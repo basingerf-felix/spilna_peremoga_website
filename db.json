@@ -1,0 +1,2480 @@
+[
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$TssGmTecFEYa3bCvb0EVaH$PrTPs1dCpAP/IJLMcuB0fdftA/wFnO8lrlQFHpflbuE=",
+    "last_login": "2025-09-08T10:28:57.379Z",
+    "is_superuser": true,
+    "username": "felix",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2025-09-08T10:23:39.426Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$XEw0iX2rzd0FzGPaTcRTy0$COF1JaG190VNP7XMOoaaD/N4qbjE5Tst3sp+B9E7hpc=",
+    "last_login": "2025-10-01T13:55:59.005Z",
+    "is_superuser": true,
+    "username": "Felix",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2025-10-01T13:55:46.055Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "main.contactmessage",
+  "pk": 1,
+  "fields": {
+    "first_name": "Feliks",
+    "last_name": "Bryzitskii",
+    "email": "basingerfelix17@gmail.com",
+    "phone": "+38043245332",
+    "subject": "Выгрузка Django проекта на сервер",
+    "message": "тотоитоиоио о",
+    "created_at": "2025-09-04T19:24:41.345Z",
+    "ip": "127.0.0.1",
+    "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+  }
+},
+{
+  "model": "main.orgunit",
+  "pk": 1,
+  "fields": {
+    "name": "Громадська організація «Спільна перемога»",
+    "slug": "gromadska-organizaciya-spilna-peremoga"
+  }
+},
+{
+  "model": "main.orgunit",
+  "pk": 2,
+  "fields": {
+    "name": "ТОВ Креативна агенція «Спільна перемога»",
+    "slug": "tov-kreativna-agenciya-brspilna-peremoga"
+  }
+},
+{
+  "model": "main.orgunit",
+  "pk": 3,
+  "fields": {
+    "name": "Продакшн-студія «Спільна перемога»",
+    "slug": "prodakshn-studiya-brspilna-peremoga"
+  }
+},
+{
+  "model": "main.projectdetail",
+  "pk": 1,
+  "fields": {
+    "slug": "plosha-zirok",
+    "title_override": "«Площа зірок»",
+    "subtitle": "Місце зустрічі легенд",
+    "lead": "«Площа зірок» у центрі Києва, створена у 2015 році біля ТРЦ «GULLIVER», стала сучасною пам’яткою та символом вшанування видатних українців. Тут встановлені іменні плити з латунного сплаву з QR-кодами, що відкривають детальну інформацію про діячів культури, театру, кіно, музики та спорту. Урочисті церемонії відкриття нових зірок збирають киян і туристів, перетворюючись на значні події та сприяючи популяризації української культури й гордості за досягнення країни.",
+    "body": "Серед сотень сучасних пам&#39;яток, пам&#39;ятників історії і архітектури, є в Києві одне місце, яке незмінно привертає столичних жителів і численних туристів. Цієї пам&#39;ятки всього кілька років, але вона вже увійшла в історію столиці. Саме тут увічнена пам&#39;ять великих, відомих і популярних українців, які зробили неоціненний внесок у розвиток української культури.\r\n<br><br>У центрі Києва, уздовж бул. Лесі Українки, вул. Еспланадної та Спортивної площі, ТРЦ\r\n«GULLIVER», спільно з партнерами і Міністерством молодості та спорту України,\r\nвідкрили, яка стала вже знаменитою, «ПЛОЩА ЗІРОК». Ідея почала реалізовуватися в\r\n2015 році, і незабаром проект перетворився на постійну пам&#39;ятку Києва.\r\nКожен українець може з гордістю перераховувати імена людей, навік зазначених\r\nвизнанням на «Площі зірок». Найвідоміші і великі діячі української культури, театру і\r\nкіно, музики, творчості та спорту удостоєні іменними знаками, виконаними з латунного\r\nсплаву. На кожній - ім&#39;я і QR-код, перейшовши за яким можна докладно дізнатися\r\nдокладну інформацію про номінанта.\r\n<br><br>Установка і церемонія відкриття кожної зоряної плити на площі, завдяки організаторам\r\nта громадськості, стають подією в житті столиці. Тисячі киян і гостей столиці, приходять\r\nпобачити своїх кумирів і стають учасниками урочистого дійства.\r\n<br><br>«Площа зірок» - це унікальний соціально-громадський проект популяризації\r\nнаціональної культури, визнання внеску відомих і великих українців в розвиток і\r\nпроцвітання нашої країни.\r\n<br><br>Театр і кіно, спорт і музика - ось головні номінації, в яких відзначаються досягнення і\r\nвибираються імена, гідні представляти Україну.",
+    "cover": "projects/detail/zirka_2.webp",
+    "video_url": "",
+    "goal": "вшанування видатних українців і популяризація культури",
+    "partners": "міська влада",
+    "results": "іменні плити з латуні з QR-кодами; регулярні церемонії відкриття",
+    "seo_title": "",
+    "seo_description": "",
+    "og_image": "",
+    "is_published": true,
+    "created_at": "2025-09-08T11:50:52.422Z"
+  }
+},
+{
+  "model": "main.projectdetail",
+  "pk": 2,
+  "fields": {
+    "slug": "ukrayina-nato-spilna-peremoga",
+    "title_override": "«Україна – НАТО. Спільна перемога»",
+    "subtitle": "Партнери Альянсу в Україні",
+    "lead": "ГО «Спільна перемога» реалізує ініціативи, що зміцнюють партнерство України з НАТО: візит поранених воїнів АТО до Брюсселя, молодіжний форум, міжнародну конференцію та освітній курс. Найбільш символічними стали проєкти у центрі Києва — «Роза вітрів» (2019) та «Сквер НАТО» зі скульптурою «Україночка під парасолькою НАТО» (2024), які стали знаковим символом євроатлантичного вибору України.",
+    "body": "Організація Північноатлантичного договору (НАТО, англ. NATO; фр. OTAN) — ключовий\r\nгарант міжнародної безпеки, що об’єднує більшість європейських країн, Туреччину,\r\nСША та Канаду. У рамках активізації громадської дипломатії та поглиблення\r\nпартнерства України з Альянсом, громадська організація «Спільна перемога»\r\nреалізувала низку знакових ініціатив, що сприяють наближенню України до\r\nєвроатлантичного простору.\r\n<br><br>«Спільна перемога» — одна з небагатьох громадських структур в Україні,\r\nпредставники якої тричі відвідували штаб-квартиру НАТО в Брюсселі,\r\nспівпрацюючи з провідними структурами Альянсу. Підтримка з боку Центру\r\nінформації та документації НАТО в Україні, а також дипломатів, представників\r\nуряду та міжнародних партнерів стала фундаментом для низки стратегічно\r\nважливих проєктів.\r\n<br><br>Основні ініціативи та реалізовані проєкти:\r\n<li>Перший візит поранених воїнів АТО до штаб-квартири НАТО\r\nЗа ініціативи ГО «Спільна перемога» відбувся історичний візит поранених українських\r\nвійськових до штаб-квартири НАТО в Брюсселі та військової бази в Нідерландах. Захід\r\nсупроводжувався дружнім тренуванням із кросфіту між українськими ветеранами та\r\nвійськовими Альянсу.\r\nПідготовку до поїздки підтримав Представник України при ЄС та Місії України при НАТО, організаційне забезпечення — Центр інформації та документації НАТО в Україні.\r\n<li>Перший Всеукраїнський молодіжний форум щодо вступу України до НАТО\r\nФорум організовано за підтримки Міністерства молоді та спорту України у співпраці з\r\nЦентром інформації та документації НАТО, студентами Інституту міжнародних відносин\r\nта молодіжними організаціями. Подія сприяла формуванню молодіжного лідерства,\r\nорієнтованого на євроатлантичні цінності.\r\n<li>Міжнародна конференція «Україна – НАТО перед Вільнюським самітом: від\r\nпідтримки до членства» (27.06.2023, м. Київ)\r\nСпіворганізація ключової конференції, у якій взяли участь високопосадовці з Офісу\r\nПрезидента України, РНБО, урядовці, посли країн-членів НАТО, а також представники\r\nштабу Альянсу та провідні міжнародні експерти. Захід став важливим етапом у\r\nміжурядовому діалозі та підготовці до стратегічних рішень Вільнюського саміту.\r\n<li>Проєкт «Україна – НАТО. Спільна перемога»\r\nСтворено авторський сценарний план документального фільму «Україна – НАТО.\r\nСпільна перемога» та телепроєкту «Кухня НАТО», які отримали позитивні відгуки в\r\nштаб-квартирі НАТО в Брюсселі як приклади ефективної публічної дипломатії.\r\n<li>Встановлення символів НАТО у центрі Києва\r\n16 травня 2024 року, у межах відзначення 75-річчя НАТО, ГО «Спільна перемога»\r\nорганізувала урочисте відкриття «Скверу НАТО» та скульптурної композиції\r\n«Україночка під парасолькою НАТО» на Європейській площі столиці.\r\nЦе стало продовженням проєкту 2019 року, коли організація вперше встановила\r\nсимвол Альянсу до 70-ти річчя НАТО «Роза вітрів» у центрі Києва — за участі\r\nЗаступника Генерального секретаря НАТО, Віце-прем’єр-міністра України та\r\nдипломатів країн-членів Альянсу.\r\n<li>Освітній проєкт «Дистанційний курс НАТО для молоді»\r\n \r\n<br><br>ГО «Спільна перемога» у співпраці з ТОВ «Центр освіти “ОПТІМА”» ініціювала розробку сучасного дистанційного курсу НАТО, спрямованого на учнів, студентів і молодіжну\r\nаудиторію.\r\n<br><br>Мета — формування критичного мислення, обізнаності про НАТО, його місію, структуру,\r\nміфи та реальність, а також зміцнення громадянської активності серед молоді.\r\n<br><br>Курс включає:\r\n<li>тематичні модулі й відеоуроки;\r\n<li>візуальні інфографіки та тестування;\r\n<li>відкритий доступ до матеріалів через онлайн-платформи (зокрема YouTube).\r\nЦей курс стане платформою підтримки нового покоління українців, які поділяють\r\nцінності демократії, верховенства права та безпеки в євроатлантичному просторі.\r\n\r\n<br><br>ГО «Спільна перемога» і надалі залишається активним суб’єктом публічної\r\nдипломатії, сприяючи розвитку стратегічного партнерства між Україною та НАТО,\r\nа також формуванню свідомого громадянського суспільства, спроможного\r\nвідстоювати національні інтереси на міжнародному рівні.",
+    "cover": "",
+    "video_url": "",
+    "goal": "публічна дипломатія та посилення євроатлантичного вектору",
+    "partners": "Центр інформації та документації НАТО, дипломати, міжнародні інституції",
+    "results": "Роза вітрів» (2019), «Сквер НАТО» і скульптура «Україночка під парасолькою НАТО» (2024), візити ветеранів, молодіжний форум, конференція, освітній курс",
+    "seo_title": "",
+    "seo_description": "",
+    "og_image": "",
+    "is_published": true,
+    "created_at": "2025-09-09T09:21:49.148Z"
+  }
+},
+{
+  "model": "main.projectdetail",
+  "pk": 3,
+  "fields": {
+    "slug": "spilna-olimpijska-peremoga",
+    "title_override": "«Спільна олімпійська перемога»",
+    "subtitle": "",
+    "lead": "Програма «Спільна олімпійська перемога», започаткована ГО «Спільна перемога» спільно з Міністерством молоді та спорту України після Олімпіади-2016 у Ріо, стала громадською ініціативою підтримки українських спортсменів. Для призерів створили позабюджетний призовий фонд: вони отримали подарунки, сертифікати, техніку, поїздки, а чемпіони — квартири та автомобілі. Кампанію підтримали меценати та інформаційні партнери 5 канал і ICTV.",
+    "body": "Програма «Спільна олімпійська перемога» — це унікальна громадська кампанія,\r\nвтілена ГО «Спільна перемога» спільно з Міністерством молоді та спорту України.\r\nІніціатива стартувала після участі українських спортсменів на ХХХІ літніх Олімпійських\r\nіграх у Ріо-де-Жанейро та отримала продовження під час наступних Олімпійських ігор.\r\n<br><br>Метою кампанії було створення додаткових стимулів для успішного виступу наших\r\nолімпійців та гідного представлення України на Олімпіаді. Зокрема, утворився\r\nпозабюджетний призовий фонд для тих українських спортсменів, які стали\r\nпереможцями та призерами літніх Олімпійських ігор - 2016.\r\n<br><br>Спортсмени отримали подарунки від меценатів та партнерів акції. Інформаційні\r\nпартнери – 5 канал та ICTV.\r\n<br><br>Кожен з призерів Олімпіади в Ріо отримав гарантовані призи: рюкзак та спортивний\r\nодяг, подарункові набори та грошові сертифікати, комплекти побутової техніки.  \r\nОлімпійські чемпіони отримали спеціальні призи: Юрій Чебан - сертифікат на квартиру,\r\nОлег Верняєв - автомобіль.\r\n<br><br>Під час безпрограшної лотереї, срібні та бронзові призери Олімпіади отримали свої\r\nгарантовані призи від спонсорів і меценатів акції – мобільні телефони, путівки,\r\nплатинову картку, телевізор, встановлення системи кондиціювання, річний курс\r\nвивчення англійської мови тощо.",
+    "cover": "",
+    "video_url": "",
+    "goal": "створити додаткові стимули для українських спортсменів та підтримати їхні виступи на Олімпійських іграх.",
+    "partners": "Міністерство молоді та спорту України, меценати та інформаційні партнери (5 канал, ICTV).",
+    "results": "сформовано позабюджетний призовий фонд; призери отримали подарунки, сертифікати, техніку, поїздки, а чемпіони — квартиру та автомобіль.",
+    "seo_title": "",
+    "seo_description": "",
+    "og_image": "",
+    "is_published": true,
+    "created_at": "2025-09-09T09:41:07.550Z"
+  }
+},
+{
+  "model": "main.projectdetail",
+  "pk": 4,
+  "fields": {
+    "slug": "atobajki-ta-frontovi-bajki",
+    "title_override": "«АТОбайки» та «Фронтові байки»",
+    "subtitle": "",
+    "lead": "«АТОбайки» та «Фронтові байки» — це збірки реальних історій українських воїнів, які показують фронтове життя з гумором, гідністю та силою духу. На основі книги створено художній серіал «АТОбайки», що отримав високу оцінку серед військових і став важливим елементом психологічної реабілітації. Проєкт має продовження у форматі «Фронтові байки», присвяченому подіям повномасштабної війни.",
+    "body": "Книжки та фільм &quot;АТОбайки&quot;\r\n«АТОбайки» та «Фронтові байки» — це збірки реальних історій, що сталися з\r\nукраїнськими воїнами під час бойових дій. Кожна розповідь — це живе свідчення, що\r\nдозволяє читачеві зазирнути у фронтове життя не лише з точки зору драми, а й через\r\nпризму іронії, гідності й незламного духу.\r\n<br><br>Ці книги відкривають нове звучання сучасної української прози та дозволяють відчути\r\nподії війни очима її безпосередніх учасників.\r\nВидання обох книг здійснено на замовлення Міністерства інформаційної політики\r\nУкраїни.\r\n<br><br>Фільм «АТОбайки»\r\nЗа мотивами книги «АТОбайки», за підтримки Міністерства інформаційної політики\r\nУкраїни, була створена пілотна серія художнього пригодницького серіалу з\r\nоднойменною назвою.\r\n<br><br>Проєкт отримав високу оцінку серед військових, капеланів та волонтерів, які\r\nвідзначають його як дієвий елемент психологічної реабілітації для тих, хто пройшов\r\nчерез жахіття війни.\r\n<br><br>Володимир Бульба, автор книг, також виступив автором ідеї та продюсером\r\nекранізації.\r\n<br><br>Заплановано продовження проекту «АТОбайки» у форматі «Фронтові байки», що\r\nвисвітлює новий, найгостріший етап війни — з початку повномасштабного вторгнення\r\nросійської федерації в Україну. Проект передбачає як літературне осмислення, так і\r\nекранізацію реальних історій цього періоду.",
+    "cover": "",
+    "video_url": "",
+    "goal": "показати фронтове життя очима воїнів, поєднавши драму з іронією та підтримати психологічну реабілітацію військових.",
+    "partners": "Міністерство інформаційної політики України, автор Володимир Бульба",
+    "results": "видано книги «АТОбайки» та «Фронтові байки», пілотна серія серіала «АТОбайки», заплановане продовження проєкту у форматі «Фронтові байки».",
+    "seo_title": "",
+    "seo_description": "",
+    "og_image": "",
+    "is_published": true,
+    "created_at": "2025-09-09T09:49:35.645Z"
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 95,
+  "fields": {
+    "project": 1,
+    "image": "projects/grid/23-02092003344869936_uizXTHZ.jpg",
+    "alt": "",
+    "order": 1
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 96,
+  "fields": {
+    "project": 1,
+    "image": "projects/grid/23-17082006171022659_SOuGVjc.jpg",
+    "alt": "",
+    "order": 2
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 97,
+  "fields": {
+    "project": 1,
+    "image": "projects/grid/23-23102003470396778_A2dHE33.jpg",
+    "alt": "",
+    "order": 3
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 98,
+  "fields": {
+    "project": 1,
+    "image": "projects/grid/23-23102004273314525_DCDsS2F.jpg",
+    "alt": "",
+    "order": 4
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 99,
+  "fields": {
+    "project": 1,
+    "image": "projects/grid/38-10062101303649844_mVnMG1C.jpg",
+    "alt": "",
+    "order": 5
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 100,
+  "fields": {
+    "project": 1,
+    "image": "projects/grid/38-10062101303722644_1uI3sj0.jpg",
+    "alt": "",
+    "order": 6
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 101,
+  "fields": {
+    "project": 1,
+    "image": "projects/grid/38-12082112533127302_sIqSGyQ.jpg",
+    "alt": "",
+    "order": 7
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 102,
+  "fields": {
+    "project": 1,
+    "image": "projects/grid/38-12082112533896670_izPowK1.jpg",
+    "alt": "",
+    "order": 8
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 103,
+  "fields": {
+    "project": 1,
+    "image": "projects/grid/38-12102109092740696_PKqbKJV.jpg",
+    "alt": "",
+    "order": 9
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 104,
+  "fields": {
+    "project": 1,
+    "image": "projects/grid/38-12102109194433898_QYgl2FD.jpg",
+    "alt": "",
+    "order": 10
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 105,
+  "fields": {
+    "project": 1,
+    "image": "projects/grid/38-22072104161792679_D0WbGG6.jpg",
+    "alt": "",
+    "order": 11
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 106,
+  "fields": {
+    "project": 1,
+    "image": "projects/grid/38-22072104161935943_ELbGVyu.jpg",
+    "alt": "",
+    "order": 12
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 107,
+  "fields": {
+    "project": 1,
+    "image": "projects/grid/3237-08101803033952148_IIWXAxW.jpg",
+    "alt": "",
+    "order": 13
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 108,
+  "fields": {
+    "project": 1,
+    "image": "projects/grid/3299-21111803041215179_qoaXTj2.jpg",
+    "alt": "",
+    "order": 14
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 109,
+  "fields": {
+    "project": 1,
+    "image": "projects/grid/3299-21111803042245186_NKngSK3.jpg",
+    "alt": "",
+    "order": 15
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 110,
+  "fields": {
+    "project": 1,
+    "image": "projects/grid/3481-18031907084067222_Ml0HHrw.jpg",
+    "alt": "",
+    "order": 16
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 111,
+  "fields": {
+    "project": 1,
+    "image": "projects/grid/3608-20051904560585700_67JcFjx.jpg",
+    "alt": "",
+    "order": 17
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 112,
+  "fields": {
+    "project": 1,
+    "image": "projects/grid/3682-01071906585186752_ZN6zqUo.jpg",
+    "alt": "",
+    "order": 18
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 113,
+  "fields": {
+    "project": 1,
+    "image": "projects/grid/3682-01071907003480300_0FAfdFr.jpg",
+    "alt": "",
+    "order": 19
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 114,
+  "fields": {
+    "project": 1,
+    "image": "projects/grid/3699-05071910260887131_FH2BnFA.jpg",
+    "alt": "",
+    "order": 20
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 115,
+  "fields": {
+    "project": 1,
+    "image": "projects/grid/3773-06091902120068114_jYF6Qcx.jpg",
+    "alt": "",
+    "order": 21
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 116,
+  "fields": {
+    "project": 1,
+    "image": "projects/grid/3773-06091902123527115_mQVEpPX.jpg",
+    "alt": "",
+    "order": 22
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 117,
+  "fields": {
+    "project": 1,
+    "image": "projects/grid/3773-06091902125747956_mTuyi5Q.jpg",
+    "alt": "",
+    "order": 23
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 118,
+  "fields": {
+    "project": 1,
+    "image": "projects/grid/3773-06091910163034702_acXRTAj.jpg",
+    "alt": "",
+    "order": 24
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 119,
+  "fields": {
+    "project": 1,
+    "image": "projects/grid/3834-24101905361170487_J1b6kW5.jpg",
+    "alt": "",
+    "order": 25
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 120,
+  "fields": {
+    "project": 1,
+    "image": "projects/grid/3834-24101905372392964_DBvON3n.jpg",
+    "alt": "",
+    "order": 26
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 121,
+  "fields": {
+    "project": 1,
+    "image": "projects/grid/3834-24101905374254674_v7IcX29.jpg",
+    "alt": "",
+    "order": 27
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 122,
+  "fields": {
+    "project": 1,
+    "image": "projects/grid/3869-30101911560757836_JKq3MGz.jpg",
+    "alt": "",
+    "order": 28
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 123,
+  "fields": {
+    "project": 1,
+    "image": "projects/grid/3869-30101911561156628_OGIOwNB.jpg",
+    "alt": "",
+    "order": 29
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 124,
+  "fields": {
+    "project": 1,
+    "image": "projects/grid/4660-11032112375373847_Dk2XwHn.jpg",
+    "alt": "",
+    "order": 30
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 125,
+  "fields": {
+    "project": 1,
+    "image": "projects/grid/59775048_1288290271320198_2494697187984801792_n_eJF7yKQ.jpg",
+    "alt": "",
+    "order": 31
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 126,
+  "fields": {
+    "project": 1,
+    "image": "projects/grid/59775610_858967387770266_46296019419267072_n_LDlVBA5.jpg",
+    "alt": "",
+    "order": 32
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 127,
+  "fields": {
+    "project": 1,
+    "image": "projects/grid/59963840_858967394436932_27613070595457024_n_nUtRxkr.jpg",
+    "alt": "",
+    "order": 33
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 128,
+  "fields": {
+    "project": 1,
+    "image": "projects/grid/64214926_1585599478237770_2122633641535209472_n_VXonOhU.jpg",
+    "alt": "",
+    "order": 34
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 129,
+  "fields": {
+    "project": 1,
+    "image": "projects/grid/65612233_357067971670210_2072474750004756480_n-1_6mDySGg.jpg",
+    "alt": "",
+    "order": 35
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 130,
+  "fields": {
+    "project": 1,
+    "image": "projects/grid/65612233_357067971670210_2072474750004756480_n_vlandkN.jpg",
+    "alt": "",
+    "order": 36
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 131,
+  "fields": {
+    "project": 1,
+    "image": "projects/grid/65688433_919653591710095_4391040723659522048_o_96SCEHd.jpg",
+    "alt": "",
+    "order": 37
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 132,
+  "fields": {
+    "project": 1,
+    "image": "projects/grid/65727275_919653435043444_8060494390033907712_o_etOZsDI.jpg",
+    "alt": "",
+    "order": 38
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 133,
+  "fields": {
+    "project": 1,
+    "image": "projects/grid/65808863_332119497720727_3529137694699421696_n_MUFzFvz.jpg",
+    "alt": "",
+    "order": 39
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 134,
+  "fields": {
+    "project": 1,
+    "image": "projects/grid/65812351_439565029965306_5516658962251907072_n_c9LLCFQ.jpg",
+    "alt": "",
+    "order": 40
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 135,
+  "fields": {
+    "project": 1,
+    "image": "projects/grid/65830409_864182380624089_1276142321032757248_n-1_QcdHWAT.jpg",
+    "alt": "",
+    "order": 41
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 136,
+  "fields": {
+    "project": 1,
+    "image": "projects/grid/65922350_847945212255492_4956786829639548928_n_xG9GsP8.jpg",
+    "alt": "",
+    "order": 42
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 137,
+  "fields": {
+    "project": 1,
+    "image": "projects/grid/66043133_913375632350203_4655400964365221888_n_5eYsSyX.jpg",
+    "alt": "",
+    "order": 43
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 138,
+  "fields": {
+    "project": 1,
+    "image": "projects/grid/74235556_1007019839640136_946136679188529152_n_ozM1mII.jpg",
+    "alt": "",
+    "order": 44
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 139,
+  "fields": {
+    "project": 1,
+    "image": "projects/grid/75429596_931012493921157_3976226829387169792_n_8zbdNHL.jpg",
+    "alt": "",
+    "order": 45
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 140,
+  "fields": {
+    "project": 1,
+    "image": "projects/grid/120470130_1757100694439151_8372247907007047630_n_7mVzFQt.jpg",
+    "alt": "",
+    "order": 46
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 141,
+  "fields": {
+    "project": 1,
+    "image": "projects/grid/thumb_4323_fe1YARC.jpg",
+    "alt": "",
+    "order": 47
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 142,
+  "fields": {
+    "project": 2,
+    "image": "projects/grid/0x0-15.jpeg",
+    "alt": "",
+    "order": 1
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 143,
+  "fields": {
+    "project": 2,
+    "image": "projects/grid/3.jpg",
+    "alt": "",
+    "order": 2
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 144,
+  "fields": {
+    "project": 2,
+    "image": "projects/grid/3p5a5290.jpg",
+    "alt": "",
+    "order": 3
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 145,
+  "fields": {
+    "project": 2,
+    "image": "projects/grid/3p5a5334.jpg",
+    "alt": "",
+    "order": 4
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 146,
+  "fields": {
+    "project": 2,
+    "image": "projects/grid/3p5a5622.jpg",
+    "alt": "",
+    "order": 5
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 147,
+  "fields": {
+    "project": 2,
+    "image": "projects/grid/3p5a5750-1-1.jpg",
+    "alt": "",
+    "order": 6
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 148,
+  "fields": {
+    "project": 2,
+    "image": "projects/grid/5fcb09c959eedeadab87af3887612812.jpeg",
+    "alt": "",
+    "order": 7
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 149,
+  "fields": {
+    "project": 2,
+    "image": "projects/grid/17457883_649742248554367_5068279162130320875_n.jpg",
+    "alt": "",
+    "order": 8
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 150,
+  "fields": {
+    "project": 2,
+    "image": "projects/grid/17629651_649742191887706_2520241503450594841_n.jpg",
+    "alt": "",
+    "order": 9
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 151,
+  "fields": {
+    "project": 2,
+    "image": "projects/grid/17630028_649742275221031_5681463656815350660_n.jpg",
+    "alt": "",
+    "order": 10
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 152,
+  "fields": {
+    "project": 2,
+    "image": "projects/grid/17952943_407423429613402_4719947136346113054_n.jpg",
+    "alt": "",
+    "order": 11
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 153,
+  "fields": {
+    "project": 2,
+    "image": "projects/grid/18119070_825083710974192_8484808656721519735_n.jpg",
+    "alt": "",
+    "order": 12
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 154,
+  "fields": {
+    "project": 2,
+    "image": "projects/grid/18119462_825981857551044_2253179420828958289_n.jpg",
+    "alt": "",
+    "order": 13
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 155,
+  "fields": {
+    "project": 2,
+    "image": "projects/grid/18121585_1327428937371723_4236449128317411542_o-1.jpg",
+    "alt": "",
+    "order": 14
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 156,
+  "fields": {
+    "project": 2,
+    "image": "projects/grid/27857770_982279541921274_8095094840849106367_n.jpg",
+    "alt": "",
+    "order": 15
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 157,
+  "fields": {
+    "project": 2,
+    "image": "projects/grid/43030767_677210489301360_2324094915119677440_n.jpg",
+    "alt": "",
+    "order": 16
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 158,
+  "fields": {
+    "project": 2,
+    "image": "projects/grid/43042920_677210715968004_8987677086487412736_n.jpg",
+    "alt": "",
+    "order": 17
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 159,
+  "fields": {
+    "project": 2,
+    "image": "projects/grid/43134846_677210602634682_8344808537695715328_n.jpg",
+    "alt": "",
+    "order": 18
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 160,
+  "fields": {
+    "project": 2,
+    "image": "projects/grid/43155781_1965131866878110_7228867852558663680_o.jpg",
+    "alt": "",
+    "order": 19
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 161,
+  "fields": {
+    "project": 2,
+    "image": "projects/grid/56520053_783166768705731_5392056325997854720_n.jpg",
+    "alt": "",
+    "order": 20
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 162,
+  "fields": {
+    "project": 2,
+    "image": "projects/grid/60342838_2242474866066357_8272278565974704128_o.jpg",
+    "alt": "",
+    "order": 21
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 163,
+  "fields": {
+    "project": 2,
+    "image": "projects/grid/60593819_888725714802883_6165119622887505920_o.jpg",
+    "alt": "",
+    "order": 22
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 164,
+  "fields": {
+    "project": 2,
+    "image": "projects/grid/60596237_2242475009399676_5105551577511362560_o.jpg",
+    "alt": "",
+    "order": 23
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 165,
+  "fields": {
+    "project": 2,
+    "image": "projects/grid/60615978_888725461469575_5112608024095096832_n.jpg",
+    "alt": "",
+    "order": 24
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 166,
+  "fields": {
+    "project": 2,
+    "image": "projects/grid/60621729_1299720330177192_3123456915238027264_n.jpg",
+    "alt": "",
+    "order": 25
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 167,
+  "fields": {
+    "project": 2,
+    "image": "projects/grid/60669344_888725878136200_1047802012533522432_n.jpg",
+    "alt": "",
+    "order": 26
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 168,
+  "fields": {
+    "project": 2,
+    "image": "projects/grid/60693017_2242474176066426_3063228039090405376_o.jpg",
+    "alt": "",
+    "order": 27
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 169,
+  "fields": {
+    "project": 2,
+    "image": "projects/grid/60739912_888725534802901_1952138158736932864_o.jpg",
+    "alt": "",
+    "order": 28
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 170,
+  "fields": {
+    "project": 2,
+    "image": "projects/grid/60806017_2242474392733071_4796268826452819968_o.jpg",
+    "alt": "",
+    "order": 29
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 171,
+  "fields": {
+    "project": 2,
+    "image": "projects/grid/60854206_2242474809399696_6351280805624414208_o.jpg",
+    "alt": "",
+    "order": 30
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 172,
+  "fields": {
+    "project": 2,
+    "image": "projects/grid/60863503_2242474782733032_7788736763945549824_o.jpg",
+    "alt": "",
+    "order": 31
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 173,
+  "fields": {
+    "project": 2,
+    "image": "projects/grid/60870623_888725781469543_5203294544858185728_o.jpg",
+    "alt": "",
+    "order": 32
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 174,
+  "fields": {
+    "project": 2,
+    "image": "projects/grid/60896264_450607885692528_6751955804997287936_n.jpg",
+    "alt": "",
+    "order": 33
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 175,
+  "fields": {
+    "project": 2,
+    "image": "projects/grid/60913884_2242473986066445_6386706155443322880_o.jpg",
+    "alt": "",
+    "order": 34
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 176,
+  "fields": {
+    "project": 2,
+    "image": "projects/grid/60931318_450148248893629_3062164764101705728_n.jpg",
+    "alt": "",
+    "order": 35
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 177,
+  "fields": {
+    "project": 2,
+    "image": "projects/grid/60969846_2242474612733049_8518333733374263296_o.jpg",
+    "alt": "",
+    "order": 36
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 178,
+  "fields": {
+    "project": 2,
+    "image": "projects/grid/61034056_2242474446066399_636613560285265920_o.jpg",
+    "alt": "",
+    "order": 37
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 179,
+  "fields": {
+    "project": 2,
+    "image": "projects/grid/61091385_888725548136233_2821043036656500736_n.jpg",
+    "alt": "",
+    "order": 38
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 180,
+  "fields": {
+    "project": 2,
+    "image": "projects/grid/61379511_2242475076066336_8241221197895827456_o.jpg",
+    "alt": "",
+    "order": 39
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 181,
+  "fields": {
+    "project": 2,
+    "image": "projects/grid/120448777_1759125207586585_5000557219502456077_n.jpg",
+    "alt": "",
+    "order": 40
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 182,
+  "fields": {
+    "project": 2,
+    "image": "projects/grid/1716333077484.jpeg",
+    "alt": "",
+    "order": 41
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 183,
+  "fields": {
+    "project": 2,
+    "image": "projects/grid/img_0020.jpg",
+    "alt": "",
+    "order": 42
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 184,
+  "fields": {
+    "project": 2,
+    "image": "projects/grid/img_0041.jpg",
+    "alt": "",
+    "order": 43
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 185,
+  "fields": {
+    "project": 2,
+    "image": "projects/grid/img_0073.jpg",
+    "alt": "",
+    "order": 44
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 186,
+  "fields": {
+    "project": 2,
+    "image": "projects/grid/img_0081.jpg",
+    "alt": "",
+    "order": 45
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 187,
+  "fields": {
+    "project": 2,
+    "image": "projects/grid/img_0119.jpg",
+    "alt": "",
+    "order": 46
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 188,
+  "fields": {
+    "project": 2,
+    "image": "projects/grid/img_2770.jpeg",
+    "alt": "",
+    "order": 47
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 189,
+  "fields": {
+    "project": 2,
+    "image": "projects/grid/img_3247.jpg",
+    "alt": "",
+    "order": 48
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 190,
+  "fields": {
+    "project": 2,
+    "image": "projects/grid/img_4926.jpg",
+    "alt": "",
+    "order": 49
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 191,
+  "fields": {
+    "project": 2,
+    "image": "projects/grid/img_4928-co-a.jpg",
+    "alt": "",
+    "order": 50
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 192,
+  "fields": {
+    "project": 2,
+    "image": "projects/grid/img_5113-co-a.jpg",
+    "alt": "",
+    "order": 51
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 193,
+  "fields": {
+    "project": 2,
+    "image": "projects/grid/img_5217.jpg",
+    "alt": "",
+    "order": 52
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 194,
+  "fields": {
+    "project": 2,
+    "image": "projects/grid/img_5241.jpg",
+    "alt": "",
+    "order": 53
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 195,
+  "fields": {
+    "project": 2,
+    "image": "projects/grid/img_5252.jpg",
+    "alt": "",
+    "order": 54
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 196,
+  "fields": {
+    "project": 2,
+    "image": "projects/grid/img_5307-1.jpg",
+    "alt": "",
+    "order": 55
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 197,
+  "fields": {
+    "project": 2,
+    "image": "projects/grid/img_5347.jpg",
+    "alt": "",
+    "order": 56
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 198,
+  "fields": {
+    "project": 2,
+    "image": "projects/grid/img_5641.jpg",
+    "alt": "",
+    "order": 57
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 199,
+  "fields": {
+    "project": 2,
+    "image": "projects/grid/img_8254-1.jpeg",
+    "alt": "",
+    "order": 58
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 200,
+  "fields": {
+    "project": 2,
+    "image": "projects/grid/img_8457.jpg",
+    "alt": "",
+    "order": 59
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 201,
+  "fields": {
+    "project": 2,
+    "image": "projects/grid/unnamed-1.jpg",
+    "alt": "",
+    "order": 60
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 202,
+  "fields": {
+    "project": 3,
+    "image": "projects/grid/14039883_282130772142669_8653781863838920745_n.jpg",
+    "alt": "",
+    "order": 1
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 203,
+  "fields": {
+    "project": 3,
+    "image": "projects/grid/14238178_1186341214758545_2269112258599606990_n.jpg",
+    "alt": "",
+    "order": 2
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 204,
+  "fields": {
+    "project": 3,
+    "image": "projects/grid/14291756_292624387759974_1567527299974772078_n.jpg",
+    "alt": "",
+    "order": 3
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 205,
+  "fields": {
+    "project": 3,
+    "image": "projects/grid/14316846_292624397759973_9029063391289246809_n.jpg",
+    "alt": "",
+    "order": 4
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 206,
+  "fields": {
+    "project": 3,
+    "image": "projects/grid/14322615_292624377759975_3627843983637834745_n.jpg",
+    "alt": "",
+    "order": 5
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 207,
+  "fields": {
+    "project": 3,
+    "image": "projects/grid/14354980_293220684367011_5837605434192720312_n.jpg",
+    "alt": "",
+    "order": 6
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 208,
+  "fields": {
+    "project": 3,
+    "image": "projects/grid/15025575_327672054255207_4613888559931335244_o-2.jpg",
+    "alt": "",
+    "order": 7
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 209,
+  "fields": {
+    "project": 3,
+    "image": "projects/grid/15025575_327672054255207_4613888559931335244_o.jpg",
+    "alt": "",
+    "order": 8
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 210,
+  "fields": {
+    "project": 3,
+    "image": "projects/grid/29365592_1000442516771643_4899894322742165504_n.jpg",
+    "alt": "",
+    "order": 9
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 211,
+  "fields": {
+    "project": 3,
+    "image": "projects/grid/dsc_6327.jpg",
+    "alt": "",
+    "order": 10
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 212,
+  "fields": {
+    "project": 3,
+    "image": "projects/grid/dsc_7874.jpg",
+    "alt": "",
+    "order": 11
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 213,
+  "fields": {
+    "project": 3,
+    "image": "projects/grid/dsc_7910.jpg",
+    "alt": "",
+    "order": 12
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 214,
+  "fields": {
+    "project": 3,
+    "image": "projects/grid/maxresdefault-1.jpg",
+    "alt": "",
+    "order": 13
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 215,
+  "fields": {
+    "project": 4,
+    "image": "projects/grid/18582089_838162432999653_4490393415926743738_n.jpg",
+    "alt": "",
+    "order": 1
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 216,
+  "fields": {
+    "project": 4,
+    "image": "projects/grid/81217905_795776174273458_4938647546366001152_o.jpg",
+    "alt": "",
+    "order": 2
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 217,
+  "fields": {
+    "project": 4,
+    "image": "projects/grid/img_3918.jpg",
+    "alt": "",
+    "order": 3
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 218,
+  "fields": {
+    "project": 4,
+    "image": "projects/grid/img_3919.jpg",
+    "alt": "",
+    "order": 4
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 219,
+  "fields": {
+    "project": 4,
+    "image": "projects/grid/img_3920.jpg",
+    "alt": "",
+    "order": 5
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 220,
+  "fields": {
+    "project": 4,
+    "image": "projects/grid/img_3921.jpg",
+    "alt": "",
+    "order": 6
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 221,
+  "fields": {
+    "project": 4,
+    "image": "projects/grid/img_3922.jpg",
+    "alt": "",
+    "order": 7
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 222,
+  "fields": {
+    "project": 4,
+    "image": "projects/grid/img_3924.jpg",
+    "alt": "",
+    "order": 8
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 223,
+  "fields": {
+    "project": 4,
+    "image": "projects/grid/img_3925.jpg",
+    "alt": "",
+    "order": 9
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 224,
+  "fields": {
+    "project": 4,
+    "image": "projects/grid/img_3926.jpg",
+    "alt": "",
+    "order": 10
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 225,
+  "fields": {
+    "project": 4,
+    "image": "projects/grid/img_3927.jpg",
+    "alt": "",
+    "order": 11
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 226,
+  "fields": {
+    "project": 4,
+    "image": "projects/grid/img_3928.jpg",
+    "alt": "",
+    "order": 12
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 227,
+  "fields": {
+    "project": 4,
+    "image": "projects/grid/img_3929.jpg",
+    "alt": "",
+    "order": 13
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 228,
+  "fields": {
+    "project": 4,
+    "image": "projects/grid/img_3930.jpg",
+    "alt": "",
+    "order": 14
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 229,
+  "fields": {
+    "project": 4,
+    "image": "projects/grid/img_3931.jpg",
+    "alt": "",
+    "order": 15
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 230,
+  "fields": {
+    "project": 4,
+    "image": "projects/grid/img_3932.jpg",
+    "alt": "",
+    "order": 16
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 231,
+  "fields": {
+    "project": 4,
+    "image": "projects/grid/img_3933.jpg",
+    "alt": "",
+    "order": 17
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 232,
+  "fields": {
+    "project": 4,
+    "image": "projects/grid/img_4388.jpg",
+    "alt": "",
+    "order": 18
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 233,
+  "fields": {
+    "project": 4,
+    "image": "projects/grid/img_4391.jpg",
+    "alt": "",
+    "order": 19
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 234,
+  "fields": {
+    "project": 4,
+    "image": "projects/grid/img_4397.jpg",
+    "alt": "",
+    "order": 20
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 235,
+  "fields": {
+    "project": 4,
+    "image": "projects/grid/img_4406.jpg",
+    "alt": "",
+    "order": 21
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 236,
+  "fields": {
+    "project": 4,
+    "image": "projects/grid/img_4413.jpg",
+    "alt": "",
+    "order": 22
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 237,
+  "fields": {
+    "project": 4,
+    "image": "projects/grid/img_4588.jpg",
+    "alt": "",
+    "order": 23
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 238,
+  "fields": {
+    "project": 4,
+    "image": "projects/grid/img_4605.jpg",
+    "alt": "",
+    "order": 24
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 239,
+  "fields": {
+    "project": 4,
+    "image": "projects/grid/img_4611.jpg",
+    "alt": "",
+    "order": 25
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 240,
+  "fields": {
+    "project": 4,
+    "image": "projects/grid/img_4640.jpg",
+    "alt": "",
+    "order": 26
+  }
+},
+{
+  "model": "main.projectdetailgridimage",
+  "pk": 241,
+  "fields": {
+    "project": 4,
+    "image": "projects/grid/img_4657.jpg",
+    "alt": "",
+    "order": 27
+  }
+},
+{
+  "model": "main.projectdetailimage",
+  "pk": 1,
+  "fields": {
+    "detail": 1,
+    "image": "projects/detail/gallery/zirka_1.webp",
+    "alt": "",
+    "order": 0
+  }
+},
+{
+  "model": "main.projectdetailimage",
+  "pk": 2,
+  "fields": {
+    "detail": 1,
+    "image": "projects/detail/gallery/zirka_2.webp",
+    "alt": "",
+    "order": 0
+  }
+},
+{
+  "model": "main.projectdetailimage",
+  "pk": 3,
+  "fields": {
+    "detail": 1,
+    "image": "projects/detail/gallery/zirka_3.jpg",
+    "alt": "",
+    "order": 0
+  }
+},
+{
+  "model": "main.projectdetailimage",
+  "pk": 4,
+  "fields": {
+    "detail": 1,
+    "image": "projects/detail/gallery/zirka_4.jpg",
+    "alt": "",
+    "order": 0
+  }
+},
+{
+  "model": "main.projectdetailimage",
+  "pk": 5,
+  "fields": {
+    "detail": 1,
+    "image": "projects/detail/gallery/zirka_5.jpg",
+    "alt": "",
+    "order": 0
+  }
+},
+{
+  "model": "main.projectdetailimage",
+  "pk": 6,
+  "fields": {
+    "detail": 1,
+    "image": "projects/detail/gallery/zirka_6.jpg",
+    "alt": "",
+    "order": 0
+  }
+},
+{
+  "model": "main.projectdetailimage",
+  "pk": 7,
+  "fields": {
+    "detail": 2,
+    "image": "projects/detail/gallery/nato_1.jpg",
+    "alt": "",
+    "order": 0
+  }
+},
+{
+  "model": "main.projectdetailimage",
+  "pk": 8,
+  "fields": {
+    "detail": 2,
+    "image": "projects/detail/gallery/nato_2.jpg",
+    "alt": "",
+    "order": 0
+  }
+},
+{
+  "model": "main.projectdetailimage",
+  "pk": 9,
+  "fields": {
+    "detail": 2,
+    "image": "projects/detail/gallery/nato_3.jpg",
+    "alt": "",
+    "order": 0
+  }
+},
+{
+  "model": "main.projectdetailimage",
+  "pk": 10,
+  "fields": {
+    "detail": 2,
+    "image": "projects/detail/gallery/nato_4.jpeg",
+    "alt": "",
+    "order": 0
+  }
+},
+{
+  "model": "main.projectdetailimage",
+  "pk": 11,
+  "fields": {
+    "detail": 2,
+    "image": "projects/detail/gallery/nato_5.jpg",
+    "alt": "",
+    "order": 0
+  }
+},
+{
+  "model": "main.projectdetailimage",
+  "pk": 12,
+  "fields": {
+    "detail": 2,
+    "image": "projects/detail/gallery/nato_6.jpg",
+    "alt": "",
+    "order": 0
+  }
+},
+{
+  "model": "main.projectdetailimage",
+  "pk": 13,
+  "fields": {
+    "detail": 3,
+    "image": "projects/detail/gallery/14291756_292624387759974_1567527299974772078_n.jpg",
+    "alt": "",
+    "order": 0
+  }
+},
+{
+  "model": "main.projectdetailimage",
+  "pk": 14,
+  "fields": {
+    "detail": 3,
+    "image": "projects/detail/gallery/14316846_292624397759973_9029063391289246809_n.jpg",
+    "alt": "",
+    "order": 0
+  }
+},
+{
+  "model": "main.projectdetailimage",
+  "pk": 15,
+  "fields": {
+    "detail": 3,
+    "image": "projects/detail/gallery/15025575_327672054255207_4613888559931335244_o.jpg",
+    "alt": "",
+    "order": 0
+  }
+},
+{
+  "model": "main.projectdetailimage",
+  "pk": 16,
+  "fields": {
+    "detail": 3,
+    "image": "projects/detail/gallery/14354980_293220684367011_5837605434192720312_n.jpg",
+    "alt": "",
+    "order": 0
+  }
+},
+{
+  "model": "main.projectdetailimage",
+  "pk": 17,
+  "fields": {
+    "detail": 3,
+    "image": "projects/detail/gallery/DSC_7910.jpg",
+    "alt": "",
+    "order": 0
+  }
+},
+{
+  "model": "main.projectdetailimage",
+  "pk": 18,
+  "fields": {
+    "detail": 3,
+    "image": "projects/detail/gallery/maxresdefault_1.jpg",
+    "alt": "",
+    "order": 0
+  }
+},
+{
+  "model": "main.projectdetailimage",
+  "pk": 19,
+  "fields": {
+    "detail": 4,
+    "image": "projects/detail/gallery/81217905_795776174273458_4938647546366001152_o.jpg",
+    "alt": "",
+    "order": 0
+  }
+},
+{
+  "model": "main.projectdetailimage",
+  "pk": 20,
+  "fields": {
+    "detail": 4,
+    "image": "projects/detail/gallery/IMG_3919.JPG",
+    "alt": "",
+    "order": 0
+  }
+},
+{
+  "model": "main.projectdetailimage",
+  "pk": 21,
+  "fields": {
+    "detail": 4,
+    "image": "projects/detail/gallery/IMG_4413.webp",
+    "alt": "",
+    "order": 0
+  }
+},
+{
+  "model": "main.projectdetailimage",
+  "pk": 22,
+  "fields": {
+    "detail": 4,
+    "image": "projects/detail/gallery/IMG_3931.JPG",
+    "alt": "",
+    "order": 0
+  }
+},
+{
+  "model": "main.projectdetailimage",
+  "pk": 23,
+  "fields": {
+    "detail": 4,
+    "image": "projects/detail/gallery/IMG_4391.webp",
+    "alt": "",
+    "order": 0
+  }
+},
+{
+  "model": "main.project",
+  "pk": 1,
+  "fields": {
+    "title": "«Площа зірок»",
+    "description": "«Площа зірок» у центрі Києва, створена у 2015 році біля ТРЦ «GULLIVER», стала сучасною пам’яткою та символом вшанування видатних українців. Тут встановлені іменні плити з латунного сплаву з QR-кодами, що відкривають детальну інформацію про діячів культури, театру, кіно, музики та спорту. Урочисті церемонії відкриття нових зірок збирають киян і туристів, перетворюючись на значні події та сприяючи популяризації української культури й гордості за досягнення країни.",
+    "goal": "вшанування видатних українців і популяризація культури",
+    "partners": "ТРЦ «GULLIVER», міська влада",
+    "results": "іменні плити з латуні з QR-кодами; регулярні церемонії відкриття",
+    "is_reverse": false,
+    "is_reverse_platform": false,
+    "is_reverse_education": false,
+    "is_reverse_sport": false,
+    "is_published": true,
+    "order": 0,
+    "detail": 1,
+    "slug": "plosha-zirok",
+    "created_at": "2025-09-08T10:34:51.995Z",
+    "units": [
+      1
+    ]
+  }
+},
+{
+  "model": "main.project",
+  "pk": 2,
+  "fields": {
+    "title": "«Україна – НАТО. Спільна перемога»",
+    "description": "ГО «Спільна перемога» реалізує ініціативи, що зміцнюють партнерство України з НАТО: візит поранених воїнів АТО до Брюсселя, молодіжний форум, міжнародну конференцію та освітній курс. Найбільш символічними стали проєкти у центрі Києва — «Роза вітрів» (2019) та «Сквер НАТО» зі скульптурою «Україночка під парасолькою НАТО» (2024), які стали знаковим символом євроатлантичного вибору України.",
+    "goal": "публічна дипломатія та посилення євроатлантичного вектору",
+    "partners": "Центр інформації та документації НАТО, дипломати, міжнародні інституції",
+    "results": "Роза вітрів» (2019), «Сквер НАТО» і скульптура «Україночка під парасолькою НАТО» (2024), візити ветеранів, молодіжний форум, конференція, освітній курс",
+    "is_reverse": true,
+    "is_reverse_platform": false,
+    "is_reverse_education": false,
+    "is_reverse_sport": false,
+    "is_published": true,
+    "order": 0,
+    "detail": 2,
+    "slug": "ukrayina-nato-spilna-peremoga",
+    "created_at": "2025-09-08T10:39:05.953Z",
+    "units": []
+  }
+},
+{
+  "model": "main.project",
+  "pk": 3,
+  "fields": {
+    "title": "«Спільна олімпійська перемога»",
+    "description": "Програма «Спільна олімпійська перемога», започаткована ГО «Спільна перемога» спільно з Міністерством молоді та спорту України після Олімпіади-2016 у Ріо, стала громадською ініціативою підтримки українських спортсменів. Для призерів створили позабюджетний призовий фонд: вони отримали подарунки, сертифікати, техніку, поїздки, а чемпіони — квартири та автомобілі. Кампанію підтримали меценати та інформаційні партнери 5 канал і ICTV.",
+    "goal": "створити додаткові стимули для українських спортсменів та підтримати їхні виступи на Олімпійських іграх.",
+    "partners": "Міністерство молоді та спорту України, меценати та інформаційні партнери (5 канал, ICTV).",
+    "results": "сформовано позабюджетний призовий фонд; призери отримали подарунки, сертифікати, техніку, поїздки, а чемпіони — квартиру та автомобіль.",
+    "is_reverse": false,
+    "is_reverse_platform": true,
+    "is_reverse_education": false,
+    "is_reverse_sport": false,
+    "is_published": true,
+    "order": 0,
+    "detail": 3,
+    "slug": "spilna-olimpijska-peremoga",
+    "created_at": "2025-09-09T07:12:39.681Z",
+    "units": [
+      2
+    ]
+  }
+},
+{
+  "model": "main.project",
+  "pk": 4,
+  "fields": {
+    "title": "«АТОбайки» та «Фронтові байки»",
+    "description": "«АТОбайки» та «Фронтові байки» — це збірки реальних історій українських воїнів, які показують фронтове життя з гумором, гідністю та силою духу. На основі книги створено художній серіал «АТОбайки», що отримав високу оцінку серед військових і став важливим елементом психологічної реабілітації. Проєкт має продовження у форматі «Фронтові байки», присвяченому подіям повномасштабної війни.",
+    "goal": "показати фронтове життя очима воїнів, поєднавши драму з іронією та підтримати психологічну реабілітацію військових.",
+    "partners": "Міністерство інформаційної політики України, автор Володимир Бульба",
+    "results": "видано книги «АТОбайки» та «Фронтові байки», пілотна серія серіала «АТОбайки», заплановане продовження проєкту у форматі «Фронтові байки».",
+    "is_reverse": true,
+    "is_reverse_platform": false,
+    "is_reverse_education": false,
+    "is_reverse_sport": true,
+    "is_published": true,
+    "order": 0,
+    "detail": 4,
+    "slug": "atobajki-ta-frontovi-bajki",
+    "created_at": "2025-09-09T08:18:02.677Z",
+    "units": [
+      3
+    ]
+  }
+},
+{
+  "model": "main.project",
+  "pk": 5,
+  "fields": {
+    "title": "«Ігри Героїв»",
+    "description": "ГО «Спільна перемога» організувала перші в Україні змагання з кросфіту серед поранених воїнів АТО, довівши їхню незламність та силу духу. Подія стала важливим етапом у спортивній реабілітації та популяризації інклюзивного спорту. Переможці отримали можливість відвідати штаб-квартиру НАТО в Брюсселі, що стало символом нової міжнародної співпраці й підтримки українських ветеранів.",
+    "goal": "підтримати поранених воїнів АТО через спорт, сприяти їхній реабілітації та розвитку інклюзивного спорту.",
+    "partners": "Міністерство молоді та спорту України, Міністерство оборони України, Центр інформації та документації НАТО.",
+    "results": "проведені перші в Україні змагання з кросфіту серед воїнів з ампутаціями; переможці відвідали штаб-квартиру НАТО, започаткувавши новий етап міжнародної співпраці.",
+    "is_reverse": false,
+    "is_reverse_platform": true,
+    "is_reverse_education": false,
+    "is_reverse_sport": false,
+    "is_published": true,
+    "order": 0,
+    "detail": null,
+    "slug": "igri-geroyiv",
+    "created_at": "2025-09-09T08:34:28.445Z",
+    "units": [
+      1
+    ]
+  }
+},
+{
+  "model": "main.project",
+  "pk": 6,
+  "fields": {
+    "title": "«І цілого світу замало»",
+    "description": "ГО «Спільна перемога» багато років співпрацює з маестро Іваном Марчуком, почесним амбасадором об’єднання. Серед спільних проєктів — іменна зірка на Площі зірок, виставка робіт на LED-екрані ТРЦ «Gulliver», модна колекція, натхненна його творчістю, виставка у Європарламенті та фільм «І цілого світу замало». Ці ініціативи стали вагомим внеском у культурну дипломатію та популяризацію українського мистецтва у світі.",
+    "goal": "популяризація українського мистецтва та розвиток культурної дипломатії.",
+    "partners": "Іван Марчук, Міністерство культури України, Держкіно.",
+    "results": "відкрито іменну зірку митця, проведено виставки в Україні та Європарламенті, створено модну колекцію й повнометражний фільм «І цілого світу замало», що презентували Україну світу.",
+    "is_reverse": true,
+    "is_reverse_platform": false,
+    "is_reverse_education": false,
+    "is_reverse_sport": false,
+    "is_published": true,
+    "order": 0,
+    "detail": null,
+    "slug": "i-cilogo-svitu-zamalo",
+    "created_at": "2025-09-09T08:52:07.903Z",
+    "units": [
+      3
+    ]
+  }
+},
+{
+  "model": "main.project",
+  "pk": 7,
+  "fields": {
+    "title": "«100 років ФСТ «Динамо» України»",
+    "description": "31 жовтня 2024 року ФСТ «Динамо» України відзначило 100-річчя — подію, що символізує століття спортивних звершень і національної єдності. Команда «Спільна Перемога» оновила бренд-ідентичність товариства, створила новий логотип, організувала урочистості та національний рекорд, випустила ювілейну монету, марку й мерч, а також запустила інтернет-магазин. Кампанія стала не лише святкуванням, а й підтвердженням сили спорту як об’єднавчого чинника та внеском у майбутній розвиток «Динамо».",
+    "goal": "вшанувати 100-річчя ФСТ «Динамо» України, зберігши спадок і водночас створивши сучасну екосистему бренду.",
+    "partners": "ФСТ «Динамо» України, Національний реєстр рекордів України.",
+    "results": "оновлений логотип і бренд-стиль, урочисті святкові заходи, встановлення національного рекорду, випуск ювілейної монети й марки, лінійка мерчу та запуск інтернет-магазину.",
+    "is_reverse": false,
+    "is_reverse_platform": false,
+    "is_reverse_education": true,
+    "is_reverse_sport": false,
+    "is_published": true,
+    "order": 0,
+    "detail": null,
+    "slug": "100-rokiv-fst-dinamo-ukrayini",
+    "created_at": "2025-09-09T09:02:55.130Z",
+    "units": [
+      2
+    ]
+  }
+},
+{
+  "model": "main.projectimage",
+  "pk": 1,
+  "fields": {
+    "project": 1,
+    "image": "projects/zirka_1.webp",
+    "alt": "",
+    "order": 0
+  }
+},
+{
+  "model": "main.projectimage",
+  "pk": 2,
+  "fields": {
+    "project": 1,
+    "image": "projects/zirka_2.webp",
+    "alt": "",
+    "order": 0
+  }
+},
+{
+  "model": "main.projectimage",
+  "pk": 3,
+  "fields": {
+    "project": 1,
+    "image": "projects/zirka_3.jpg",
+    "alt": "",
+    "order": 0
+  }
+},
+{
+  "model": "main.projectimage",
+  "pk": 4,
+  "fields": {
+    "project": 1,
+    "image": "projects/zirka_4.jpg",
+    "alt": "",
+    "order": 0
+  }
+},
+{
+  "model": "main.projectimage",
+  "pk": 5,
+  "fields": {
+    "project": 1,
+    "image": "projects/zirka_5.jpg",
+    "alt": "",
+    "order": 0
+  }
+},
+{
+  "model": "main.projectimage",
+  "pk": 6,
+  "fields": {
+    "project": 1,
+    "image": "projects/zirka_6.jpg",
+    "alt": "",
+    "order": 0
+  }
+},
+{
+  "model": "main.projectimage",
+  "pk": 7,
+  "fields": {
+    "project": 2,
+    "image": "projects/nato_1.jpg",
+    "alt": "",
+    "order": 0
+  }
+},
+{
+  "model": "main.projectimage",
+  "pk": 8,
+  "fields": {
+    "project": 2,
+    "image": "projects/nato_2.jpg",
+    "alt": "",
+    "order": 0
+  }
+},
+{
+  "model": "main.projectimage",
+  "pk": 9,
+  "fields": {
+    "project": 2,
+    "image": "projects/nato_3.jpg",
+    "alt": "",
+    "order": 0
+  }
+},
+{
+  "model": "main.projectimage",
+  "pk": 10,
+  "fields": {
+    "project": 2,
+    "image": "projects/nato_4.jpeg",
+    "alt": "",
+    "order": 0
+  }
+},
+{
+  "model": "main.projectimage",
+  "pk": 11,
+  "fields": {
+    "project": 2,
+    "image": "projects/nato_5.jpg",
+    "alt": "",
+    "order": 0
+  }
+},
+{
+  "model": "main.projectimage",
+  "pk": 12,
+  "fields": {
+    "project": 2,
+    "image": "projects/nato_6.jpg",
+    "alt": "",
+    "order": 0
+  }
+},
+{
+  "model": "main.projectimage",
+  "pk": 13,
+  "fields": {
+    "project": 3,
+    "image": "projects/14291756_292624387759974_1567527299974772078_n.jpg",
+    "alt": "",
+    "order": 0
+  }
+},
+{
+  "model": "main.projectimage",
+  "pk": 14,
+  "fields": {
+    "project": 3,
+    "image": "projects/14316846_292624397759973_9029063391289246809_n.jpg",
+    "alt": "",
+    "order": 0
+  }
+},
+{
+  "model": "main.projectimage",
+  "pk": 15,
+  "fields": {
+    "project": 3,
+    "image": "projects/DSC_7910.jpg",
+    "alt": "",
+    "order": 0
+  }
+},
+{
+  "model": "main.projectimage",
+  "pk": 16,
+  "fields": {
+    "project": 3,
+    "image": "projects/maxresdefault_1.jpg",
+    "alt": "",
+    "order": 0
+  }
+},
+{
+  "model": "main.projectimage",
+  "pk": 17,
+  "fields": {
+    "project": 3,
+    "image": "projects/15025575_327672054255207_4613888559931335244_o.jpg",
+    "alt": "",
+    "order": 0
+  }
+},
+{
+  "model": "main.projectimage",
+  "pk": 18,
+  "fields": {
+    "project": 3,
+    "image": "projects/14354980_293220684367011_5837605434192720312_n.jpg",
+    "alt": "",
+    "order": 0
+  }
+},
+{
+  "model": "main.projectimage",
+  "pk": 19,
+  "fields": {
+    "project": 4,
+    "image": "projects/81217905_795776174273458_4938647546366001152_o.jpg",
+    "alt": "",
+    "order": 0
+  }
+},
+{
+  "model": "main.projectimage",
+  "pk": 20,
+  "fields": {
+    "project": 4,
+    "image": "projects/IMG_3919.JPG",
+    "alt": "",
+    "order": 0
+  }
+},
+{
+  "model": "main.projectimage",
+  "pk": 21,
+  "fields": {
+    "project": 4,
+    "image": "projects/IMG_4391.webp",
+    "alt": "",
+    "order": 0
+  }
+},
+{
+  "model": "main.projectimage",
+  "pk": 22,
+  "fields": {
+    "project": 4,
+    "image": "projects/IMG_4413.webp",
+    "alt": "",
+    "order": 0
+  }
+},
+{
+  "model": "main.projectimage",
+  "pk": 23,
+  "fields": {
+    "project": 4,
+    "image": "projects/IMG_3931.JPG",
+    "alt": "",
+    "order": 0
+  }
+},
+{
+  "model": "main.projectimage",
+  "pk": 24,
+  "fields": {
+    "project": 5,
+    "image": "projects/15622206_758256810990216_6180286980712712492_n.jpg",
+    "alt": "",
+    "order": 0
+  }
+},
+{
+  "model": "main.projectimage",
+  "pk": 25,
+  "fields": {
+    "project": 5,
+    "image": "projects/15622671_604594569735802_65614432293162494_n.jpg",
+    "alt": "",
+    "order": 0
+  }
+},
+{
+  "model": "main.projectimage",
+  "pk": 26,
+  "fields": {
+    "project": 5,
+    "image": "projects/15625744_758104217672142_6690724781114654141_o.jpg",
+    "alt": "",
+    "order": 0
+  }
+},
+{
+  "model": "main.projectimage",
+  "pk": 27,
+  "fields": {
+    "project": 5,
+    "image": "projects/15672637_10202431255538170_1583151147000157415_n.jpg",
+    "alt": "",
+    "order": 0
+  }
+},
+{
+  "model": "main.projectimage",
+  "pk": 28,
+  "fields": {
+    "project": 5,
+    "image": "projects/17861598_818613334954563_255621465917872749_n.jpg",
+    "alt": "",
+    "order": 0
+  }
+},
+{
+  "model": "main.projectimage",
+  "pk": 29,
+  "fields": {
+    "project": 5,
+    "image": "projects/15726335_10202431322779851_674672392879457314_n.jpg",
+    "alt": "",
+    "order": 0
+  }
+},
+{
+  "model": "main.projectimage",
+  "pk": 30,
+  "fields": {
+    "project": 6,
+    "image": "projects/IMG_0832.webp",
+    "alt": "",
+    "order": 0
+  }
+},
+{
+  "model": "main.projectimage",
+  "pk": 33,
+  "fields": {
+    "project": 6,
+    "image": "projects/IMG_9814.webp",
+    "alt": "",
+    "order": 0
+  }
+},
+{
+  "model": "main.projectimage",
+  "pk": 34,
+  "fields": {
+    "project": 6,
+    "image": "projects/IMG_7872.webp",
+    "alt": "",
+    "order": 0
+  }
+},
+{
+  "model": "main.projectimage",
+  "pk": 35,
+  "fields": {
+    "project": 6,
+    "image": "projects/IMG_0829.webp",
+    "alt": "",
+    "order": 0
+  }
+},
+{
+  "model": "main.projectimage",
+  "pk": 36,
+  "fields": {
+    "project": 7,
+    "image": "projects/462557160_925774532215514_5447108645602506616_n_копия.jpg",
+    "alt": "",
+    "order": 0
+  }
+},
+{
+  "model": "main.projectimage",
+  "pk": 37,
+  "fields": {
+    "project": 7,
+    "image": "projects/PHOTO-2025-09-04-03-59-05.jpg",
+    "alt": "",
+    "order": 0
+  }
+},
+{
+  "model": "main.projectimage",
+  "pk": 38,
+  "fields": {
+    "project": 7,
+    "image": "projects/462642702_923235863019731_6725744508428882644_n_копия.jpg",
+    "alt": "",
+    "order": 0
+  }
+},
+{
+  "model": "main.projectimage",
+  "pk": 39,
+  "fields": {
+    "project": 7,
+    "image": "projects/465437394_122187499670192912_6683003182385757382_n.jpg",
+    "alt": "",
+    "order": 0
+  }
+},
+{
+  "model": "main.projectimage",
+  "pk": 40,
+  "fields": {
+    "project": 7,
+    "image": "projects/465406345_2827911867385731_2806311176752229283_n.jpg",
+    "alt": "",
+    "order": 0
+  }
+},
+{
+  "model": "main.projectimage",
+  "pk": 41,
+  "fields": {
+    "project": 7,
+    "image": "projects/PHOTO-2025-09-04-03-59-09.jpg",
+    "alt": "",
+    "order": 0
+  }
+},
+{
+  "model": "main.projectbadge",
+  "pk": 1,
+  "fields": {
+    "project": 1,
+    "text": "2015",
+    "order": 0
+  }
+},
+{
+  "model": "main.projectbadge",
+  "pk": 2,
+  "fields": {
+    "project": 1,
+    "text": "Київ",
+    "order": 0
+  }
+},
+{
+  "model": "main.projectbadge",
+  "pk": 3,
+  "fields": {
+    "project": 2,
+    "text": "2019, 2024",
+    "order": 0
+  }
+},
+{
+  "model": "main.projectbadge",
+  "pk": 4,
+  "fields": {
+    "project": 2,
+    "text": "Київ",
+    "order": 0
+  }
+},
+{
+  "model": "main.projectbadge",
+  "pk": 5,
+  "fields": {
+    "project": 3,
+    "text": "2016",
+    "order": 0
+  }
+},
+{
+  "model": "main.projectbadge",
+  "pk": 6,
+  "fields": {
+    "project": 3,
+    "text": "Київ",
+    "order": 0
+  }
+},
+{
+  "model": "main.projectbadge",
+  "pk": 7,
+  "fields": {
+    "project": 7,
+    "text": "2025",
+    "order": 0
+  }
+},
+{
+  "model": "main.projectbadge",
+  "pk": 8,
+  "fields": {
+    "project": 7,
+    "text": "Київ",
+    "order": 0
+  }
+}
+]

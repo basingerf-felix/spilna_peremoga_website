@@ -1,0 +1,17 @@
+{# templates/admin/bulk_upload_grid.html #}
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+  <h1>{{ title }}</h1>
+  <p>{% trans "Завантажте ZIP-архів з зображеннями (jpg, jpeg, png, webp). Всі файли будуть додані до полотна цього проєкту." %}</p>
+  <form method="post" enctype="multipart/form-data" style="margin-top:1rem">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" class="default" value="{% trans 'Завантажити' %}">
+    <a href="{% url 'admin:main_projectdetail_change' original.pk %}" class="button">
+  {% trans "Назад" %}
+</a>
+
+  </form>
+{% endblock %}

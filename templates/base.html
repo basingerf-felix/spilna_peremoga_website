@@ -1,0 +1,612 @@
+{% load static %}
+{% load i18n %}
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Спільна Перемога{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Только Bootstrap Grid -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap-grid.min.css">
+    <!-- Кастомные стили --><!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    {% block head %}{% endblock %}
+</head>
+<body>
+
+<header class="site-header ">
+    <div class="container-fluid">
+        <div class="row align-items-center justify-content-between">
+            <!-- Логотип -->
+            <div class="col-6 col-md-3">
+                <a href="{% url 'index' %}" class="logo-link">
+                    <img src="{% static 'images/spilna_peremoga.png' %}" alt="Логотип" class="img-fluid logo-img">
+                </a>
+            </div>
+
+            <!-- Меню и язык (десктоп) -->
+            <div class="col-md-9 d-none d-md-flex justify-content-end">
+                <nav class="main-nav d-flex align-items-center gap-4">
+                    <a href="{% url 'index' %}" class="nav-link">{% trans "Головна" %}</a>
+                    <div class="nav-dropdown team-dropdown" data-team-dropdown>
+                    <button
+                      class="nav-link team-trigger"
+                      type="button"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                      aria-controls="teamMenu"
+                    >
+                      {% trans "Команда" %} <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+
+                    <div id="teamMenu" class="team-menu" role="menu" aria-label="{% trans 'Розділи команди' %}">
+                      <a href="{% url 'go-spilna-peremoga' %}#team-leadership" class="team-item" role="menuitem" tabindex="-1">
+                        <span class="team-ico"><i class="fa-solid fa-people-group" aria-hidden="true"></i></span>
+                        <span class="team-text">
+                          <strong>{% trans "Громадська платформа" %}</strong>
+
+                        </span>
+                      </a>
+
+                      <a href="{% url 'go-creative-agency' %}" class="team-item" role="menuitem" tabindex="-1">
+                        <span class="team-ico"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span>
+                        <span class="team-text">
+                          <strong>{% trans "Креативна агенцiя" %}</strong>
+
+                        </span>
+                      </a>
+
+                      <a href="{% url 'go-sp-production' %}" class="team-item" role="menuitem" tabindex="-1">
+                        <span class="team-ico"><i class="bi bi-camera-reels-fill" aria-hidden="true"></i></span>
+                        <span class="team-text">
+                          <strong>{% trans "Продакш-студiя" %}</strong>
+
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                    <a href="{% url 'projects' %}" class="nav-link">{% trans "Проекти" %}</a>
+                    {# === КАСТОМНИЙ ДРОПДАУН ДЛЯ КОМАНДИ === #}
+
+                    <a href="{% url 'index' %}#contact" class="nav-link" data-contact-link>
+  {% trans "Контакти" %}
+</a>
+
+
+                    <!-- Переключатель языка -->
+                    <div class="dropdown lang-switcher">
+                        <button class="btn btn-light rounded-circle d-flex align-items-center justify-content-center"
+        type="button" data-lang-dropdown>
+                            {# ВАЖНО: безопасно выводим флаг по текущему языку: 'uk', 'en', 'it' и т.п. #}
+                            {% get_current_language as CUR_LANG %}
+                            <img src="{% static 'images/flags/' %}{{ CUR_LANG|slice:":2" }}.png" alt="flag" class="lang-flag-icon">
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end text-center lang-dropdown-menu">
+                            {% for lang in languages %}
+                            <li>
+                                <form action="{% url 'set_language' %}" method="post" class="d-inline">{% csrf_token %}
+                                    <input type="hidden" name="language" value="{{ lang.code }}">
+                                    {# возвращаемся на ту же страницу #}
+                                    <input type="hidden" name="next" value="{{ request.get_full_path }}">
+                                    <button type="submit" class="dropdown-item border-0 bg-transparent" onclick="event.stopPropagation()">
+                                        <img src="{% static 'images/flags/'|add:lang.flag %}" alt="{{ lang.code }}" class="lang-flag-icon">
+                                    </button>
+                                </form>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+
+            <!-- Бургер (мобайл) -->
+            <!-- Кнопка бургера (мобайл) -->
+<div class="col-6 d-flex justify-content-end d-md-none">
+  <button
+    class="burger-btn advanced-burger"
+    id="burgerToggle"
+    aria-controls="offcanvasMenu"
+    aria-expanded="false"
+    aria-label="{% trans 'Відкрити меню' %}">
+    <span class="ab-bar" aria-hidden="true"></span>
+    <span class="ab-bar" aria-hidden="true"></span>
+    <span class="ab-bar" aria-hidden="true"></span>
+  </button>
+</div>
+
+        </div>
+
+
+    </div>
+</header>
+<!-- СРАЗУ ПОСЛЕ </header>, перед <main> -->
+<div class="offcanvas-root" id="offcanvasRoot" hidden>
+  <div class="offcanvas-backdrop" data-offcanvas-close></div>
+
+  <aside class="offcanvas-panel" id="offcanvasMenu" role="dialog" aria-modal="true" aria-label="{% trans 'Головне меню' %}">
+    <button class="offcanvas-close" type="button" aria-label="{% trans 'Закрити меню' %}" data-offcanvas-close>
+      <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+    </button>
+
+    <nav class="offcanvas-nav">
+        <a href="{% url 'index' %}" class="off-link">{% trans "Головна" %}</a>
+
+      <a href="{% url 'about' %}" class="off-link">{% trans "Про нас" %}</a>
+      <a href="{% url 'projects' %}" class="off-link">{% trans "Проекти" %}</a>
+
+      <!-- Выпадающий раздел "Команда" в виде аккордеона -->
+      <details class="off-accordion">
+        <summary class="off-link">
+  {% trans "Команда" %}
+  <i class="fa-solid fa-chevron-down off-acc-chevron" aria-hidden="true"></i>
+</summary>
+        <div class="off-sub">
+          <a href="{% url 'go-spilna-peremoga' %}" class="off-sublink">{% trans "Громадська платформа" %}</a>
+          <a href="{% url 'go-creative-agency' %}" class="off-sublink">{% trans "Креативна агенцiя" %}</a>
+          <a href="{% url 'go-sp-production' %}" class="off-sublink">{% trans "Продакш-студiя" %}</a>
+        </div>
+      </details>
+
+      <a href="#contact" class="off-link">{% trans "Контакти" %}</a>
+    </nav>
+
+    <!-- Переключатель языка (мобайл-версия в панели) -->
+    <div class="off-lang">
+      <span class="off-lang-label">{% trans "Мова" %}</span>
+      <div class="off-lang-row">
+        {% for lang in languages %}
+        <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
+          <input type="hidden" name="language" value="{{ lang.code }}">
+          <input type="hidden" name="next" value="{{ request.get_full_path }}">
+          <button class="off-lang-btn" type="submit" aria-label="{{ lang.code }}" onclick="event.stopPropagation()">
+            <img src="{% static 'images/flags/'|add:lang.flag %}" alt="{{ lang.code }}">
+          </button>
+        </form>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="off-cta">
+  <a href="{% url 'index' %}#contact" class="off-btn" data-contact-link>
+    {% trans "Зв’язатися" %}
+  </a>
+</div>
+
+  </aside>
+</div>
+
+
+<main>
+    {% block content %}{% endblock %}
+</main>
+
+
+
+{# ==== FOOTER (screenshot-style) ==== #}
+
+<section class="newsletter">
+
+
+  <div class="nl-shell">
+    <div class="nl-eyebrow">{% trans "Разом до дії" %}</div>
+
+    <h2 class="nl-title">
+      <span>{% trans "Приєднуйтесь до «Спільної Перемоги»" %}</span>
+      <span class="accent">{% trans "Разом перетворимо ідеї на дії" %}</span>
+    </h2>
+  </div>
+</section>
+
+<footer class="site-footer v2">
+  <!-- Верхняя полоса с заголовком и кнопкой -->
+  <div class="ft-top">
+    <h2 class="ft-title">
+      <div>
+        <span class="ft-title-light">{% trans "Будьмо" %}</span>
+        <span class="ft-title-accent">{% trans "на зв'язку" %}</span>
+        <span class="ft-title-light">{% trans "тут" %}</span>
+      </div>
+      <a href="{% url 'index' %}#contact" class="ft-cta">{% trans "Зв’язатися" %}</a>
+    </h2>
+  </div>
+
+  <!-- Основной контент футера -->
+  <div class="ft-grid">
+    <!-- Лево: бренд + соцсети -->
+    <div class="ft-col ft-brand">
+      <a class="ft-logo" href="{% url 'index' %}">
+        <img src="{% static 'images/spilna_peremoga.png' %}" alt="Спільна Перемога">
+      </a>
+
+      <ul class="ft-socials">
+        <li><a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a></li>
+        <li><a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a></li>
+        <li><a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a></li>
+        <li><a href="#" aria-label="Telegram"><i class="bi bi-telegram"></i></a></li>
+      </ul>
+    </div>
+
+    <!-- Центр: навигация -->
+    <nav class="ft-col ft-nav" aria-label="{% trans 'Навігація' %}">
+      <h3 class="ft-h3">{% trans "Навігація" %}</h3>
+      <ul class="ft-links">
+        <li><a href="{% url 'index' %}">{% trans "Головна" %}</a></li>
+        <li><a href="{% url 'go-spilna-peremoga' %}">{% trans "Громадська платформа" %}</a></li>
+        <li><a href="{% url 'go-creative-agency' %}">{% trans "Креативна агенцiя" %}</a></li>
+        <li><a href="{% url 'go-sp-production' %}">{% trans "Продакшн-студiя" %}</a></li>
+        <li><a href="{% url 'projects' %}">{% trans "Проекти" %}</a></li>
+        <li><a href="{% url 'index' %}#contact">{% trans "Контакти" %}</a></li>
+      </ul>
+    </nav>
+
+    <!-- Право: контакты -->
+    <div class="ft-col ft-contacts">
+      <h3 class="ft-h3">{% trans "Контакти" %}</h3>
+      <ul class="ft-contacts-list">
+        <li><i class="bi bi-telephone-fill"></i> <a href="tel:+0000000000">+(000) 000-0000</a></li>
+        <li><i class="bi bi-envelope-fill"></i> <a href="mailto:example@gmail.com">example@gmail.com</a></li>
+        <li><i class="bi bi-geo-alt-fill"></i>
+          <span>2464 Royal Ln. Mesa,<br> New Jersey 45463</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Нижняя оранжевая полоса -->
+  <div class="ft-bottombar">
+    <p>© {% now "Y" %} Спільна Перемога. {% trans "Усі права захищені." %}</p>
+    <ul class="ft-legal">
+      <li><a href="#">{% trans "Умови користування" %}</a></li>
+        |
+      <li><a href="#">{% trans "Політика конфіденційності" %}</a></li>
+    </ul>
+  </div>
+</footer>
+
+
+
+<button id="scrollTop"
+        class="scrolltop"
+        type="button"
+        aria-label="{% trans 'Прокрутити вгору' %}">
+  <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+
+</button>
+
+
+<script>
+(function(){
+  const toggleBtn   = document.getElementById('burgerToggle');
+  const root        = document.getElementById('offcanvasRoot');
+  const panel       = document.getElementById('offcanvasMenu');
+  const closeEls    = root?.querySelectorAll('[data-offcanvas-close]');
+  let lastFocused   = null;
+
+  if(!toggleBtn || !root || !panel) return;
+
+  const open = () => {
+    lastFocused = document.activeElement;
+    root.hidden = false;
+    requestAnimationFrame(() => {
+      root.classList.add('is-open');
+      toggleBtn.classList.add('is-open');
+      document.documentElement.classList.add('offcanvas-lock');
+      document.body.classList.add('offcanvas-lock');
+      toggleBtn.setAttribute('aria-expanded','true');
+      toggleBtn.setAttribute('aria-label', "{{ _('Закрити меню') }}");
+      const firstFocusable = panel.querySelector('a,button,summary,[tabindex]:not([tabindex="-1"])');
+      firstFocusable?.focus({preventScroll:true});
+    });
+  };
+
+  const close = () => {
+    root.classList.remove('is-open');
+    toggleBtn.classList.remove('is-open');
+    document.documentElement.classList.remove('offcanvas-lock');
+    document.body.classList.remove('offcanvas-lock');
+    toggleBtn.setAttribute('aria-expanded','false');
+    toggleBtn.setAttribute('aria-label', "{{ _('Відкрити меню') }}");
+    setTimeout(() => { root.hidden = true; }, 320);
+    lastFocused?.focus?.({preventScroll:true});
+  };
+
+  const toggle = () => (root.classList.contains('is-open') ? close() : open());
+
+  toggleBtn.addEventListener('click', toggle);
+  closeEls.forEach(el => el.addEventListener('click', close));
+
+  root.querySelector('.offcanvas-backdrop')?.addEventListener('click', close);
+
+  document.addEventListener('keydown', (e) => {
+    if(e.key === 'Escape' && root.classList.contains('is-open')) close();
+  });
+
+  panel.addEventListener('keydown', (e) => {
+    if(e.key !== 'Tab') return;
+    const foci = panel.querySelectorAll('a,button,summary,[tabindex]:not([tabindex="-1"])');
+    if(!foci.length) return;
+    const first = foci[0], last = foci[foci.length - 1];
+    if(e.shiftKey && document.activeElement === first){ e.preventDefault(); last.focus(); }
+    else if(!e.shiftKey && document.activeElement === last){ e.preventDefault(); first.focus(); }
+  });
+
+  // === ДОБАВЛЕНО: закрытие при клике на "Связаться" ===
+  const isSamePageTarget = (url) => {
+    try {
+      const u = new URL(url, window.location.origin);
+      return u.origin === location.origin && u.pathname === location.pathname;
+    } catch { return false; }
+  };
+
+  const smoothScrollToContact = () => {
+    const target = document.getElementById('contact');
+    if (!target) return;
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    target.scrollIntoView({ behavior: prefersReduced ? 'auto' : 'smooth', block: 'start' });
+  };
+
+  document.querySelectorAll('[data-contact-link]').forEach(link => {
+    link.addEventListener('click', (e) => {
+      const href = link.getAttribute('href') || '';
+      close(); // закрываем меню
+
+      if (isSamePageTarget(href)) {
+        e.preventDefault();
+        setTimeout(() => smoothScrollToContact(), 100);
+      } else {
+        e.preventDefault();
+        setTimeout(() => { window.location.href = href; }, 150);
+      }
+    });
+  });
+
+})();
+</script>
+
+
+
+<script>
+(function () {
+  const btn = document.getElementById('scrollTop');
+  if (!btn) return;
+
+  const SHOW_AFTER = 400; // пикселей прокрутки
+
+  // Появление/исчезание
+  const onScroll = () => {
+    if (window.scrollY > SHOW_AFTER) {
+      btn.classList.add('is-visible');
+    } else {
+      btn.classList.remove('is-visible');
+    }
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // Скролл вверх
+  btn.addEventListener('click', () => {
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({ top: 0, behavior: prefersReduced ? 'auto' : 'smooth' });
+  });
+})();
+</script>
+
+<script>
+(function(){
+  // поддержка нескольких переключателей, если они есть (десктоп/мобайл)
+  const wraps = document.querySelectorAll('.dropdown.lang-switcher');
+  if (!wraps.length) return;
+
+  const closeAll = (except) => {
+    document.querySelectorAll('.dropdown.lang-switcher.show').forEach(el => {
+      if (el !== except) {
+        el.classList.remove('show');
+        el.querySelector('[data-lang-dropdown]')?.setAttribute('aria-expanded','false');
+      }
+    });
+  };
+
+  wraps.forEach(wrap => {
+    const btn  = wrap.querySelector('[data-lang-dropdown]');
+    const menu = wrap.querySelector('.lang-dropdown-menu');
+    if (!btn || !menu) return;
+
+    // ARIA
+    btn.setAttribute('aria-haspopup', 'true');
+    btn.setAttribute('aria-expanded', 'false');
+
+    const open = () => {
+      closeAll(wrap);
+      wrap.classList.add('show');
+      btn.setAttribute('aria-expanded','true');
+      // фокус на первый элемент меню (если нужно)
+      const first = menu.querySelector('button,[href],[tabindex]:not([tabindex="-1"])');
+      first && first.focus({preventScroll:true});
+    };
+
+    const close = () => {
+      wrap.classList.remove('show');
+      btn.setAttribute('aria-expanded','false');
+    };
+
+    const toggle = (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      wrap.classList.contains('show') ? close() : open();
+    };
+
+    // Открыть/закрыть по клику на кнопку
+    btn.addEventListener('click', toggle);
+
+    // ВАЖНО: клики внутри меню не должны всплывать до «клик-вне»
+    menu.addEventListener('click', (e) => {
+      e.stopPropagation();
+    });
+
+    // Клик-вне — закрыть
+    document.addEventListener('click', (e) => {
+      if (!wrap.contains(e.target)) close();
+    });
+
+    // Закрыть по Esc
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && wrap.classList.contains('show')) close();
+    });
+
+    // Закрывать при скролле/resize (чтобы не «висело»)
+    window.addEventListener('scroll', () => wrap.classList.remove('show'), { passive: true });
+    window.addEventListener('resize', () => wrap.classList.remove('show'));
+
+    // На сабмит формы (выбор языка) можно сразу схлопнуть меню
+    wrap.querySelectorAll('form').forEach(f => {
+      f.addEventListener('submit', (ev) => {
+        ev.stopPropagation(); // на всякий случай
+        close();
+      });
+    });
+  });
+})();
+</script>
+
+<script>
+(function(){
+  // Разрешённые коды языков = как в settings.LANGUAGES (нижний регистр, кратко)
+  const SUPPORTED = ['uk','en','it'];
+  const DEFAULT = 'uk'; // ваш дефолт (без префикса в URL)
+
+  function withLangPrefix(pathname, lang){
+    // нормализуем начальный слэш
+    let p = pathname || '/';
+    if (!p.startsWith('/')) p = '/' + p;
+
+    // отделим первый сегмент
+    const parts = p.split('/');
+    // parts[0] === "" всегда, parts[1] — первый сегмент
+    const first = (parts[1] || '').toLowerCase();
+
+    // если первый сегмент — поддерживаемый язык, уберём его
+    if (SUPPORTED.includes(first)) {
+      parts.splice(1, 1);
+      p = parts.join('/');
+      if (!p.startsWith('/')) p = '/' + p;
+    }
+
+    // для дефолта префикс НЕ нужен
+    if (lang === DEFAULT) return p;
+
+    // для остальных — добавляем префикс
+    // аккуратно склеим, чтобы не было двойных слэшей
+    return ('/' + lang + (p === '/' ? '' : p)).replace(/\/+/g,'/');
+  }
+
+  function attachHandler(scope){
+    scope.querySelectorAll('form[action$="setlang/"], form[action$="set_language/"]').forEach(function(form){
+      form.addEventListener('submit', function(e){
+        // какой язык выбираем
+        const langInput = form.querySelector('input[name="language"]');
+        const nextInput = form.querySelector('input[name="next"]');
+        if (!langInput || !nextInput) return;
+
+        const targetLang = (langInput.value || '').toLowerCase().slice(0,2);
+        if (!SUPPORTED.includes(targetLang)) return;
+
+        const current = window.location.pathname + window.location.search + window.location.hash;
+        // только по pathname меняем префикс, query/hash оставляем как есть
+        const url = new URL(window.location.href);
+        const newPath = withLangPrefix(url.pathname, targetLang);
+        const rebuilt = newPath + url.search + url.hash;
+
+        nextInput.value = rebuilt; // перезаписываем next корректным путём
+      }, { passive: true });
+    });
+  }
+
+  // десктопный переключатель
+  const desktopSwitcher = document.querySelector('.dropdown.lang-switcher') || document;
+  attachHandler(desktopSwitcher);
+
+  // мобильный в оффканвасе
+  const offcanvas = document.getElementById('offcanvasMenu') || document;
+  attachHandler(offcanvas);
+})();
+</script>
+
+<script>
+(function(){
+  const dd = document.querySelector('[data-team-dropdown]');
+  if(!dd) return;
+
+  const trigger = dd.querySelector('.team-trigger');
+  const panel   = dd.querySelector('.team-menu');
+  const items   = Array.from(panel.querySelectorAll('.team-item'));
+  let open = false;
+
+  function setOpen(state){
+    open = state;
+    dd.classList.toggle('is-open', open);
+    trigger.setAttribute('aria-expanded', String(open));
+    if (open) {
+      // перший пункт доступний табом
+      items.forEach(a => a.tabIndex = 0);
+    } else {
+      items.forEach(a => a.tabIndex = -1);
+    }
+  }
+
+  // toggle on click
+  trigger.addEventListener('click', (e)=>{
+    e.preventDefault();
+    setOpen(!open);
+    if (open) items[0]?.focus();
+  });
+
+  // click outside to close
+  document.addEventListener('click', (e)=>{
+    if (!open) return;
+    if (!dd.contains(e.target)) setOpen(false);
+  });
+
+  // Esc to close, arrows to navigate
+  dd.addEventListener('keydown', (e)=>{
+    if (!open) return;
+
+    const idx = items.indexOf(document.activeElement);
+    if (e.key === 'Escape'){
+      setOpen(false);
+      trigger.focus();
+    } else if (e.key === 'ArrowDown'){
+      e.preventDefault();
+      const next = items[(idx + 1 + items.length) % items.length];
+      next?.focus();
+    } else if (e.key === 'ArrowUp'){
+      e.preventDefault();
+      const prev = items[(idx - 1 + items.length) % items.length];
+      prev?.focus();
+    } else if (e.key === 'Tab' && !panel.contains(document.activeElement)){
+      // якщо фокус вийшов — закриваємо
+      setOpen(false);
+    }
+  });
+
+  // optional: close on resize to avoid odd positions
+  window.addEventListener('resize', ()=> setOpen(false));
+
+  // старт: робимо елементи недоступними табом до відкриття
+  items.forEach(a => a.tabIndex = -1);
+})();
+
+</script>
+
+</body>
+</html>

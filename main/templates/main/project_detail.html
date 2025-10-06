@@ -1,0 +1,223 @@
+{% extends "base.html" %}
+{% load static i18n %}
+
+{% block title %}{{ object.seo_title|default:object.title_override|default:object.slug }}{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/main/project_detail.css' %}">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+<section class="pdj-projects">
+  <div class="pdj-container">
+    <div class="pdj-head">
+      <div class="pdj-eyebrow">{% trans "Проєкт" %}</div>
+      <h1 class="pdj-title">
+        {{ object.title_override|default:project.title }}
+        {% if object.subtitle %}<span class="accent">{{ object.subtitle }}</span>{% endif %}
+      </h1>
+    </div>
+
+    <article class="pdj-card" data-observe>
+      <figure class="pdj-media">
+        <div class="pdj-swiper swiper" data-autoplay="4500">
+          <div class="swiper-wrapper">
+            {% if object.cover %}
+              <div class="swiper-slide">
+                <img src="{{ object.cover.url }}" alt="{{ object.title_override|default:project.title }}" loading="eager">
+              </div>
+            {% endif %}
+            {% for img in object.images.all %}
+              <div class="swiper-slide">
+                <img src="{{ img.image.url }}" alt="{{ img.alt|default:object.title_override|default:project.title }}" loading="lazy">
+              </div>
+            {% endfor %}
+          </div>
+          <div class="pdj-pagination swiper-pagination"></div>
+          <div class="pdj-prev swiper-button-prev"></div>
+          <div class="pdj-next swiper-button-next"></div>
+        </div>
+
+        {% if project and project.badges.all %}
+        <div class="pdj-badges">
+          {% for b in project.badges.all %}
+            <span class="pdj-badge">{{ b.text }}</span>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </figure>
+
+      <div class="pdj-content">
+        {% with lead_txt=object.lead|default:project.description %}
+          {% if lead_txt %}<p class="pdj-lead">{{ lead_txt|linebreaksbr }}</p>{% endif %}
+        {% endwith %}
+
+        <ul class="pdj-meta">
+          {% with g=object.goal|default:project.goal p=object.partners|default:project.partners r=object.results|default:project.results %}
+            {% if g %}
+              <li><span class="pdj-ico"><i class="bi bi-bullseye"></i></span>
+                  <span><strong>{% trans "Мета" %}:</strong> {{ g|linebreaksbr }}</span></li>
+            {% endif %}
+            {% if p %}
+              <li><span class="pdj-ico"><i class="bi bi-people-fill"></i></span>
+                  <span><strong>{% trans "Партнери" %}:</strong> {{ p|linebreaksbr }}</span></li>
+            {% endif %}
+            {% if r %}
+              <li><span class="pdj-ico"><i class="bi bi-stars"></i></span>
+                  <span><strong>{% trans "Результати" %}:</strong> {{ r|linebreaksbr }}</span></li>
+            {% endif %}
+          {% endwith %}
+        </ul>
+
+        <a href="{% url 'projects' %}" class="pdj-link">
+          <i class="fa-solid fa-arrow-left"></i>&nbsp {% trans "До всіх проєктів" %} &nbsp;
+        </a>
+      </div>
+    </article>
+
+    {% if object.body %}
+      <article class="pdj-card" style="grid-template-columns: 1fr;">
+        <div class="pdj-content">
+          <div class="richtext">{{ object.body|safe }}</div>
+        </div>
+      </article>
+    {% endif %}
+
+    {% if object.video_url %}
+      <article class="pdj-card" style="grid-template-columns: 1fr;">
+        <div class="pdj-content" style="align-items:center; text-align:center;">
+          <button class="ch-play" type="button" data-video-url="{{ object.video_url }}" aria-label="{% trans 'Відтворити відео' %}">
+            <span class="ch-play-icon">▶</span>
+          </button>
+          <p class="pdj-lead" style="margin-top:12px;">{% trans "Переглянути відео проєкту" %}</p>
+        </div>
+      </article>
+
+      <div id="ch-video-modal" class="ch-modal" aria-hidden="true">
+        <div class="ch-modal__backdrop" data-close-modal></div>
+        <div class="ch-modal__dialog" role="dialog" aria-modal="true" aria-label="Video player">
+          <button class="ch-modal__close" type="button" aria-label="{% trans 'Закрити відео' %}" data-close-modal>✕</button>
+          <div class="ch-modal__player" id="ch-modal-player"></div>
+        </div>
+      </div>
+    {% endif %}
+  </div>
+
+</section>
+
+
+   <section>
+  {% if object.grid_images.exists %}
+    <div class="pdj-masonry" aria-label="{% trans 'Галерея фото проєкту' %}">
+      {% for gimg in object.grid_images.all %}
+        <figure class="pdj-masonry-item">
+          <a href="{{ gimg.image.url }}"
+             data-pswp-width="{{ gimg.image.width|default:'1600' }}"
+             data-pswp-height="{{ gimg.image.height|default:'900' }}"
+             target="_blank" rel="noreferrer">
+            <img src="{{ gimg.image.url }}" alt="" loading="lazy">
+          </a>
+        </figure>
+      {% endfor %}
+    </div>
+  {% endif %}
+</section>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@5/dist/photoswipe.css">
+
+<script type="module">
+  import PhotoSwipeLightbox from 'https://cdn.jsdelivr.net/npm/photoswipe@5/dist/photoswipe-lightbox.esm.min.js';
+  const lightbox = new PhotoSwipeLightbox({
+    gallery: '.pdj-masonry',   // контейнер галереи
+    children: 'a',              // элементы внутри (ссылки вокруг img)
+    pswpModule: () => import('https://cdn.jsdelivr.net/npm/photoswipe@5/dist/photoswipe.esm.min.js')
+  });
+  lightbox.init();
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+<script>
+(function(){
+  const onReady = (fn)=>document.readyState!=='loading'?fn():document.addEventListener('DOMContentLoaded',fn);
+  function createSwiper(swiperEl){
+    const wrap = swiperEl.closest('.pdj-media') || document;
+    const delay = parseInt(swiperEl.dataset.autoplay || '0', 10);
+    const opts = {
+      loop: true, speed: 550, slidesPerView: 1, watchSlidesProgress: true,
+      preloadImages: false, lazy: { loadPrevNext: true, loadPrevNextAmount: 1 }
+    };
+    const nextEl = wrap.querySelector('.pdj-next');
+    const prevEl = wrap.querySelector('.pdj-prev');
+    const pagEl  = wrap.querySelector('.pdj-pagination');
+    if (nextEl && prevEl) opts.navigation = { nextEl, prevEl };
+    if (pagEl) opts.pagination = { el: pagEl, clickable: true };
+    if (delay) opts.autoplay = { delay, disableOnInteraction: false, pauseOnMouseEnter: true };
+    return new Swiper(swiperEl, opts);
+  }
+  onReady(function(){
+    if (!window.Swiper) return;
+    const instances = new WeakMap();
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{
+        const el = entry.target;
+        let inst = instances.get(el);
+        if (entry.isIntersecting){
+          if (!inst){ inst = createSwiper(el); instances.set(el, inst); }
+          if (inst.params.autoplay) inst.autoplay.start();
+        } else {
+          if (inst && inst.params.autoplay) inst.autoplay.stop();
+        }
+      });
+    }, { threshold: 0.2, rootMargin: '0px 0px 200px 0px' });
+    document.querySelectorAll('.pdj-swiper').forEach(el => io.observe(el));
+    document.addEventListener('visibilitychange', () => {
+      instances.forEach((inst) => {
+        if (!inst || !inst.params.autoplay) return;
+        if (document.hidden) inst.autoplay.stop(); else inst.autoplay.start();
+      });
+    });
+  });
+})();
+</script>
+
+<script>
+(function(){
+  const playBtn = document.querySelector('.ch-play');
+  const modal   = document.getElementById('ch-video-modal');
+  const player  = document.getElementById('ch-modal-player');
+  if (!playBtn || !modal || !player) return;
+
+  function isYouTube(url){ return /(?:youtube\.com|youtu\.be)/i.test(url); }
+  function ytId(url){ const m = url.match(/(?:v=|\/)([0-9A-Za-z_-]{11})(?:[?&].*)?$/); return m ? m[1] : null; }
+
+  function openModal(src){
+    document.documentElement.classList.add('no-scroll');
+    modal.classList.add('is-open');
+    modal.setAttribute('aria-hidden', 'false');
+    player.innerHTML = '';
+    if (isYouTube(src) && ytId(src)) {
+      const id = ytId(src);
+      const iframe = document.createElement('iframe');
+      iframe.src = `https://www.youtube.com/embed/${id}?autoplay=1&rel=0&playsinline=1`;
+      iframe.allow = 'autoplay; encrypted-media; picture-in-picture';
+      iframe.allowFullscreen = true;
+      player.appendChild(iframe);
+    } else {
+      const video = document.createElement('video');
+      video.src = src; video.controls = true; video.autoplay = true; video.playsInline = true;
+      player.appendChild(video);
+    }
+    modal.querySelector('.ch-modal__close')?.focus({ preventScroll:true });
+  }
+  function closeModal(){
+    modal.classList.remove('is-open'); modal.setAttribute('aria-hidden','true');
+    document.documentElement.classList.remove('no-scroll'); player.innerHTML = '';
+    playBtn?.focus({ preventScroll:true });
+  }
+  playBtn.addEventListener('click', ()=>{ const url = playBtn.dataset.videoUrl || playBtn.dataset.videoMp4; if (url) openModal(url); });
+  modal.addEventListener('click', (e)=>{ if (e.target.matches('[data-close-modal]')) closeModal(); });
+  window.addEventListener('keydown', (e)=>{ if (e.key === 'Escape' && modal.classList.contains('is-open')) closeModal(); });
+})();
+</script>
+{% endblock %}

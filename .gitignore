@@ -1,0 +1,32 @@
+# --- Python / Django ---
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+*.sqlite3.bak
+*.log
+*.pot
+*.mo
+
+# --- Django static/media ---
+/staticfiles/
+/media/
+
+# --- Virtualenv / Poetry cache ---
+.venv/
+.env
+.env.*
+poetry.lock
+.idea/
+.vscode/
+.DS_Store
+
+# --- Docker ---
+*.pid
+*.tar
+*.gz
+*.bak
+pgdata/
+

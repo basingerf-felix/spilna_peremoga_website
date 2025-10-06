@@ -1,0 +1,885 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}{% trans "Креативна маркетингова агенція — Спільна Перемога" %}{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/main/index.css' %}">
+<link rel="stylesheet" href="{% static 'css/main/projects.css' %}">
+
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+<!-- ========== SP Production (merged showcase) ========== -->
+<section class="sp-prod" id="sp-prod">
+  <div class="sp-prod__container">
+
+    <!-- Head -->
+    <header class="sp-prod__head">
+      <div class="sp-prod__head-left">
+        <span class="sp-prod__eyebrow">{% trans "Кіно, що говорить мовою світу" %}</span>
+        <h2 class="sp-prod__title">
+          <span>{% trans "Спільна Перемога" %}</span>
+          <span class="accent">{% trans "Продакшн" %}</span>
+        </h2>
+      </div>
+    </header>
+
+    <!-- Card -->
+    <article class="prj-card is-reverse">
+      <figure class="prj-media">
+        <div class="prj-swiper swiper" data-autoplay="4500">
+          <div class="swiper-wrapper">
+            <!-- Пример 1: YouTube -->
+            <div class="swiper-slide pv-slide"
+                 data-video-kind="youtube"
+                 data-video="https://www.youtube.com/watch?v=U27YRzflWDo">
+              <img src="{% static 'images/dissidnt_picture.webp' %}" alt="{% trans 'Фасад сучасної бізнес-будівлі' %}">
+              <button class="pv-play" type="button" aria-label="{% trans 'Відтворити відео' %}">
+                <span class="pv-play__icon" aria-hidden="true"></span>
+              </button>
+            </div>
+
+            <!-- Пример 2: Ваше видео (MP4/WebM + постер) -->
+            <div class="swiper-slide pv-slide"
+                 data-video-kind="file"
+                 data-src-mp4="{% static 'video/space_compressed.mp4' %}"
+                 data-src-webm="{% static 'videos/trailer.webm' %}"
+                 data-poster="{% static 'images/mission-space (1).webp' %}">
+              <img src="{% static 'images/mission-space (1).webp' %}" alt="{% trans 'Інтер’єр бізнес-хабу' %}">
+              <button class="pv-play" type="button" aria-label="{% trans 'Відтворити відео' %}">
+                <span class="pv-play__icon" aria-hidden="true"></span>
+              </button>
+            </div>
+
+            <!-- Пример 3: HLS (.m3u8) — опционально, если используете поток -->
+            <div class="swiper-slide pv-slide"
+                 data-video-kind="file"
+                 data-src-mp4="{% static 'video/marchuk.mp4' %}"
+                 data-src-webm="{% static 'videos/trailer.webm' %}"
+                 data-poster="{% static 'images/main-photo_marchuk.jpg' %}">
+              <img src="{% static 'images/main-photo_marchuk.jpg' %}" alt="{% trans 'Постер відео' %}">
+              <button class="pv-play" type="button" aria-label="{% trans 'Відтворити відео' %}">
+                <span class="pv-play__icon" aria-hidden="true"></span>
+              </button>
+            </div>
+
+            <!-- Пример 4: ещё YouTube -->
+            <div class="swiper-slide pv-slide"
+                 data-video-kind="youtube"
+                 data-video="https://www.youtube.com/watch?v=2mfnTmxh7BI">
+              <img src="{% static 'images/ato_baiki.jpg' %}" alt="{% trans 'Кадр із серіалу' %}">
+              <button class="pv-play" type="button" aria-label="{% trans 'Відтворити відео' %}">
+                <span class="pv-play__icon" aria-hidden="true"></span>
+              </button>
+            </div>
+          </div>
+
+          <div class="prj-pagination swiper-pagination" aria-label="Slider pagination"></div>
+          <div class="prj-prev swiper-button-prev" aria-label="Previous"></div>
+          <div class="prj-next swiper-button-next" aria-label="Next"></div>
+        </div>
+      </figure>
+
+      <div class="prj-content">
+        <p class="prj-lead">
+          {% trans "«Спільна Перемога Продакшн» - прогресивна українська кіновиробнича компанія, що поєднує традиції класичного кіно з найновішими технологіями ШІ. Ми створюємо художні та документальні фільми, які відкривають Україні нові горизонти у світовому медіапросторі." %}
+        </p>
+        <p class="prj-lead">
+          {% trans "Наша мiсiя - розповідати історії України мовою, зрозумілою світу. Ми створюємо кіно, що зберігає культурну пам’ять, надихає нові покоління та формує сучасний образ нашої країни на міжнародній арені." %}
+        </p>
+        <br>
+        <p class="prj-lead">{% trans "У нашому портфоліо - проєкти, що вже стали знаковими:" %}</p>
+
+        <ul class="prj-meta">
+          <li>
+            <span class="prj-ico"><i class="bi bi-camera-reels-fill" aria-hidden="true"></i></span>
+            <span><strong>{% trans "Художній фільм «Божевільні»" %}</strong> - {% trans "драматична історія з глибоким філософським підтекстом і потужним візуальним стилем;" %}</span>
+          </li>
+          <li>
+            <span class="prj-ico"><i class="bi bi-film" aria-hidden="true"></i></span>
+            <span><strong>{% trans "Документальний фільм «Цілого світу замало. Іван Марчук»" %}</strong> - {% trans "кінопортрет легендарного українського художника, визнаного у світі;" %}</span>
+          </li>
+          <li>
+            <span class="prj-ico"><i class="bi bi-rocket-takeoff-fill" aria-hidden="true"></i></span>
+            <span><strong>{% trans "Документальний фільм «Місія космос. Мрія про космонавта Каденюка»" %}</strong> - {% trans "стрічка про життя та мрію першого українського астронавта;" %}</span>
+          </li>
+          <li>
+            <span class="prj-ico"><i class="bi bi-tv-fill" aria-hidden="true"></i></span>
+            <span><strong>{% trans "Пілотна серія «АТОбайки»" %}</strong> - {% trans "гостросюжетна історія про пригоди українських військових у зоні АТО, створена за мотивами книги засновника компанії Володимира Бульби." %}</span>
+          </li>
+          <p class="prj-lead">{% trans "Наразі наша команда працює над масштабною кінематографічною сагою:" %}</p>
+          <li>
+            <span class="prj-ico"><i class="bi bi-trophy-fill" aria-hidden="true"></i></span>
+            <span><strong>{% trans "«Нація воїнів. Ринг історії»" %}</strong> - {% trans "документальний проєкт про становлення українського професійного боксу та його внесок у світовий спорт." %}</span>
+          </li>
+        </ul>
+
+        <a href="#" class="prj-link">{% trans "Дізнатися більше" %} &nbsp;<i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </article>
+  </div>
+
+  <!-- Video modal -->
+  <div id="prod-video-modal" class="prod-modal" aria-hidden="true">
+    <div class="prod-modal__backdrop" data-close-modal></div>
+    <div class="prod-modal__dialog" role="dialog" aria-modal="true" aria-label="Video player">
+      <button class="prod-modal__close" type="button" aria-label="{% trans 'Закрити відео' %}" data-close-modal>✕</button>
+      <div class="prod-modal__player" id="prod-modal-player"></div>
+    </div>
+  </div>
+</section>
+
+
+<section class="pjs-projects">
+  <div class="pjs-container">
+    <div class="pjs-head">
+      <div class="pjs-eyebrow">{% trans "Останні проєкти продакшн-студії" %}</div>
+      <h2 class="pjs-title">
+        {% trans "Проєкти" %} <span class="accent">{% trans "продакшн-студії" %}</span>
+      </h2>
+    </div>
+
+    {% for p in projects %}
+    <article class="pjs-card{% if p.page_is_reverse %} is-reverse{% endif %}" data-observe>
+      <figure class="pjs-media">
+        <div class="pjs-swiper swiper" data-autoplay="4500">
+          <div class="swiper-wrapper">
+            {% for img in p.images.all %}
+              <div class="swiper-slide">
+                <img src="{{ img.image.url }}"
+                     alt="{{ img.alt|default:p.title }}"
+                     {% if forloop.first %}loading="eager"{% else %}loading="lazy"{% endif %}>
+              </div>
+            {% endfor %}
+          </div>
+          <div class="pjs-pagination swiper-pagination" aria-label="Slider pagination"></div>
+          <div class="pjs-prev swiper-button-prev" aria-label="Previous"></div>
+          <div class="pjs-next swiper-button-next" aria-label="Next"></div>
+        </div>
+
+        <div class="pjs-badges">
+          {% for b in p.badges.all %}
+            <span class="pjs-badge">{{ b.text }}</span>
+          {% endfor %}
+        </div>
+      </figure>
+
+      <div class="pjs-content">
+        <h3 class="pjs-name">{{ p.title }}</h3>
+        <p class="pjs-lead">{{ p.description }}</p>
+
+        <ul class="pjs-meta">
+          {% if p.goal %}
+          <li>
+            <span class="pjs-ico"><i class="bi bi-bullseye" aria-hidden="true"></i></span>
+            <span><strong>{% trans "Мета" %}:</strong> {{ p.goal }}</span>
+          </li>
+          {% endif %}
+
+          {% if p.partners %}
+          <li>
+            <span class="pjs-ico"><i class="bi bi-people-fill" aria-hidden="true"></i></span>
+            <span><strong>{% trans "Партнери" %}:</strong> {{ p.partners }}</span>
+          </li>
+          {% endif %}
+
+          {% if p.results %}
+          <li>
+            <span class="pjs-ico"><i class="bi bi-stars" aria-hidden="true"></i></span>
+            <span><strong>{% trans "Результати" %}:</strong> {{ p.results }}</span>
+          </li>
+          {% endif %}
+        </ul>
+
+        {% if p.detail %}
+          <a href="{% url 'project_detail' slug=p.detail.slug %}" class="pjs-link">
+            {% trans "Дізнатися більше" %} &nbsp;<i class="bi bi-arrow-right"></i>
+          </a>
+        {% else %}
+          <a href="#" class="pjs-link" aria-disabled="true" style="pointer-events:none;opacity:.6;">
+            {% trans "Детально готується" %}
+          </a>
+        {% endif %}
+      </div>
+    </article>
+    {% empty %}
+      <p class="pjs-empty">{% trans "Наразі немає опублікованих проєктів у цьому підрозділі." %}</p>
+    {% endfor %}
+
+  </div>
+</section>
+
+
+
+<!-- Swiper для карток проектів -->
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const images = document.querySelectorAll('.hero-background-grid img');
+        const contentBlock = document.querySelector('.hero-content-block');
+
+        images.forEach((img, index) => {
+            setTimeout(() => {
+                img.classList.add('visible');
+            }, index * 150); // задержка между фото
+        });
+
+        // Время появления блока с лого после всех фото
+        const totalDelay = images.length * 200;
+        setTimeout(() => {
+            contentBlock.classList.add('visible');
+        }, totalDelay);
+
+        // Отдельно логотип и надписи — через 1 секунду после блока
+        setTimeout(() => {
+            contentBlock.classList.add('show-elements');
+        }, totalDelay + 1000);
+    });
+</script>
+
+    <script>
+(function(){
+  const playBtn = document.querySelector('.ch-play');
+  const modal   = document.getElementById('ch-video-modal');
+  const player  = document.getElementById('ch-modal-player');
+
+  function isYouTube(url){
+    return /(?:youtube\.com|youtu\.be)/i.test(url);
+  }
+  function ytId(url){
+    // простое извлечение ID
+    const m = url.match(/(?:v=|\/)([0-9A-Za-z_-]{11})(?:[?&].*)?$/);
+    return m ? m[1] : null;
+  }
+
+  function openModal(src){
+    // Блокируем прокрутку боди
+    document.documentElement.classList.add('no-scroll');
+    modal.classList.add('is-open');
+    modal.setAttribute('aria-hidden', 'false');
+    player.innerHTML = '';
+
+    if (isYouTube(src) && ytId(src)) {
+      const id = ytId(src);
+      const iframe = document.createElement('iframe');
+      iframe.src = `https://www.youtube.com/embed/${id}?autoplay=1&rel=0&playsinline=1`;
+      iframe.allow = 'autoplay; encrypted-media; picture-in-picture';
+      iframe.allowFullscreen = true;
+      iframe.setAttribute('title', 'YouTube video player');
+      player.appendChild(iframe);
+    } else {
+      const video = document.createElement('video');
+      video.src = src;
+      video.controls = true;
+      video.autoplay = true;
+      video.playsInline = true;
+      video.setAttribute('muted', ''); // для автоплея мобильных при необходимости
+      player.appendChild(video);
+      // если нужно со звуком — раскомментируй:
+      // video.muted = false;
+    }
+
+    // Фокус на кнопке закрытия (доступность)
+    const closeBtn = modal.querySelector('.ch-modal__close');
+    closeBtn && closeBtn.focus({ preventScroll: true });
+  }
+
+  function closeModal(){
+    modal.classList.remove('is-open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.documentElement.classList.remove('no-scroll');
+    // Останавливаем воспроизведение — удаляем узел плеера
+    player.innerHTML = '';
+    // Возврат фокуса на кнопку play
+    playBtn && playBtn.focus({ preventScroll: true });
+  }
+
+  // Открытие
+  if (playBtn){
+    playBtn.addEventListener('click', function(){
+      const src = this.getAttribute('data-video-url');
+      if (!src) return;
+      openModal(src);
+    });
+  }
+
+  // Закрытие по крестику/бекдропу
+  modal.addEventListener('click', function(e){
+    if (e.target.matches('[data-close-modal]')) closeModal();
+  });
+
+  // Закрытие по Esc
+  window.addEventListener('keydown', function(e){
+    if (e.key === 'Escape' && modal.classList.contains('is-open')) closeModal();
+  });
+})();
+</script>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  const playBtn = document.querySelector('.ch-play');
+  const modal   = document.getElementById('ch-video-modal');
+  const player  = document.getElementById('ch-modal-player');
+
+  function pickMp4(btn){
+    // Один-единственный файл
+    return btn.dataset.videoMp4 || '';
+  }
+
+  function openModal(){
+    document.documentElement.classList.add('no-scroll');
+    modal.classList.add('is-open');
+    modal.setAttribute('aria-hidden','false');
+
+    const poster = playBtn.dataset.poster || '';
+    const mp4Url = pickMp4(playBtn);
+
+    player.innerHTML = '<div class="ch-spinner" aria-hidden="true"></div>';
+
+    // создаём <video> заранее, чтобы не было рефлоу
+    const video = document.createElement('video');
+    video.controls   = true;        // системные контролы (с полосой)
+    video.playsInline = true;
+      video.autoplay = true;
+    video.preload    = 'metadata';  // грузим только метаданные — появится длительность
+    video.muted      = false;       // без автоплея — меньше лагов
+    if (poster) video.poster = poster;
+
+    player.innerHTML = '';
+    player.appendChild(video);
+
+    if (mp4Url) {
+      // через <source> Safari надёжнее понимает тип и даёт seek
+      const src = document.createElement('source');
+      src.src = mp4Url;
+      src.type = 'video/mp4';
+      video.appendChild(src);
+
+      // как только пришли метаданные — сразу “пинаем” таймлайн
+      video.addEventListener('loadedmetadata', () => {
+        try { video.currentTime = 0.001; } catch(e){}
+        player.querySelector('.ch-spinner')?.remove();
+      });
+
+      // убираем спиннер, когда реально готовы кадры
+      video.addEventListener('canplay', () => {
+        player.querySelector('.ch-spinner')?.remove();
+      });
+    } else {
+      player.innerHTML = '<p style="color:#fff; padding:20px; text-align:center">Відео недоступне.</p>';
+      return;
+    }
+
+    // Ошибки сети/декодера
+    video.addEventListener('error', () => {
+      player.innerHTML = '<p style="color:#fff; padding:20px; text-align:center">Помилка відтворення. Перевірте з’єднання.</p>';
+    });
+
+    // Фокус на «закрыть»
+    const closeBtn = modal.querySelector('.ch-modal__close');
+    closeBtn && closeBtn.focus({ preventScroll: true });
+  }
+
+  function closeModal(){
+    const video = player.querySelector('video');
+    if (video) {
+      try { video.pause(); } catch(e){}
+      // очистка DOM гарантированно снимает источники и декодер
+    }
+    player.innerHTML = '';
+    modal.classList.remove('is-open');
+    modal.setAttribute('aria-hidden','true');
+    document.documentElement.classList.remove('no-scroll');
+    playBtn && playBtn.focus({ preventScroll: true });
+  }
+
+  if (playBtn) playBtn.addEventListener('click', openModal);
+  modal.addEventListener('click', (e) => { if (e.target.matches('[data-close-modal]')) closeModal(); });
+  window.addEventListener('keydown', (e)=>{ if (e.key === 'Escape' && modal.classList.contains('is-open')) closeModal(); });
+});
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  const ambSwiper = new Swiper('.amb-swiper', {
+    slidesPerView: 3,
+    spaceBetween: 18,
+    speed: 500,
+
+    loop: false,
+    rewind: true,
+
+    autoplay: {
+      delay: 3500,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true
+    },
+
+    navigation: {
+      nextEl: '.amb-next',
+      prevEl: '.amb-prev',
+    },
+    keyboard: { enabled: true },
+
+    /* КЛЮЧЕВОЕ: 1 слайд на маленьких экранах */
+    breakpoints: {
+      0:    { slidesPerView: 1,   spaceBetween: 12 }, /* было 1.2 → стало 1 */
+      640:  { slidesPerView: 2,   spaceBetween: 16 },
+      1024: { slidesPerView: 3,   spaceBetween: 18 }
+    },
+
+    watchOverflow: true,
+    preloadImages: true,
+    updateOnWindowResize: true,
+    on: {
+      imagesReady(sw){ sw.update(); },
+      resize(sw){ sw.update(); }
+    }
+  });
+});
+</script>
+
+<script>
+    (function(){ // Инициализация для всех блоков .about-mission на странице
+    document.querySelectorAll('[data-mission]').forEach(function(root){
+        const slides = Array.from(root.querySelectorAll('.mission-slide'));
+        const prevBtn = root.querySelector('.mission-btn.prev');
+        const nextBtn = root.querySelector('.mission-btn.next');
+        if (!slides.length || !prevBtn || !nextBtn) return;
+        let index = slides.findIndex(s => s.classList.contains('is-active'));
+        if (index < 0) index = 0; update(); prevBtn.addEventListener('click', function(){
+            if (index > 0) { index--; update(); } });
+        nextBtn.addEventListener('click', function(){
+            if (index < slides.length - 1) { index++; update(); } });
+        function update(){ slides.forEach((s, i) => s.classList.toggle('is-active', i === index));
+            prevBtn.disabled = index === 0; nextBtn.disabled = index === slides.length - 1; }
+    });
+})
+();
+</script>
+
+
+<script>
+  document.querySelectorAll('.prj-swiper').forEach(function(swiperEl){
+    const media = swiperEl.closest('.prj-media');
+    const delay = parseInt(swiperEl.dataset.autoplay || '0', 10);
+
+    new Swiper(swiperEl, {
+      loop: true,
+      speed: 550,
+      slidesPerView: 1,
+      watchSlidesProgress: true,
+      autoplay: delay ? {
+        delay: delay,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true
+      } : false,
+      navigation: {
+        nextEl: media.querySelector('.prj-next'),
+        prevEl: media.querySelector('.prj-prev'),
+      },
+      pagination: {
+        el: media.querySelector('.prj-pagination'),
+        clickable: true,
+      },
+    });
+  });
+</script>
+
+<script>
+  document.querySelectorAll('.choose-swiper').forEach(function(swiperEl){
+    const wrap = swiperEl.closest('.choose-media');
+    const delay = parseInt(swiperEl.dataset.autoplay || '0', 10);
+
+    new Swiper(swiperEl, {
+      loop: true,
+      speed: 550,
+      slidesPerView: 1,
+      autoplay: delay ? {
+        delay: delay,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true
+      } : false,
+      navigation: {
+        nextEl: wrap.querySelector('.choose-next'),
+        prevEl: wrap.querySelector('.choose-prev'),
+      },
+      pagination: {
+        el: wrap.querySelector('.choose-pagination'),
+        clickable: true,
+      },
+    });
+  });
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  const svcSwiper = new Swiper('.svc-swiper', {
+    slidesPerView: 3,
+    spaceBetween: 20,
+    speed: 550,
+    loop: false,
+    rewind: true,
+    grabCursor: true,
+    watchOverflow: true,
+
+      autoplay: {
+      delay: 3500,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true
+    },
+
+    navigation: {
+      enabled: true,                 // базово включено
+      nextEl: '.svc-next',
+      prevEl: '.svc-prev',
+    },
+
+
+    breakpoints: {
+      0:    { slidesPerView: 1, spaceBetween: 16, navigation: { enabled: true } },
+      640:  { slidesPerView: 2, spaceBetween: 18, navigation: { enabled: true } },
+      1024: { slidesPerView: 3, spaceBetween: 20, navigation: { enabled: false } } // ← прячем стрелки
+    },
+
+    preloadImages: true,
+    updateOnWindowResize: true,
+    on: {
+      imagesReady(sw){ sw.update(); },
+      resize(sw){ sw.update(); }
+    }
+  });
+});
+</script>
+
+<script>
+
+document.addEventListener('DOMContentLoaded', function(){
+  const svcSwiper = new Swiper('.tm-swiper', {
+    slidesPerView: 3,
+    spaceBetween: 20,
+    speed: 550,
+    loop: false,
+    rewind: true,
+    grabCursor: true,
+    watchOverflow: true,
+
+      autoplay: {
+      delay: 3500,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true
+    },
+
+    navigation: {
+      enabled: true,                 // базово включено
+      nextEl: '.tm-next',
+      prevEl: '.tm-prev',
+    },
+
+
+    breakpoints: {
+      0:    { slidesPerView: 1, spaceBetween: 16, navigation: { enabled: true } },
+      640:  { slidesPerView: 2, spaceBetween: 18, navigation: { enabled: true } },
+      1024: { slidesPerView: 3, spaceBetween: 20, navigation: { enabled: false } } // ← прячем стрелки
+    },
+
+    preloadImages: true,
+    updateOnWindowResize: true,
+    on: {
+      imagesReady(sw){ sw.update(); },
+      resize(sw){ sw.update(); }
+    }
+  });
+});
+</script>
+
+<script>
+(function(){
+  const dd = document.querySelector('[data-team-dropdown]');
+  if(!dd) return;
+
+  const trigger = dd.querySelector('.team-trigger');
+  const panel   = dd.querySelector('.team-menu');
+  const items   = Array.from(panel.querySelectorAll('.team-item'));
+  let open = false;
+
+  function setOpen(state){
+    open = state;
+    dd.classList.toggle('is-open', open);
+    trigger.setAttribute('aria-expanded', String(open));
+    if (open) {
+      // перший пункт доступний табом
+      items.forEach(a => a.tabIndex = 0);
+    } else {
+      items.forEach(a => a.tabIndex = -1);
+    }
+  }
+
+  // toggle on click
+  trigger.addEventListener('click', (e)=>{
+    e.preventDefault();
+    setOpen(!open);
+    if (open) items[0]?.focus();
+  });
+
+  // click outside to close
+  document.addEventListener('click', (e)=>{
+    if (!open) return;
+    if (!dd.contains(e.target)) setOpen(false);
+  });
+
+  // Esc to close, arrows to navigate
+  dd.addEventListener('keydown', (e)=>{
+    if (!open) return;
+
+    const idx = items.indexOf(document.activeElement);
+    if (e.key === 'Escape'){
+      setOpen(false);
+      trigger.focus();
+    } else if (e.key === 'ArrowDown'){
+      e.preventDefault();
+      const next = items[(idx + 1 + items.length) % items.length];
+      next?.focus();
+    } else if (e.key === 'ArrowUp'){
+      e.preventDefault();
+      const prev = items[(idx - 1 + items.length) % items.length];
+      prev?.focus();
+    } else if (e.key === 'Tab' && !panel.contains(document.activeElement)){
+      // якщо фокус вийшов — закриваємо
+      setOpen(false);
+    }
+  });
+
+  // optional: close on resize to avoid odd positions
+  window.addEventListener('resize', ()=> setOpen(false));
+
+  // старт: робимо елементи недоступними табом до відкриття
+  items.forEach(a => a.tabIndex = -1);
+})();
+
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  if (!window.Swiper) return;
+
+  new Swiper('.prod-films-swiper', {
+    slidesPerView: 1,       // один слайд за раз (а внутри — 2 постера)
+    slidesPerGroup: 1,
+    spaceBetween: 0,
+    loop: true,
+    speed: 600,
+    allowTouchMove: true,
+    grabCursor: true,
+    pagination: false,
+    navigation: {
+      nextEl: '.sp-prod__next',
+      prevEl: '.sp-prod__prev'
+    },
+    autoplay: {
+      delay: 2600,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true
+    }
+  });
+});
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+
+<script>
+// --- YouTube URL -> embed
+function toYouTubeEmbed(url) {
+  try {
+    const u = new URL(url);
+    if (u.hostname.includes('youtu.be')) {
+      const id = u.pathname.replace('/', '');
+      const params = u.searchParams.toString();
+      return `https://www.youtube.com/embed/${id}?rel=0&modestbranding=1&autoplay=1${params ? '&' + params : ''}`;
+    }
+    if (u.hostname.includes('youtube.com')) {
+      const id = u.searchParams.get('v');
+      if (id) {
+        const sp = new URLSearchParams(u.search);
+        sp.delete('v');
+        const tail = sp.toString();
+        return `https://www.youtube.com/embed/${id}?rel=0&modestbranding=1&autoplay=1${tail ? '&' + tail : ''}`;
+      }
+      if (u.pathname.startsWith('/shorts/')) {
+        const id = u.pathname.split('/shorts/')[1].split('/')[0];
+        return `https://www.youtube.com/embed/${id}?rel=0&modestbranding=1&autoplay=1`;
+      }
+      if (u.pathname.startsWith('/embed/')) {
+        const id = u.pathname.split('/embed/')[1].split('/')[0];
+        return `https://www.youtube.com/embed/${id}?rel=0&modestbranding=1&autoplay=1`;
+      }
+    }
+  } catch(e) {}
+  return url;
+}
+
+// --- Модалка
+(function(){
+  const modal = document.getElementById('prod-video-modal');
+  const player = document.getElementById('prod-modal-player');
+  const closeEls = modal.querySelectorAll('[data-close-modal]');
+  const openBtns = document.querySelectorAll('.pv-play');
+
+  function lockBody(lock) {
+    document.documentElement.classList.toggle('body--lock', !!lock);
+  }
+
+  function openModalWithYouTube(url) {
+    const embed = toYouTubeEmbed(url);
+    player.innerHTML = `<iframe src="${embed}" title="YouTube video" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>`;
+    modal.setAttribute('aria-hidden', 'false'); lockBody(true);
+    modal.querySelector('.prod-modal__close')?.focus();
+  }
+
+  function openModalWithFile({ mp4, webm, poster }) {
+    const posterAttr = poster ? ` poster="${poster}"` : '';
+    const webmSrc = webm ? `<source src="${webm}" type="video/webm">` : '';
+    const mp4Src  = mp4  ? `<source src="${mp4}" type="video/mp4">` : '';
+    player.innerHTML = `
+      <video controls autoplay playsinline${posterAttr}>
+        ${webmSrc}
+        ${mp4Src}
+        <!-- Фолбек-текст -->
+        Your browser does not support the video tag.
+      </video>`;
+    modal.setAttribute('aria-hidden', 'false'); lockBody(true);
+    modal.querySelector('video')?.focus();
+  }
+
+  // HLS с автодетектом: Safari/iOS умеет нативно, остальные — через hls.js (если подключён)
+  function openModalWithHLS({ hls, poster }) {
+    player.innerHTML = `<video controls autoplay playsinline ${poster ? `poster="${poster}"` : ''}></video>`;
+    const video = player.querySelector('video');
+    const canNativeHls = video.canPlayType('application/vnd.apple.mpegurl') !== '';
+    if (canNativeHls) {
+      video.src = hls;
+      video.addEventListener('loadedmetadata', () => video.play().catch(()=>{}));
+    } else if (window.Hls && window.Hls.isSupported()) {
+      const hlsJs = new Hls();
+      hlsJs.loadSource(hls);
+      hlsJs.attachMedia(video);
+      hlsJs.on(Hls.Events.MANIFEST_PARSED, () => video.play().catch(()=>{}));
+    } else {
+      // Фолбек: предложим прямую ссылку
+      player.innerHTML = `
+        <div style="display:grid;place-items:center;color:#fff;padding:20px;text-align:center">
+          <p>HLS not supported. <a href="${hls}" style="color:#8ab4ff" target="_blank" rel="noopener">Open stream</a></p>
+        </div>`;
+    }
+    modal.setAttribute('aria-hidden', 'false'); lockBody(true);
+  }
+
+  function closeModal(){
+    modal.setAttribute('aria-hidden', 'true'); lockBody(false);
+    // Удаляем содержимое, чтобы остановить проигрывание
+    player.innerHTML = '';
+  }
+
+  openBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const slide = btn.closest('.pv-slide');
+      if (!slide) return;
+
+      const kind   = slide.getAttribute('data-video-kind') || 'youtube';
+      const url    = slide.getAttribute('data-video') || '';
+      const mp4    = slide.getAttribute('data-src-mp4') || '';
+      const webm   = slide.getAttribute('data-src-webm') || '';
+      const poster = slide.getAttribute('data-poster') || '';
+      const hls    = slide.getAttribute('data-src-hls') || '';
+
+      if (kind === 'file' && (mp4 || webm)) {
+        openModalWithFile({ mp4, webm, poster });
+      } else if (kind === 'hls' && hls) {
+        openModalWithHLS({ hls, poster });
+      } else {
+        // по умолчанию — YouTube
+        openModalWithYouTube(url);
+      }
+    }, { passive: true });
+  });
+
+  closeEls.forEach(el => el.addEventListener('click', closeModal));
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+})();
+</script>
+
+
+
+
+
+
+
+
+    <script>
+(function(){
+  const onReady = (fn)=>document.readyState!=='loading'?fn():document.addEventListener('DOMContentLoaded',fn);
+
+  function createSwiper(swiperEl){
+    const wrap = swiperEl.closest('.pjs-media') || document;
+    const delay = parseInt(swiperEl.dataset.autoplay || '0', 10);
+
+    const opts = {
+      loop: true,
+      speed: 550,
+      slidesPerView: 1,
+      watchSlidesProgress: true,
+      preloadImages: false,
+      lazy: { loadOnTransitionStart: false, loadPrevNext: true, loadPrevNextAmount: 1 },
+    };
+
+    const nextEl = wrap.querySelector('.pjs-next');
+    const prevEl = wrap.querySelector('.pjs-prev');
+    const pagEl  = wrap.querySelector('.pjs-pagination');
+
+    if (nextEl && prevEl)  opts.navigation = { nextEl, prevEl };
+    if (pagEl)              opts.pagination = { el: pagEl, clickable: true };
+    if (delay)              opts.autoplay   = { delay, disableOnInteraction: false, pauseOnMouseEnter: true };
+
+    return new Swiper(swiperEl, opts);
+  }
+
+  onReady(function(){
+    if (!window.Swiper){ console.error('Swiper не подключен'); return; }
+
+    const instances = new WeakMap();
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{
+        const el = entry.target;
+        let inst = instances.get(el);
+        if (entry.isIntersecting){
+          if (!inst){ inst = createSwiper(el); instances.set(el, inst); }
+          if (inst.params.autoplay) inst.autoplay.start();
+        } else {
+          if (inst && inst.params.autoplay) inst.autoplay.stop();
+        }
+      });
+    }, { threshold: 0.2, rootMargin: '0px 0px 200px 0px' });
+
+    document.querySelectorAll('.pjs-swiper').forEach(el => io.observe(el));
+
+    document.addEventListener('visibilitychange', () => {
+      instances.forEach((inst) => {
+        if (!inst || !inst.params.autoplay) return;
+        if (document.hidden) inst.autoplay.stop(); else inst.autoplay.start();
+      });
+    });
+  });
+})();
+</script>
+
+
+
+{% endblock %}

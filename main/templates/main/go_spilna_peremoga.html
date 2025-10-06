@@ -1,0 +1,383 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}{% trans "Громадська платформа — Спільна Перемога" %}{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/main/go.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main/projects.css' %}">
+
+
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+<section class="construction-hero">
+  <div class="ch-container">
+
+    <!-- Eyebrow -->
+    <div class="ch-eyebrow">{% trans "З 2014 року: шлях до національного рівня" %}</div>
+
+    <!-- Заголовок -->
+    <h2 class="ch-title">
+      <span>{% trans "Громадська платформа" %}</span>
+      <span class="accent">{% trans "Спільна Перемога" %}</span>
+    </h2>
+
+    <!-- Ряд: текст слева — разделитель — направления справа -->
+    <div class="ch-head">
+      <div class="ch-left">
+        <p class="ch-lead">
+          {% trans "Ми об’єднуємо людей, ідеї та партнерства, щоб утілювати суспільно важливі ініціативи в Україні та за її межами. Послідовна робота платформи перетворила локальні проєкти на рух національного масштабу." %}
+        </p>
+      </div>
+
+      <!-- Вертикальный разделитель -->
+      <div class="ch-divider" aria-hidden="true"></div>
+
+      <div class="ch-right">
+        <ul class="ch-services" aria-label="{% trans 'Напрямки діяльності платформи' %}">
+          <li><button class="ch-chip" type="button">{% trans "Культурна дипломатія" %}</button></li>
+          <li><button class="ch-chip" type="button">{% trans "Громадські ініціативи" %}</button></li>
+
+          <li><button class="ch-chip" type="button">{% trans "Спорт і здорові спільноти" %}</button></li>
+          <li><button class="ch-chip" type="button">{% trans "Міжнародна співпраця" %}</button></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Слайдер -->
+  <div class="sp-slider__container">
+
+    <!-- Кнопки навигации -->
+    <button class="sp-slider__nav sp-slider__prev" aria-label="{% trans 'Попередній' %}">
+      <i class="bi bi-chevron-left" aria-hidden="true"></i>
+    </button>
+    <button class="sp-slider__nav sp-slider__next" aria-label="{% trans 'Наступний' %}">
+      <i class="bi bi-chevron-right" aria-hidden="true"></i>
+    </button>
+
+    <!-- Swiper -->
+    <div class="swiper sp-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <article class="sp-card">
+            <img src="{% static 'images/prew_1.webp' %}" alt="{% trans 'Проєкт 1' %}">
+          </article>
+        </div>
+        <div class="swiper-slide">
+          <article class="sp-card">
+            <img src="{% static 'images/prew_2.jpg' %}" alt="{% trans 'Проєкт 2' %}">
+          </article>
+        </div>
+        <div class="swiper-slide">
+          <article class="sp-card">
+            <img src="{% static 'images/prew_3.jpg' %}" alt="{% trans 'Проєкт 3' %}">
+          </article>
+        </div>
+        <div class="swiper-slide">
+          <article class="sp-card">
+            <img src="{% static 'images/prew_4.jpg' %}" alt="{% trans 'Проєкт 4' %}">
+          </article>
+        </div>
+        <div class="swiper-slide">
+          <article class="sp-card">
+            <img src="{% static 'images/prew_5.jpg' %}" alt="{% trans 'Проєкт 5' %}">
+          </article>
+        </div>
+        <div class="swiper-slide">
+          <article class="sp-card">
+            <img src="{% static 'images/prew_6.jpg' %}" alt="{% trans 'Проєкт 6' %}">
+          </article>
+        </div>
+      </div>
+
+      <!-- Пагинация -->
+      <div class="swiper-pagination" aria-hidden="true"></div>
+    </div>
+  </div>
+</section>
+
+<section class="about-section">
+  <div class="about-container">
+
+    <!-- Верхний блок -->
+    <div class="about-head">
+      <span class="about-eyebrow">{% trans "Хто ми" %}</span>
+      <h2 class="about-title">
+        <span class="accent">{% trans "Платформа громадянської дії" %}</span>
+        <span>{% trans "разом із 2014 року" %}</span>
+      </h2>
+
+      <!-- Ряд: текст слева, кнопка справа -->
+      <div class="about-head-row">
+        <p class="about-lead">
+          {% trans "Працюємо для громад, освітніх спільнот, культурних і спортивних осередків. Допомагаємо ініціативам ставати системними програмами з відчутним впливом для людей." %}
+        </p>
+        <a href="#" class="about-btn">{% trans "Дізнатися більше" %} &nbsp;<i class="bi bi-arrow-right"></i></a>
+      </div>
+    </div>
+
+    <!-- Нижний блок: фото слева, миссия справа -->
+    <div class="about-grid">
+      <div class="about-photo">
+        <img src="{% static 'images/main_photo.webp' %}" alt="{% trans 'Партнерство та співпраця' %}">
+
+      </div>
+
+      <div class="about-mission" data-mission>
+        <div class="mission-slides">
+          <div class="mission-slide is-active">
+            <p>
+              {% trans "Ми виросли з волонтерських і локальних ініціатив у платформу, що поєднує громадські організації, партнерів та активні громади. Наша мета — створювати сталу інфраструктуру для суспільно корисних проєктів." %}
+            </p>
+          </div>
+          <div class="mission-slide">
+            <p>
+              {% trans "Працюємо через партнерства, відкриті конкурси і mentoring: підтримуємо команди, надаємо експертизу, комунікації та проєктний менеджмент. Зосереджуємося на культурній дипломатії, освіті молоді, спорті та міжнародній взаємодії." %}
+            </p>
+          </div>
+          <div class="mission-slide">
+            <p>
+              {% trans "Результат — програми, що зміцнюють єдність і репутацію України: від локальних подій до міжнародних проєктів і кампаній, які формують позитивні зміни в суспільстві." %}
+            </p>
+          </div>
+        </div>
+
+        <div class="about-mission-footer">
+          <span class="about-mission-title">{% trans "Наша Місія" %}</span>
+
+          <div class="mission-nav">
+            <button class="mission-btn prev" type="button" aria-label="{% trans 'Попередній' %}" disabled>
+              <i class="bi bi-arrow-left"></i>
+            </button>
+            <button class="mission-btn next" type="button" aria-label="{% trans 'Наступний' %}">
+              <i class="bi bi-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+    <section class="pjs-projects">
+  <div class="pjs-container">
+    <div class="pjs-head">
+      <div class="pjs-eyebrow">{% trans "Останні проєкти платформи" %}</div>
+      <h2 class="pjs-title">
+        {% trans "Проєкти" %} <span class="accent">{% trans "громадської платформи" %}</span>
+      </h2>
+    </div>
+
+    {# Если нужен фильтр по підрозділах — оставьте закомментированным/удалите #}
+
+    {% for p in projects %}
+    <article class="pjs-card{% if p.page_is_reverse %} is-reverse{% endif %}" data-observe>
+      <figure class="pjs-media">
+        <div class="pjs-swiper swiper" data-autoplay="4500">
+          <div class="swiper-wrapper">
+            {% for img in p.images.all %}
+              <div class="swiper-slide">
+                <img src="{{ img.image.url }}"
+                     alt="{{ img.alt|default:p.title }}"
+                     {% if forloop.first %}loading="eager"{% else %}loading="lazy"{% endif %}>
+              </div>
+            {% endfor %}
+          </div>
+          <div class="pjs-pagination swiper-pagination" aria-label="Slider pagination"></div>
+          <div class="pjs-prev swiper-button-prev" aria-label="Previous"></div>
+          <div class="pjs-next swiper-button-next" aria-label="Next"></div>
+        </div>
+
+        <div class="pjs-badges">
+          {% for b in p.badges.all %}
+            <span class="pjs-badge">{{ b.text }}</span>
+          {% endfor %}
+        </div>
+      </figure>
+
+      <div class="pjs-content">
+        <h3 class="pjs-name">{{ p.title }}</h3>
+        <p class="pjs-lead">{{ p.description }}</p>
+
+        <ul class="pjs-meta">
+          {% if p.goal %}
+          <li>
+            <span class="pjs-ico"><i class="bi bi-bullseye" aria-hidden="true"></i></span>
+            <span><strong>{% trans "Мета" %}:</strong> {{ p.goal }}</span>
+          </li>
+          {% endif %}
+
+          {% if p.partners %}
+          <li>
+            <span class="pjs-ico"><i class="bi bi-people-fill" aria-hidden="true"></i></span>
+            <span><strong>{% trans "Партнери" %}:</strong> {{ p.partners }}</span>
+          </li>
+          {% endif %}
+
+          {% if p.results %}
+          <li>
+            <span class="pjs-ico"><i class="bi bi-stars" aria-hidden="true"></i></span>
+            <span><strong>{% trans "Результати" %}:</strong> {{ p.results }}</span>
+          </li>
+          {% endif %}
+        </ul>
+
+        {% if p.detail %}
+          <a href="{% url 'project_detail' slug=p.detail.slug %}" class="pjs-link">
+            {% trans "Дізнатися більше" %} &nbsp;<i class="bi bi-arrow-right"></i>
+          </a>
+        {% else %}
+          <a href="#" class="pjs-link" aria-disabled="true" style="pointer-events:none;opacity:.6;">
+            {% trans "Детально готується" %}
+          </a>
+        {% endif %}
+      </div>
+    </article>
+    {% empty %}
+      <p class="pjs-empty">{% trans "Наразі немає опублікованих проєктів у цьому підрозділі." %}</p>
+    {% endfor %}
+
+
+  </div>
+</section>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- Инициализация слайдера -->
+<script>
+  (function() {
+    const sliderEl = document.querySelector('.sp-swiper');
+    if (!sliderEl) return;
+
+    const swiper = new Swiper(sliderEl, {
+      loop: true,
+      speed: 600,
+      spaceBetween: 16,
+      grabCursor: true,
+      watchSlidesProgress: true,
+
+      navigation: {
+        nextEl: '.sp-slider__next',
+        prevEl: '.sp-slider__prev',
+      },
+
+
+
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+
+      breakpoints: {
+        0:    { slidesPerView: 1, spaceBetween: 12 },
+        480:  { slidesPerView: 1, spaceBetween: 14 },
+        576:  { slidesPerView: 1,   spaceBetween: 16 },
+        768:  { slidesPerView: 2,   spaceBetween: 16 },
+        992:  { slidesPerView: 3,   spaceBetween: 18 },
+        1200: { slidesPerView: 3,   spaceBetween: 20 },
+        1440: { slidesPerView: 3,   spaceBetween: 22 }
+      }
+    });
+
+    const container = document.querySelector('.sp-slider__container');
+    container.addEventListener('mouseenter', () => swiper.autoplay.stop());
+    container.addEventListener('mouseleave', () => swiper.autoplay.start());
+  })();
+</script>
+
+<script>
+(function(){ // Ініціалізація для всіх блоків .about-mission на сторінці
+  document.querySelectorAll('[data-mission]').forEach(function(root){
+    const slides = Array.from(root.querySelectorAll('.mission-slide'));
+    const prevBtn = root.querySelector('.mission-btn.prev');
+    const nextBtn = root.querySelector('.mission-btn.next');
+    if (!slides.length || !prevBtn || !nextBtn) return;
+
+    let index = slides.findIndex(s => s.classList.contains('is-active'));
+    if (index < 0) index = 0;
+
+    function update(){
+      slides.forEach((s, i) => s.classList.toggle('is-active', i === index));
+      prevBtn.disabled = index === 0;
+      nextBtn.disabled = index === slides.length - 1;
+    }
+
+    prevBtn.addEventListener('click', function(){
+      if (index > 0) { index--; update(); }
+    });
+    nextBtn.addEventListener('click', function(){
+      if (index < slides.length - 1) { index++; update(); }
+    });
+
+    update();
+  });
+})();
+</script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script>
+(function(){
+  const onReady = (fn)=>document.readyState!=='loading'?fn():document.addEventListener('DOMContentLoaded',fn);
+
+  function createSwiper(swiperEl){
+    const wrap = swiperEl.closest('.pjs-media') || document;
+    const delay = parseInt(swiperEl.dataset.autoplay || '0', 10);
+
+    const opts = {
+      loop: true,
+      speed: 550,
+      slidesPerView: 1,
+      watchSlidesProgress: true,
+      preloadImages: false,
+      lazy: { loadOnTransitionStart: false, loadPrevNext: true, loadPrevNextAmount: 1 },
+    };
+
+    const nextEl = wrap.querySelector('.pjs-next');
+    const prevEl = wrap.querySelector('.pjs-prev');
+    const pagEl  = wrap.querySelector('.pjs-pagination');
+
+    if (nextEl && prevEl)  opts.navigation = { nextEl, prevEl };
+    if (pagEl)              opts.pagination = { el: pagEl, clickable: true };
+    if (delay)              opts.autoplay   = { delay, disableOnInteraction: false, pauseOnMouseEnter: true };
+
+    return new Swiper(swiperEl, opts);
+  }
+
+  onReady(function(){
+    if (!window.Swiper){ console.error('Swiper не подключен'); return; }
+
+    const instances = new WeakMap();
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{
+        const el = entry.target;
+        let inst = instances.get(el);
+        if (entry.isIntersecting){
+          if (!inst){ inst = createSwiper(el); instances.set(el, inst); }
+          if (inst.params.autoplay) inst.autoplay.start();
+        } else {
+          if (inst && inst.params.autoplay) inst.autoplay.stop();
+        }
+      });
+    }, { threshold: 0.2, rootMargin: '0px 0px 200px 0px' });
+
+    document.querySelectorAll('.pjs-swiper').forEach(el => io.observe(el));
+
+    document.addEventListener('visibilitychange', () => {
+      instances.forEach((inst) => {
+        if (!inst || !inst.params.autoplay) return;
+        if (document.hidden) inst.autoplay.stop(); else inst.autoplay.start();
+      });
+    });
+  });
+})();
+</script>
+{% endblock %}

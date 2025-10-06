@@ -1,0 +1,2517 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}Головна — Спільна Перемога{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/main/index.css' %}">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+
+<section class="hero-section">
+    <div class="hero-background-grid">
+        <img src="{% static 'images/prew_3.jpg' %}" alt="">
+        <img src="{% static 'images/nato_photo-2.webp' %}" alt="">
+        <img src="{% static 'images/prew_2.jpg' %}" alt="">
+        <img src="{% static 'images/prew_1.webp' %}" alt="">
+        <img src="{% static 'images/prew_6.jpg' %}" alt="">
+        <img src="{% static 'images/prew_5.jpg' %}" alt="">
+        <img src="{% static 'images/prew_4.jpg' %}" alt="">
+        <img src="{% static 'images/prew_7.jpg' %}" alt="">
+    </div>
+
+    <div class="hero-overlay">
+        <div class="hero-content-block">
+            <img src="{% static 'images/logo_without_words.png' %}" alt="Спільна Перемога" class="hero-logo">
+            <p class="hero-organization"> Спільна Перемога</p>
+            <p class="hero-slogan">«Коли слово стає дiєю»</p>
+        </div>
+    </div>
+</section>
+
+
+
+
+<section class="construction-hero">
+  <div class="ch-container">
+
+    <!-- Eyebrow с оранжевой полоской -->
+    <div class="ch-eyebrow">{% trans "Єдність, що творить майбутнє" %}</div>
+
+    <!-- Отдельный заголовок -->
+    <h2 class="ch-title">
+      <span>{% trans "Спільна Перемога" %}</span>
+      <span class="accent">{% trans "Простір дії та нових сенсів" %}</span>
+    </h2>
+
+    <!-- Ряд: текст слева — оранжевый разделитель — услуги справа -->
+    <div class="ch-head">
+      <div class="ch-left">
+        <p class="ch-lead">
+          {% trans "Тут зустрічаються ініціативи, ідеї та досвід, щоб народжувати сміливі проєкти й історії, що надихають і формують стійкість. Партнерство стає енергією розвитку, а спільні кроки ведуть до перемог, які змінюють культуру, суспільство й майбутнє України." %}
+        </p>
+      </div>
+
+      <!-- Вертикальный разделитель (оранжевый, настраиваемые размеры) -->
+      <div class="ch-divider" aria-hidden="true"></div>
+      <!-- Если нужно растянуть на всю высоту ряда: добавь класс ch-divider--stretch -->
+
+ <div class="ch-right">
+  <ul class="ch-services" aria-label="{% trans 'Послуги' %}">
+    <li><button class="ch-chip" type="button">{% trans "Культурні ініціативи" %}</button></li>
+    <li><button class="ch-chip" type="button">{% trans "Креативні кампанії" %}</button></li>
+    <li><button class="ch-chip" type="button">{% trans "Аудіовізуальний продакшн" %}</button></li>
+    <li><button class="ch-chip" type="button">{% trans "Освітні проєкти" %}</button></li>
+    <li><button class="ch-chip" type="button">{% trans "Спортивні ініціативи" %}</button></li>
+    <li><button class="ch-chip" type="button">{% trans "Громадянські проєкти" %}</button></li>
+  </ul>
+</div>
+
+
+
+    </div>
+
+    <!-- Нижняя сетка: фото + статистика -->
+    <div class="ch-grid">
+      <figure class="ch-figure">
+  <img src="{% static 'images/main_photo.jpg' %}" alt="{% trans 'Engineers discussing a project at a construction site' %}">
+  <!-- Укажи свои файлы видео (можно только mp4, webm опционально) -->
+  <button class="ch-play"
+        type="button"
+        aria-label="{% trans 'Play video' %}"
+        data-video-mp4="{% static 'images/open_video_fix.mp4' %}">
+  <span class="ch-play-icon">▶</span>
+</button>
+
+</figure>
+
+<!-- Модальное окно для полноэкранного локального видео -->
+<div id="ch-video-modal" class="ch-modal" aria-hidden="true">
+  <div class="ch-modal__backdrop" data-close-modal></div>
+  <div class="ch-modal__dialog" role="dialog" aria-modal="true" aria-label="Video player">
+    <button class="ch-modal__close" type="button" aria-label="{% trans 'Закрити відео' %}" data-close-modal>✕</button>
+    <div class="ch-modal__player" id="ch-modal-player"></div>
+  </div>
+</div>
+
+
+
+      <aside class="ch-stats" aria-label="{% trans 'Результати компанії' %}">
+  <div class="ch-stat">
+    <div class="ch-num">40+</div>
+    <div class="ch-label">{% trans "Реалізовані проєкти" %}</div>
+  </div>
+  <div class="ch-stat">
+    <div class="ch-num">10+</div>
+    <div class="ch-label">{% trans "Років досвіду" %}</div>
+  </div>
+  <div class="ch-stat">
+    <div class="ch-num">50+</div>
+    <div class="ch-label">{% trans "Надійні партнери" %}</div>
+  </div>
+          <div class="ch-stat">
+    <div class="ch-num">100+</div>
+    <div class="ch-label">{% trans "Організованих заходів" %}</div>
+  </div>
+</aside>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="about-section">
+  <div class="about-container">
+
+    <!-- Верхний блок -->
+    <div class="about-head">
+      <span class="about-eyebrow">{% trans "Хто ми" %}</span>
+      <h2 class="about-title">
+        <span class="accent">{% trans "Творимо досконалість" %}</span>
+        <span>{% trans "у кожному проєкті" %}</span>
+      </h2>
+
+      <!-- Ряд: текст слева, кнопка справа -->
+      <div class="about-head-row">
+        <p class="about-lead">
+          {% trans "Ми віримо, що сила України — в єдності, і кожна велика перемога починається з малих, але рішучих кроків, зроблених разом." %}
+        </p>
+        <a href="#projects" class="about-btn">{% trans "Дізнатися більше" %} &nbsp;<i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+
+    <!-- Нижний блок: фото слева, миссия справа -->
+    <div class="about-grid">
+      <div class="about-photo">
+        <img src="{% static 'images/IMG_8457.webp' %}" alt="{% trans 'Handshake partnership' %}">
+        <div class="about-badge">
+  <strong>10+</strong>
+  <div class="about-badge-text">
+    <span class="years">{% trans "Років" %}</span>
+    <span class="exp">{% trans "досвіду" %}</span>
+  </div>
+</div>
+
+
+      </div>
+
+      <div class="about-mission" data-mission>
+  <div class="mission-slides">
+    <div class="mission-slide is-active">
+      <p>
+        {% trans "«Спільна перемога» — це міжсекторальне об’єднання, що поєднує громадську організацію, продакшн-компанію та креативну маркетингову агенцію, які працюють синергійно задля реалізації соціально важливих проєктів у сферах культури, спорту, медіа, освіти та громадянської дії." %}
+      </p>
+    </div>
+    <div class="mission-slide">
+      <p>
+        {% trans "Наша команда об’єднує тих, хто творить нову культуру, розвиває креативні проєкти, створює фільми та візуальний контент і впроваджує ідеї з відчутним впливом. Ми підтримуємо сильні голоси, відкриваємо потенціал і формуємо простір для рішень, що надихають, змінюють і визначають майбутнє України." %}
+      </p>
+    </div>
+  </div>
+
+  <div class="about-mission-footer">
+    <span class="about-mission-title">{% trans "Наша Місія" %}</span>
+
+    <div class="mission-nav">
+      <button class="mission-btn prev" type="button" aria-label="{% trans 'Попередній' %}" disabled>
+        <i class="fa-solid fa-arrow-left"></i>
+      </button>
+      <button class="mission-btn next" type="button" aria-label="{% trans 'Наступний' %}">
+        <i class="fa-solid fa-arrow-right"></i>
+      </button>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="services">
+  <div class="svc-container">
+    <!-- Заголовочная часть -->
+    <div class="svc-head">
+      <div class="svc-eyebrow">{% trans "Наші послуги" %}</div>
+      <h2 class="svc-title">
+        <span>{% trans "Послуги, що відповідають" %}</span>
+        <span class="accent">{% trans "вашим потребам" %}</span>
+      </h2>
+    </div>
+
+    <!-- СЛАЙДЕР -->
+    <div class="svc-swiper swiper" aria-label="{% trans 'Сервіси' %}">
+      <div class="swiper-wrapper">
+
+        <!-- Slide 1 -->
+        <div class="swiper-slide">
+          <a href="{% url 'go-spilna-peremoga' %}" class="svc-card-link">
+            <article class="svc-card">
+              <div class="svc-media">
+                <img src="{% static 'images/go_spilna_peremoga.png' %}" alt="{% trans 'Команда на житловому об’єкті' %}">
+              </div>
+              <div class="svc-body">
+                <div class="svc-icon">
+                  <i class="fa-solid fa-people-group" aria-hidden="true"></i>
+                </div>
+                <h3 class="svc-name">{% trans "Громадська організація <br>«Спільна перемога»" %}</h3>
+                <p class="svc-text">
+                  {% trans "Реалізуємо культурно-соціальні ініціативи, що формують єдність і стійкість суспільства." %}
+                </p>
+                <a href="{% url 'go-spilna-peremoga' %}" class="svc-link">
+                  {% trans "Детальніше" %} <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </article>
+          </a>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide">
+          <a href="{% url 'go-creative-agency' %}" class="svc-card-link">
+            <article class="svc-card">
+              <div class="svc-media">
+                <img src="{% static 'images/3P5A5334 (1).webp' %}" alt="{% trans 'Команда на комерційному об’єкті' %}">
+              </div>
+              <div class="svc-body">
+                <div class="svc-icon">
+                  <i class="fa-solid fa-lightbulb" aria-hidden="true"></i>
+                </div>
+                <h3 class="svc-name">{% trans "ТОВ Креативна агенція <br>«Спільна перемога»" %}</h3>
+                <p class="svc-text">
+                  {% trans "Комерційна платформа, що поєднує соціальну місію з економічною ефективністю та розвитком партнерств." %}
+                </p>
+                <a href="{% url 'go-creative-agency' %}" class="svc-link">
+                  {% trans "Детальніше" %} <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </article>
+          </a>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="swiper-slide">
+          <a href="{% url 'go-sp-production' %}" class="svc-card-link">
+            <article class="svc-card">
+              <div class="svc-media">
+                <img src="{% static 'images/marchuk_movie_main.png' %}" alt="{% trans 'Процес ремонту та оновлення' %}">
+              </div>
+              <div class="svc-body">
+                <div class="svc-icon">
+                  <i class="bi bi-camera-reels-fill" aria-hidden="true"></i>
+                </div>
+                <h3 class="svc-name">{% trans "Продакшн-студія <br>«Спільна перемога»" %}</h3>
+                <p class="svc-text">
+                  {% trans "Продакшн, що розповідає світові українські історії через потужний аудіовізуальний контент." %}
+                </p>
+                <a href="{% url 'go-sp-production' %}" class="svc-link">
+                  {% trans "Детальніше" %} <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </article>
+          </a>
+        </div>
+      </div>
+
+      <!-- Навигация -->
+      <button class="svc-nav svc-prev" aria-label="{% trans 'Попередній' %}">
+        <i class="bi bi-chevron-left"></i>
+      </button>
+      <button class="svc-nav svc-next" aria-label="{% trans 'Наступний' %}">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+      <div class="svc-pagination swiper-pagination" aria-hidden="true"></div>
+    </div>
+  </div>
+</section>
+
+
+<section class="workflow">
+  <div class="wf-container">
+    <!-- Заголовок -->
+    <div class="wf-head">
+      <div class="wf-eyebrow">{% trans "Як ми працюємо" %}</div>
+      <h2 class="wf-title">
+        <span>{% trans "Як ми" %}</span>
+        <span class="accent">{% trans "досягаємо результату" %}</span>
+      </h2>
+    </div>
+
+    <!-- Шаги -->
+    <div class="wf-steps">
+      <!-- Step 1 -->
+      <div class="wf-step">
+        <div class="wf-step-num">{% trans "Крок 1" %}</div>
+        <h3 class="wf-step-title">{% trans "Діагностика та стратегія" %}</h3>
+        <p class="wf-step-text">
+          {% trans "Проводимо брифінг і занурення в контекст, аналізуємо ринок, конкурентів і цільову аудиторію, після чого формуємо чітку дорожню карту: від ключових меседжів і образу бренду до каналів комунікації." %}
+        </p>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="wf-step">
+        <div class="wf-step-num">{% trans "Крок 2" %}</div>
+        <h3 class="wf-step-title">{% trans "Креатив та концепція" %}</h3>
+        <p class="wf-step-text">
+          {% trans "Генеруємо і перевіряємо ідеї, розробляємо айдентику, візуальні рішення й сценарії кампаній, презентуємо й узгоджуємо з клієнтом, допрацьовуємо до найсильнішої концепції." %}
+        </p>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="wf-step">
+        <div class="wf-step-num">{% trans "Крок 3" %}</div>
+        <h3 class="wf-step-title">{% trans "Реалізація та результат" %}</h3>
+        <p class="wf-step-text">
+          {% trans "Запускаємо кампанії та виробляємо матеріали, супроводжуємо і коригуємо в процесі, вимірюємо ефективність і надаємо прозорий звіт з рекомендаціями для наступних кроків." %}
+        </p>
+      </div>
+    </div>
+
+
+  </div>
+</section>
+
+
+<section class="projects" id="projects">
+  <div class="prj-container">
+    <div class="prj-head">
+      <div class="prj-eyebrow">{% trans "Останні проєкти" %}</div>
+      <h2 class="prj-title">
+        {% trans "Наші" %} <span class="accent">{% trans "реалізовані проєкти" %}</span>
+      </h2>
+    </div>
+
+    <!-- Card 1 (image left, text right) -->
+    <article class="prj-card">
+      <figure class="prj-media">
+        <!-- СЛАЙДЕР ТІЛЬКИ ДЛЯ ФОТО -->
+        <div class="prj-swiper swiper" data-autoplay="4500">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="{% static 'images/zirka_1.webp' %}" alt="{% trans 'Фасад сучасної бізнес-будівлі' %}">
+            </div>
+            <div class="swiper-slide">
+              <img src="{% static 'images/zirka_2.webp' %}" alt="{% trans 'Інтер’єр бізнес-хабу' %}">
+            </div>
+            <div class="swiper-slide">
+              <img src="{% static 'images/zirka_3.jpg' %}" alt="{% trans 'Панорама комплексу' %}">
+            </div>
+            <div class="swiper-slide">
+              <img src="{% static 'images/zirka_6.jpg' %}" alt="{% trans 'Панорама комплексу' %}">
+            </div>
+            <div class="swiper-slide">
+              <img src="{% static 'images/zirka_5.jpg' %}" alt="{% trans 'Панорама комплексу' %}">
+            </div>
+          </div>
+          <div class="prj-pagination swiper-pagination" aria-label="Slider pagination"></div>
+          <div class="prj-prev swiper-button-prev" aria-label="Previous"></div>
+          <div class="prj-next swiper-button-next" aria-label="Next"></div>
+        </div>
+
+        <!-- Бейджі залишаються зверху -->
+        <div class="prj-badges">
+          <span class="prj-badge">2015</span>
+          <span class="prj-badge">{% trans "Київ" %}</span>
+        </div>
+      </figure>
+
+      <div class="prj-content">
+        <h3 class="prj-name">{% trans "«Площа зірок»" %}</h3>
+        <p class="prj-lead">
+          {% trans "«Площа зірок» у центрі Києва, створена у 2015 році біля ТРЦ «GULLIVER», стала сучасною пам’яткою та символом вшанування видатних українців. Тут встановлені іменні плити з латунного сплаву з QR-кодами, що відкривають детальну інформацію про діячів культури, театру, кіно, музики та спорту. Урочисті церемонії відкриття нових зірок збирають киян і туристів, перетворюючись на значні події та сприяючи популяризації української культури й гордості за досягнення країни." %}
+        </p>
+        <ul class="prj-meta">
+          <li>
+            <span class="prj-ico"><i class="bi bi-bullseye" aria-hidden="true"></i></span>
+            <span><strong>{% trans "Мета" %}:</strong> {% trans "вшанування видатних українців і популяризація культури" %}</span>
+          </li>
+          <li>
+            <span class="prj-ico"><i class="bi bi-people-fill" aria-hidden="true"></i></span>
+            <span><strong>{% trans "Партнери" %}:</strong> ТРЦ «GULLIVER», {% trans "міська влада" %}</span>
+          </li>
+          <li>
+            <span class="prj-ico"><i class="bi bi-stars" aria-hidden="true"></i></span>
+            <span><strong>{% trans "Результати" %}:</strong> {% trans "іменні плити з латуні з QR-кодами; регулярні церемонії відкриття" %}</span>
+          </li>
+        </ul>
+        <a href="#" class="prj-link">{% trans "Дізнатися більше" %} &nbsp;<i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </article>
+
+    <!-- Card 2 (text left, image right) -->
+    <article class="prj-card is-reverse">
+      <figure class="prj-media">
+        <div class="prj-swiper swiper" data-autoplay="4500">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="{% static 'images/nato_1.jpg' %}" alt="{% trans 'Фасад сучасної бізнес-будівлі' %}">
+            </div>
+            <div class="swiper-slide">
+              <img src="{% static 'images/nato_6.jpg' %}" alt="{% trans 'Інтер’єр бізнес-хабу' %}">
+            </div>
+            <div class="swiper-slide">
+              <img src="{% static 'images/nato_3.jpg' %}" alt="{% trans 'Панорама комплексу' %}">
+            </div>
+            <div class="swiper-slide">
+              <img src="{% static 'images/nato_4.jpeg' %}" alt="{% trans 'Панорама комплексу' %}">
+            </div>
+            <div class="swiper-slide">
+              <img src="{% static 'images/nato_5.jpg' %}" alt="{% trans 'Панорама комплексу' %}">
+            </div>
+          </div>
+          <div class="prj-pagination swiper-pagination" aria-label="Slider pagination"></div>
+          <div class="prj-prev swiper-button-prev" aria-label="Previous"></div>
+          <div class="prj-next swiper-button-next" aria-label="Next"></div>
+        </div>
+
+        <div class="prj-badges">
+          <span class="prj-badge">2019–2024</span>
+          <span class="prj-badge">{% trans "Київ" %}</span>
+          <span class="prj-badge">{% trans "Брюссель" %}</span>
+        </div>
+      </figure>
+
+      <div class="prj-content">
+        <h3 class="prj-name">{% trans "«Україна – НАТО. Спільна перемога»" %}</h3>
+        <p class="prj-lead">
+          {% trans "ГО «Спільна перемога» реалізує ініціативи, що зміцнюють партнерство України з НАТО: візит поранених воїнів АТО до Брюсселя, молодіжний форум, міжнародну конференцію та освітній курс. Найбільш символічними стали проєкти у центрі Києва — «Роза вітрів» (2019) та «Сквер НАТО» зі скульптурою «Україночка під парасолькою НАТО» (2024), які стали знаковим символом євроатлантичного вибору України." %}
+        </p>
+        <ul class="prj-meta">
+          <li>
+            <span class="prj-ico"><i class="bi bi-bullseye" aria-hidden="true"></i></span>
+            <span><strong>{% trans "Мета" %}:</strong> {% trans "публічна дипломатія та посилення євроатлантичного вектору" %}</span>
+          </li>
+          <li>
+            <span class="prj-ico"><i class="bi bi-people-fill" aria-hidden="true"></i></span>
+            <span><strong>{% trans "Партнери" %}:</strong> {% trans "Центр інформації та документації НАТО, дипломати, міжнародні інституції" %}</span>
+          </li>
+          <li>
+            <span class="prj-ico"><i class="bi bi-stars" aria-hidden="true"></i></span>
+            <span><strong>{% trans "Результати" %}:</strong> {% trans "«Роза вітрів» (2019), «Сквер НАТО» і скульптура «Україночка під парасолькою НАТО» (2024), візити ветеранів, молодіжний форум, конференція, освітній курс" %}</span>
+          </li>
+        </ul>
+        <a href="#" class="prj-link">{% trans "Дізнатися більше" %} &nbsp;<i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </article>
+
+    <!-- Card 3 -->
+    <article class="prj-card">
+      <figure class="prj-media">
+        <!-- СЛАЙДЕР ТІЛЬКИ ДЛЯ ФОТО -->
+        <div class="prj-swiper swiper" data-autoplay="4500">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="{% static 'images/bw_1.jpg' %}" alt="{% trans 'Фасад сучасної бізнес-будівлі' %}">
+            </div>
+            <div class="swiper-slide">
+              <img src="{% static 'images/bw_5.JPG' %}" alt="{% trans 'Інтер’єр бізнес-хабу' %}">
+            </div>
+            <div class="swiper-slide">
+              <img src="{% static 'images/bw_4.JPG' %}" alt="{% trans 'Панорама комплексу' %}">
+            </div>
+            <div class="swiper-slide">
+              <img src="{% static 'images/bw_3.webp' %}" alt="{% trans 'Панорама комплексу' %}">
+            </div>
+            <div class="swiper-slide">
+              <img src="{% static 'images/bw_2.webp' %}" alt="{% trans 'Панорама комплексу' %}">
+            </div>
+          </div>
+          <div class="prj-pagination swiper-pagination" aria-label="Slider pagination"></div>
+          <div class="prj-prev swiper-button-prev" aria-label="Previous"></div>
+          <div class="prj-next swiper-button-next" aria-label="Next"></div>
+        </div>
+
+        <!-- Бейджі -->
+        <div class="prj-badges">
+          <span class="prj-badge">2025</span>
+          <span class="prj-badge">{% trans "Київ" %}</span>
+        </div>
+      </figure>
+
+      <div class="prj-content">
+        <h3 class="prj-name">{% trans "«Божевільнi. Діагноз: дисидент»" %}</h3>
+        <p class="prj-lead">
+          {% trans "«БожеВільні» — дебютний фільм Дениса Тарасова про радянських дисидентів, які попри переслідування залишалися вірними своїм переконанням. Стрічка вперше у світовому кіно показує каральну медицину СРСР, коли психіатричні лікарні ставали знаряддям репресій. Створений компанією «Спільна Перемога Продакшн» у партнерстві з FILM.UA та «Національною Кінематекою України» за підтримки Держкіно, фільм нагадує про ціну свободи та мужність тих, хто протистояв тоталітарному режиму." %}
+        </p>
+        <ul class="prj-meta">
+          <li>
+            <span class="prj-ico"><i class="bi bi-bullseye" aria-hidden="true"></i></span>
+            <span><strong>{% trans "Мета" %}:</strong> {% trans "нагадати про ціну свободи та злочини каральної медицини СРСР" %}</span>
+          </li>
+          <li>
+            <span class="prj-ico"><i class="bi bi-people-fill" aria-hidden="true"></i></span>
+            <span><strong>{% trans "Партнери" %}:</strong> «Спільна Перемога Продакшн», FILM.UA Group, {% trans "НКУ" %}, {% trans "Держкіно" %}</span>
+          </li>
+          <li>
+            <span class="prj-ico"><i class="bi bi-stars" aria-hidden="true"></i></span>
+            <span><strong>{% trans "Результати" %}:</strong> {% trans "повнометражний художній фільм; перше в кіно системне висвітлення каральної психіатрії" %}</span>
+          </li>
+        </ul>
+        <a href="#" class="prj-link">{% trans "Дізнатися більше" %} &nbsp;<i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </article>
+
+    <div class="prj-footer">
+      <a href="{% url 'projects' %}" class="prj-cta">{% trans "Переглянути всі проєкти" %}</a>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="choose">
+  <!-- Отдельная шапка секции -->
+  <div class="choose-head">
+    <div class="choose-eyebrow">{% trans "Чому обирають нас" %}</div>
+    <h2 class="choose-title">
+      <span>{% trans "Будуємо довіру," %}</span>
+      <span class="accent">{% trans "поставляємо досконалість" %}</span>
+    </h2>
+  </div>
+
+  <div class="choose-container">
+    <!-- Левая карточка того же размера, что и правая -->
+    <div class="choose-card choose-card--media">
+      <figure class="choose-media">
+  <div class="choose-swiper swiper" data-autoplay="4500">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="{% static 'images/us8.webp' %}" alt="{% trans 'Команда інженерів за робочим столом' %}">
+      </div>
+      <div class="swiper-slide">
+        <img src="{% static 'images/us7.jpg' %}" alt="{% trans 'Проєктна нарада' %}">
+      </div>
+      <div class="swiper-slide">
+        <img src="{% static 'images/us9.jpg' %}" alt="{% trans 'Монтаж на об’єкті' %}">
+      </div>
+        <div class="swiper-slide">
+        <img src="{% static 'images/us1.jpg' %}" alt="{% trans 'Команда інженерів за робочим столом' %}">
+      </div>
+      <div class="swiper-slide">
+        <img src="{% static 'images/us2.jpg' %}" alt="{% trans 'Проєктна нарада' %}">
+      </div>
+      <div class="swiper-slide">
+        <img src="{% static 'images/us3.JPG' %}" alt="{% trans 'Монтаж на об’єкті' %}">
+      </div>
+        <div class="swiper-slide">
+        <img src="{% static 'images/us4.jpg' %}" alt="{% trans 'Команда інженерів за робочим столом' %}">
+      </div>
+      <div class="swiper-slide">
+        <img src="{% static 'images/us5.jpg' %}" alt="{% trans 'Проєктна нарада' %}">
+      </div>
+      <div class="swiper-slide">
+        <img src="{% static 'images/us6.webp' %}" alt="{% trans 'Монтаж на об’єкті' %}">
+      </div>
+    </div>
+
+    <!-- Навигация и точки -->
+    <div class="choose-pagination swiper-pagination" aria-label="Slider pagination"></div>
+    <div class="choose-prev swiper-button-prev" aria-label="Previous"></div>
+    <div class="choose-next swiper-button-next" aria-label="Next"></div>
+  </div>
+</figure>
+
+    </div>
+
+    <!-- Правая карточка с принципами -->
+    <aside class="choose-card choose-card--features">
+      <ul class="choose-list">
+        <!-- Національна гідність -->
+        <li class="choose-item">
+          <span class="choose-ico"><i class="bi bi-flag"></i></span>
+          <div class="choose-text">
+            <h3>{% trans "Національна гідність" %}</h3>
+            <p>{% trans "Ми бережемо та підкреслюємо українську ідентичність у кожному проєкті, формуючи гордість за країну." %}</p>
+          </div>
+        </li>
+
+        <!-- Відповідальне партнерство -->
+        <li class="choose-item">
+          <span class="choose-ico"><i class="bi bi-people-fill"></i></span>
+          <div class="choose-text">
+            <h3>{% trans "Відповідальне партнерство" %}</h3>
+            <p>{% trans "Ми будуємо співпрацю на чесності, прозорості та взаємній довірі для довготривалого розвитку." %}</p>
+          </div>
+        </li>
+
+        <!-- Професійна реалізація -->
+        <li class="choose-item">
+          <span class="choose-ico"><i class="bi bi-tools"></i></span>
+          <div class="choose-text">
+            <h3>{% trans "Професійна реалізація" %}</h3>
+            <p>{% trans "Кожен проєкт проходить через експертне планування, якісну реалізацію та контроль на всіх етапах." %}</p>
+          </div>
+        </li>
+
+        <!-- Прозорість та довіра -->
+        <li class="choose-item">
+          <span class="choose-ico"><i class="bi bi-shield-check"></i></span>
+          <div class="choose-text">
+            <h3>{% trans "Прозорість та довіра" %}</h3>
+            <p>{% trans "Ми відкрито ділимося процесами й результатами, забезпечуючи чесність і надійність у співпраці." %}</p>
+          </div>
+        </li>
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<!-- ========== SP Production (merged showcase) ========== -->
+<section class="sp-prod" id="sp-prod">
+  <div class="sp-prod__container">
+
+    <!-- Head -->
+    <header class="sp-prod__head">
+      <div class="sp-prod__head-left">
+        <span class="sp-prod__eyebrow">{% trans "Кіно, що говорить мовою світу" %}</span>
+        <h2 class="sp-prod__title">
+          <span>{% trans "Спільна Перемога" %}</span>
+          <span class="accent">{% trans "Продакшн" %}</span>
+        </h2>
+      </div>
+    </header>
+
+    <!-- Card -->
+    <article class="prj-card is-reverse">
+      <figure class="prj-media">
+        <div class="prj-swiper swiper" data-autoplay="4500">
+          <div class="swiper-wrapper">
+            <!-- Пример 1: YouTube -->
+            <div class="swiper-slide pv-slide"
+                 data-video-kind="youtube"
+                 data-video="https://www.youtube.com/watch?v=U27YRzflWDo">
+              <img src="{% static 'images/dissidnt_picture.webp' %}" alt="{% trans 'Фасад сучасної бізнес-будівлі' %}">
+              <button class="pv-play" type="button" aria-label="{% trans 'Відтворити відео' %}">
+                <span class="pv-play__icon" aria-hidden="true"></span>
+              </button>
+            </div>
+
+            <!-- Пример 2: Ваше видео (MP4/WebM + постер) -->
+            <div class="swiper-slide pv-slide"
+                 data-video-kind="file"
+                 data-src-mp4="{% static 'video/space_compressed.mp4' %}"
+                 data-src-webm="{% static 'videos/trailer.webm' %}"
+                 data-poster="{% static 'images/mission-space (1).webp' %}">
+              <img src="{% static 'images/mission-space (1).webp' %}" alt="{% trans 'Інтер’єр бізнес-хабу' %}">
+              <button class="pv-play" type="button" aria-label="{% trans 'Відтворити відео' %}">
+                <span class="pv-play__icon" aria-hidden="true"></span>
+              </button>
+            </div>
+
+            <!-- Пример 3: HLS (.m3u8) — опционально, если используете поток -->
+            <div class="swiper-slide pv-slide"
+                 data-video-kind="file"
+                 data-src-mp4="{% static 'video/marchuk.mp4' %}"
+                 data-src-webm="{% static 'videos/trailer.webm' %}"
+                 data-poster="{% static 'images/main-photo_marchuk.jpg' %}">
+              <img src="{% static 'images/main-photo_marchuk.jpg' %}" alt="{% trans 'Постер відео' %}">
+              <button class="pv-play" type="button" aria-label="{% trans 'Відтворити відео' %}">
+                <span class="pv-play__icon" aria-hidden="true"></span>
+              </button>
+            </div>
+
+            <!-- Пример 4: ещё YouTube -->
+            <div class="swiper-slide pv-slide"
+                 data-video-kind="youtube"
+                 data-video="https://www.youtube.com/watch?v=2mfnTmxh7BI">
+              <img src="{% static 'images/ato_baiki.jpg' %}" alt="{% trans 'Кадр із серіалу' %}">
+              <button class="pv-play" type="button" aria-label="{% trans 'Відтворити відео' %}">
+                <span class="pv-play__icon" aria-hidden="true"></span>
+              </button>
+            </div>
+          </div>
+
+          <div class="prj-pagination swiper-pagination" aria-label="Slider pagination"></div>
+          <div class="prj-prev swiper-button-prev" aria-label="Previous"></div>
+          <div class="prj-next swiper-button-next" aria-label="Next"></div>
+        </div>
+      </figure>
+
+      <div class="prj-content">
+        <p class="prj-lead">
+          {% trans "«Спільна Перемога Продакшн» - прогресивна українська кіновиробнича компанія, що поєднує традиції класичного кіно з найновішими технологіями ШІ. Ми створюємо художні та документальні фільми, які відкривають Україні нові горизонти у світовому медіапросторі." %}
+        </p>
+        <p class="prj-lead">
+          {% trans "Наша мiсiя - розповідати історії України мовою, зрозумілою світу. Ми створюємо кіно, що зберігає культурну пам’ять, надихає нові покоління та формує сучасний образ нашої країни на міжнародній арені." %}
+        </p>
+        <br>
+        <p class="prj-lead">{% trans "У нашому портфоліо - проєкти, що вже стали знаковими:" %}</p>
+
+        <ul class="prj-meta">
+          <li>
+            <span class="prj-ico"><i class="bi bi-camera-reels-fill" aria-hidden="true"></i></span>
+            <span><strong>{% trans "Художній фільм «Божевільні»" %}</strong> - {% trans "драматична історія з глибоким філософським підтекстом і потужним візуальним стилем;" %}</span>
+          </li>
+          <li>
+            <span class="prj-ico"><i class="bi bi-film" aria-hidden="true"></i></span>
+            <span><strong>{% trans "Документальний фільм «Цілого світу замало. Іван Марчук»" %}</strong> - {% trans "кінопортрет легендарного українського художника, визнаного у світі;" %}</span>
+          </li>
+          <li>
+            <span class="prj-ico"><i class="bi bi-rocket-takeoff-fill" aria-hidden="true"></i></span>
+            <span><strong>{% trans "Документальний фільм «Місія космос. Мрія про космонавта Каденюка»" %}</strong> - {% trans "стрічка про життя та мрію першого українського астронавта;" %}</span>
+          </li>
+          <li>
+            <span class="prj-ico"><i class="bi bi-tv-fill" aria-hidden="true"></i></span>
+            <span><strong>{% trans "Пілотна серія «АТОбайки»" %}</strong> - {% trans "гостросюжетна історія про пригоди українських військових у зоні АТО, створена за мотивами книги засновника компанії Володимира Бульби." %}</span>
+          </li>
+          <p class="prj-lead">{% trans "Наразі наша команда працює над масштабною кінематографічною сагою:" %}</p>
+          <li>
+            <span class="prj-ico"><i class="bi bi-trophy-fill" aria-hidden="true"></i></span>
+            <span><strong>{% trans "«Нація воїнів. Ринг історії»" %}</strong> - {% trans "документальний проєкт про становлення українського професійного боксу та його внесок у світовий спорт." %}</span>
+          </li>
+        </ul>
+
+        <a href="{% url 'go-sp-production' %}" class="prj-link">{% trans "Дізнатися більше" %} &nbsp;<i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </article>
+  </div>
+
+  <!-- Video modal -->
+  <div id="prod-video-modal" class="prod-modal" aria-hidden="true">
+    <div class="prod-modal__backdrop" data-close-modal></div>
+    <div class="prod-modal__dialog" role="dialog" aria-modal="true" aria-label="Video player">
+      <button class="prod-modal__close" type="button" aria-label="{% trans 'Закрити відео' %}" data-close-modal>✕</button>
+      <div class="prod-modal__player" id="prod-modal-player"></div>
+    </div>
+  </div>
+</section>
+
+<section class="team">
+  <div class="tm-head">
+    <div class="tm-eyebrow">{% trans "Наша команда" %}</div>
+    <div class="tm-toprow">
+      <h2 class="tm-title">
+        <span>{% trans "Знайомтесь з людьми," %}</span>
+        <span class="accent">{% trans "які стоять за проєктами" %}</span>
+      </h2>
+    </div>
+  </div>
+
+  <!-- СЛАЙДЕР 3 → 2 → 1 -->
+  <div class="tm-swiper swiper" aria-label="{% trans 'Команда' %}">
+    <div class="swiper-wrapper">
+      <!-- Slide 1 -->
+      <div class="swiper-slide">
+        <article class="tm-card">
+          <figure class="tm-photo">
+            <img src="{% static 'images/bulba_vol.webp' %}" alt="{% trans 'Jenny Alexander' %}">
+          </figure>
+          <div class="tm-body">
+            <h3 class="tm-name">Володимир Бульба</h3>
+            <p class="tm-role">{% trans "<b>Засновник Нацiональної громадської платформи «Спiльна Перемога».</b> <br>Майстер спорту мiжнародного класу. Радник Мiнiстра молодi та спорту України (2015-2019). Нагороджений державною вiдзнакою з вiдстоювання iнформацiйного суверенiтету України. Автор книжок «АТОбайки» та «Фронтовi байки»." %}</p>
+          </div>
+        </article>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="swiper-slide">
+        <article class="tm-card">
+          <figure class="tm-photo">
+            <img src="{% static 'images/sokolinskiy_al.webp' %}" alt="{% trans 'Esther Howard' %}">
+          </figure>
+          <div class="tm-body">
+            <h3 class="tm-name">Олександр Соколинський</h3>
+            <p class="tm-role">{% trans "<b>Засновник Нацiональної громадської платформи «Спiльна Перемога».</b> <br>Провiдний в Українi, професiйний менеджер спортивно-молодiжних заходiв. Громадський дiяч. Спортивний директор Нацiональної книги рекордiв України. Нагороджений державною вiдзнакою за вiдстоювання суверенiтету України." %}</p>
+          </div>
+        </article>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="swiper-slide">
+        <article class="tm-card">
+          <figure class="tm-photo">
+            <img src="{% static 'images/ivanenko_val.webp' %}" alt="{% trans 'Ronald Richards' %}">
+          </figure>
+          <div class="tm-body">
+            <h3 class="tm-name">Валерiя Іваненко</h3>
+            <p class="tm-role">{% trans "<b>Директор Продюсерської Агенцiї «Спiльна перемога продакшн».</b> <br>Продюсер. Член Союзу кiнематографiстiв України. Член Союзу журналiстiв України. Лауреат премiї Нацiональної Спiлки журналiстiв України «Золоте перо». Лауреат премiї «ПРОМЕТЕЙ-ПРЕСТИЖ» загальнонацiональної програми «Людина року»." %}</p>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <!-- Навигация и пагинация -->
+    <button class="tm-nav tm-prev" aria-label="{% trans 'Попередній' %}">
+      <i class="bi bi-chevron-left"></i>
+    </button>
+    <button class="tm-nav tm-next" aria-label="{% trans 'Наступний' %}">
+      <i class="bi bi-chevron-right"></i>
+    </button>
+    <div class="tm-pagination swiper-pagination" aria-hidden="true"></div>
+  </div>
+</section>
+
+<section class="ambassadors">
+  <div class="amb-head">
+    <div class="amb-eyebrow">{% trans "Амбасадори організації" %}</div>
+    <h2 class="amb-title">
+      <span>{% trans "Обличчя, які" %}</span>
+      <span class="accent">{% trans "надихають наш рух" %}</span>
+    </h2>
+  </div>
+
+  <div class="amb-shell">
+    <!-- Навігаційні стрілки -->
+    <button class="amb-nav amb-prev" aria-label="{% trans 'Попередній' %}">
+      <i class="bi bi-chevron-left"></i>
+    </button>
+    <button class="amb-nav amb-next" aria-label="{% trans 'Наступний' %}">
+      <i class="bi bi-chevron-right"></i>
+    </button>
+
+    <!-- Swiper -->
+    <div class="swiper amb-swiper">
+      <div class="swiper-wrapper">
+
+        <!-- slide 1 -->
+        <div class="swiper-slide">
+          <article class="amb-card">
+            <figure class="amb-photo">
+              <img src="{% static 'images/marchuk.jpg' %}" alt="{% trans 'Іван Марчук' %}">
+            </figure>
+            <div class="amb-body">
+              <h3 class="amb-name">Іван Марчук</h3>
+              <p class="amb-desc">{% trans "Український живописець, народний художник України, лауреат Національної премії України ім. Шевченка. Почесний академік Національної академії мистецтв України." %}</p>
+              <a class="amb-wiki" target="_blank" rel="noopener"
+                 href="https://uk.wikipedia.org/wiki/%D0%9C%D0%B0%D1%80%D1%87%D1%83%D0%BA_%D0%86%D0%B2%D0%B0%D0%BD_%D0%A1%D1%82%D0%B5%D0%BF%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%87">
+                Wikipedia &nbsp;<i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <!-- slide 2 -->
+        <div class="swiper-slide">
+          <article class="amb-card">
+            <figure class="amb-photo">
+              <img src="{% static 'images/liashuk.jpg' %}" alt="{% trans 'Ольга Лящук' %}">
+            </figure>
+            <div class="amb-body">
+              <h3 class="amb-name">Ольга Лящук</h3>
+              <p class="amb-desc">{% trans "Найсильнiша жiнка планети, рекордсменка Книги рекордiв Гiннеса." %}</p>
+              <a class="amb-wiki" target="_blank" rel="noopener"
+                 href="https://uk.wikipedia.org/wiki/%D0%9B%D1%8F%D1%89%D1%83%D0%BA_%D0%9E%D0%BB%D1%8C%D0%B3%D0%B0_%D0%93%D1%80%D0%B8%D0%B3%D0%BE%D1%80%D1%96%D0%B2%D0%BD%D0%B0">
+                  Wikipedia &nbsp;<i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <!-- slide 3 -->
+        <div class="swiper-slide">
+          <article class="amb-card">
+            <figure class="amb-photo">
+              <img src="{% static 'images/osnyk.jpg' %}" alt="{% trans 'Володимир Оснiк' %}">
+            </figure>
+            <div class="amb-body">
+              <h3 class="amb-name">Володимир Оснiк</h3>
+              <p class="amb-desc">{% trans "Перший українець Мiстер Всесвiт з фiтнесу." %}</p>
+              <a class="amb-wiki" target="_blank" rel="noopener"
+                 href="https://firstua.com.ua/records/volodymyr-osnik">
+               Wikipedia &nbsp;<i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <!-- slide 4 -->
+        <div class="swiper-slide">
+          <article class="amb-card">
+            <figure class="amb-photo">
+              <img src="{% static 'images/pidgrushna.jpg' %}" alt="{% trans 'Олена Пiдгрушна' %}">
+            </figure>
+            <div class="amb-body">
+              <h3 class="amb-name">Олена Пiдгрушна</h3>
+              <p class="amb-desc">{% trans " Українська біатлоністка, заслужений майстер спорту України, чемпіонка Олімпійських ігор, чемпіонка світу, 5-разова чемпіонка Європи, переможниця і призерка етапів Кубка світу з біатлону." %}</p>
+              <a class="amb-wiki" target="_blank" rel="noopener"
+                 href="https://uk.wikipedia.org/wiki/%D0%9F%D1%96%D0%B4%D0%B3%D1%80%D1%83%D1%88%D0%BD%D0%B0_%D0%9E%D0%BB%D0%B5%D0%BD%D0%B0_%D0%9C%D0%B8%D1%85%D0%B0%D0%B9%D0%BB%D1%96%D0%B2%D0%BD%D0%B0">
+                Wikipedia &nbsp;<i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <!-- slide 5 -->
+        <div class="swiper-slide">
+          <article class="amb-card">
+            <figure class="amb-photo">
+              <img src="{% static 'images/zavyalov.jpeg' %}" alt="{% trans 'Михайло Зав’ялов' %}">
+            </figure>
+            <div class="amb-body">
+              <h3 class="amb-name">Михайло Зав’ялов</h3>
+              <p class="amb-desc">{% trans "Український радянський боксер та тренер, український тренер та спортивний функціонер, заслужений тренер СРСР. Президент професiйної лiги боксу України." %}</p>
+              <a class="amb-wiki" target="_blank" rel="noopener"
+                 href="https://uk.wikipedia.org/wiki/%D0%97%D0%B0%D0%B2%27%D1%8F%D0%BB%D0%BE%D0%B2_%D0%9C%D0%B8%D1%85%D0%B0%D0%B9%D0%BB%D0%BE_%D0%9C%D0%B8%D1%85%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2%D0%B8%D1%87">
+              Wikipedia &nbsp;<i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+        </div>
+
+
+          <div class="swiper-slide">
+          <article class="amb-card">
+            <figure class="amb-photo">
+              <img src="{% static 'images/abramenko.jpg' %}" alt="{% trans 'Олександр Абраменко' %}">
+            </figure>
+            <div class="amb-body">
+              <h3 class="amb-name">Олександр Абраменко</h3>
+              <p class="amb-desc">{% trans "Український фристайліст, заслужений майстер спорту України, фахівець із лижної акробатики, олімпійський чемпіон 2018 року. Володар малого Кришталевого глобуса з лижної акробатики сезону 2015–16." %}</p>
+              <a class="amb-wiki" target="_blank" rel="noopener"
+                 href="https://uk.wikipedia.org/wiki/%D0%90%D0%B1%D1%80%D0%B0%D0%BC%D0%B5%D0%BD%D0%BA%D0%BE_%D0%9E%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80_%D0%92%D0%BE%D0%BB%D0%BE%D0%B4%D0%B8%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B8%D1%87">
+              Wikipedia &nbsp;<i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+        </div>
+
+          <div class="swiper-slide">
+          <article class="amb-card">
+            <figure class="amb-photo">
+              <img src="{% static 'images/klochkova.jpeg' %}" alt="{% trans 'Яна Клочкова' %}">
+            </figure>
+            <div class="amb-body">
+              <h3 class="amb-name">Яна Клочкова</h3>
+              <p class="amb-desc">{% trans " Українська плавчиня, чотирикратна олімпійська чемпіонка на дистанціях 200 та 400 метрів, срібна призерка — 800 метрів. Принесла Україні найбільшу кількість золотих олімпійських медалей." %}</p>
+              <a class="amb-wiki" target="_blank" rel="noopener"
+                 href="https://uk.wikipedia.org/wiki/%D0%9A%D0%BB%D0%BE%D1%87%D0%BA%D0%BE%D0%B2%D0%B0_%D0%AF%D0%BD%D0%B0_%D0%9E%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80%D1%96%D0%B2%D0%BD%D0%B0">
+              Wikipedia &nbsp;<i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+        </div>
+
+          <div class="swiper-slide">
+          <article class="amb-card">
+            <figure class="amb-photo">
+              <img src="{% static 'images/yablonska.jpg' %}" alt="{% trans 'Галина Яблонська' %}">
+            </figure>
+            <div class="amb-body">
+              <h3 class="amb-name">Галина Яблонська</h3>
+              <p class="amb-desc">{% trans "Українська актриса героїчного плану, громадська діячка, режисерка, сценаристка. Народна артистка УРСР. Член Національної спілки театральних діячів України, актриса Національного академічного драматичного театру ім. Івана Франка." %}</p>
+              <a class="amb-wiki" target="_blank" rel="noopener"
+                 href="https://uk.wikipedia.org/wiki/%D0%AF%D0%B1%D0%BB%D0%BE%D0%BD%D1%81%D1%8C%D0%BA%D0%B0_%D0%93%D0%B0%D0%BB%D0%B8%D0%BD%D0%B0_%D0%93%D1%96%D0%BB%D1%8F%D1%80%D1%96%D0%B2%D0%BD%D0%B0">
+              Wikipedia &nbsp;<i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+        </div>
+
+           <div class="swiper-slide">
+          <article class="amb-card">
+            <figure class="amb-photo">
+              <img src="{% static 'images/sherbachov.webp' %}" alt="{% trans 'Валентин Щербачев' %}">
+            </figure>
+            <div class="amb-body">
+              <h3 class="amb-name">Валентин Щербачев</h3>
+              <p class="amb-desc">{% trans "Український спортивний журналіст. Засновник «Національного реєстру рекордів України», голова «Клубу незвичайних рекордсменів», засновник «Всесвітньої української спортивної агенції». Заслужений журналіст України." %}</p>
+              <a class="amb-wiki" target="_blank" rel="noopener"
+                 href="https://uk.wikipedia.org/wiki/%D0%A9%D0%B5%D1%80%D0%B1%D0%B0%D1%87%D0%BE%D0%B2_%D0%92%D0%B0%D0%BB%D0%B5%D0%BD%D1%82%D0%B8%D0%BD_%D0%92%D0%B0%D1%81%D0%B8%D0%BB%D1%8C%D0%BE%D0%B2%D0%B8%D1%87">
+              Wikipedia &nbsp;<i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <section class="sponsors">
+  <div class="sp-head">
+    <div class="sp-eyebrow">{% trans "Наші партнери та друзi" %}</div>
+    <h2 class="sp-title">
+      <span>{% trans "Разом" %}</span>
+      <span class="accent">{% trans "посилюємо вплив" %}</span>
+    </h2>
+  </div>
+
+  <div class="sp-container">
+   <ul class="sp-grid">
+  <li class="sp-item">
+    <a class="sp-logo" href="https://example.com/dynamo" target="_blank" rel="noopener" aria-label="Sponsor 1">
+      <img src="{% static 'images/dynamo_map.webp' %}" alt="Sponsor 1">
+    </a>
+  </li>
+  <li class="sp-item">
+    <a class="sp-logo" href="https://example.com/home-uk-ua" target="_blank" rel="noopener" aria-label="Sponsor 7">
+      <img src="{% static 'images/logo_home_uk-ua_white.png' %}" alt="Sponsor 7">
+    </a>
+  </li>
+  <li class="sp-item">
+    <a class="sp-logo" href="https://example.com/records-ua" target="_blank" rel="noopener" aria-label="Sponsor 3">
+      <img src="{% static 'images/records_ua.webp' %}" alt="Sponsor 3">
+    </a>
+  </li>
+  <li class="sp-item">
+    <a class="sp-logo" href="https://example.com/optima" target="_blank" rel="noopener" aria-label="Sponsor 4">
+      <img src="{% static 'images/optima.png' %}" alt="Sponsor 4">
+    </a>
+  </li>
+  <li class="sp-item">
+    <a class="sp-logo" href="https://example.com/omozu" target="_blank" rel="noopener" aria-label="Sponsor 10">
+      <img src="{% static 'images/ОМОЗУ.svg' %}" alt="Sponsor 10">
+    </a>
+  </li>
+  <li class="sp-item">
+    <a class="sp-logo" href="https://example.com/sportland" target="_blank" rel="noopener" aria-label="Sponsor 6">
+      <img src="{% static 'images/sportland.png' %}" alt="Sponsor 6">
+    </a>
+  </li>
+  <li class="sp-item">
+    <a class="sp-logo" href="https://example.com/dila" target="_blank" rel="noopener" aria-label="Sponsor 2">
+      <img src="{% static 'images/dila.png' %}" alt="Sponsor 2">
+    </a>
+  </li>
+  <li class="sp-item">
+    <a class="sp-logo" href="https://example.com/logo-1" target="_blank" rel="noopener" aria-label="Sponsor 8">
+      <img src="{% static 'images/logo-1.png' %}" alt="Sponsor 8">
+    </a>
+  </li>
+  <li class="sp-item">
+    <a class="sp-logo" href="https://example.com/logo-uk" target="_blank" rel="noopener" aria-label="Sponsor 9">
+      <img src="{% static 'images/logo_uk.svg' %}" alt="Sponsor 9">
+    </a>
+  </li>
+  <li class="sp-item">
+    <a class="sp-logo" href="https://example.com/minsport" target="_blank" rel="noopener" aria-label="Sponsor 5">
+      <img src="{% static 'images/min_sport.png' %}" alt="Sponsor 5">
+    </a>
+  </li>
+</ul>
+
+
+    <div class="sp-footer">
+      <a href="#contact" class="sp-cta">
+        {% trans "Стати партнером" %} &nbsp;<i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+    {# ==== CONTACT SECTION (на той же странице) ==== #}
+<section id="contact" class="contact-section">
+  <div class="ct-head">
+    <div class="ct-eyebrow">{% trans "Зв’яжіться з нами" %}</div>
+    <h2 class="ct-title">
+      <span>{% trans "Маєте ідею проєкту?" %}</span>
+      <span class="accent">{% trans "Поговорімо!" %}</span>
+    </h2>
+  </div>
+
+  {# Повідомлення Django для цієї секції #}
+  {% if messages %}
+  <div class="ct-messages">
+    {% for m in messages %}
+      <div class="ct-msg {{ m.tags }}">{{ m }}</div>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  <div class="ct-grid">
+    <form method="post" class="ct-form" novalidate>
+      {% csrf_token %}
+      <input type="hidden" name="form_name" value="contact">
+      {{ contact_form.website }} {# honeypot #}
+
+      <div class="ct-row">
+        <div class="ct-field">
+          <label>{{ contact_form.first_name.label }} *</label>
+          {{ contact_form.first_name }}
+          {% if contact_form.first_name.errors %}<small class="err">{{ contact_form.first_name.errors|striptags }}</small>{% endif %}
+        </div>
+        <div class="ct-field">
+          <label>{{ contact_form.last_name.label }}</label>
+          {{ contact_form.last_name }}
+          {% if contact_form.last_name.errors %}<small class="err">{{ contact_form.last_name.errors|striptags }}</small>{% endif %}
+        </div>
+      </div>
+
+      <div class="ct-row">
+        <div class="ct-field">
+          <label>{{ contact_form.email.label }} *</label>
+          {{ contact_form.email }}
+          {% if contact_form.email.errors %}<small class="err">{{ contact_form.email.errors|striptags }}</small>{% endif %}
+        </div>
+        <div class="ct-field">
+          <label>{{ contact_form.phone.label }}</label>
+          {{ contact_form.phone }}
+          {% if contact_form.phone.errors %}<small class="err">{{ contact_form.phone.errors|striptags }}</small>{% endif %}
+        </div>
+      </div>
+
+      <div class="ct-field">
+        <label>{{ contact_form.subject.label }} *</label>
+        {{ contact_form.subject }}
+        {% if contact_form.subject.errors %}<small class="err">{{ contact_form.subject.errors|striptags }}</small>{% endif %}
+      </div>
+
+      <div class="ct-field">
+        <label>{{ contact_form.message.label }} *</label>
+        {{ contact_form.message }}
+        {% if contact_form.message.errors %}<small class="err">{{ contact_form.message.errors|striptags }}</small>{% endif %}
+      </div>
+
+      <button class="ct-submit" type="submit">
+        {% trans "Надіслати " %}
+      </button>
+    </form>
+
+    <aside class="ct-aside">
+      <div class="ct-aside-inner">
+        <div class="ct-block">
+          <h3>{% trans "Адреса" %}</h3>
+          <p>2464 Royal Ln. Mesa,</p>
+          <p>New Jersey 45463</p>
+        </div>
+
+        <div class="ct-block">
+          <h3>{% trans "Контакти" %}</h3>
+          <p>{% trans "Телефон" %}: +(000) 000-0000</p>
+          <p>{% trans "Електронна пошта" %}: example@gmail.com</p>
+        </div>
+
+        <div class="ct-block">
+  <h3>{% trans "Канали зв’язку" %}</h3>
+
+  <ul class="ct-contacts">
+    <li>
+
+      <a href="tel:+390000000000"><i class="bi bi-telephone"></i></a>
+    </li>
+
+    <li>
+
+      <a href="https://wa.me/390000000000" target="_blank" rel="noopener">
+       <i class="bi bi-whatsapp"></i>
+      </a>
+    </li>
+    <li>
+
+      <a href="https://t.me/your_username" target="_blank" rel="noopener">
+        <i class="bi bi-telegram"></i>
+      </a>
+    </li>
+
+  </ul>
+
+
+</div>
+
+
+        <div class="ct-block">
+          <h3>{% trans "Ми в соцмережах" %}</h3>
+          <ul class="ct-socials">
+            <li><a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a></li>
+            <li><a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+
+{# ==== NEWSLETTER SECTION ==== #}
+
+
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const images = document.querySelectorAll('.hero-background-grid img');
+        const contentBlock = document.querySelector('.hero-content-block');
+
+        images.forEach((img, index) => {
+            setTimeout(() => {
+                img.classList.add('visible');
+            }, index * 150); // задержка между фото
+        });
+
+        // Время появления блока с лого после всех фото
+        const totalDelay = images.length * 200;
+        setTimeout(() => {
+            contentBlock.classList.add('visible');
+        }, totalDelay);
+
+        // Отдельно логотип и надписи — через 1 секунду после блока
+        setTimeout(() => {
+            contentBlock.classList.add('show-elements');
+        }, totalDelay + 1000);
+    });
+</script>
+
+    <script>
+(function(){
+  const playBtn = document.querySelector('.ch-play');
+  const modal   = document.getElementById('ch-video-modal');
+  const player  = document.getElementById('ch-modal-player');
+
+  function isYouTube(url){
+    return /(?:youtube\.com|youtu\.be)/i.test(url);
+  }
+  function ytId(url){
+    // простое извлечение ID
+    const m = url.match(/(?:v=|\/)([0-9A-Za-z_-]{11})(?:[?&].*)?$/);
+    return m ? m[1] : null;
+  }
+
+  function openModal(src){
+    // Блокируем прокрутку боди
+    document.documentElement.classList.add('no-scroll');
+    modal.classList.add('is-open');
+    modal.setAttribute('aria-hidden', 'false');
+    player.innerHTML = '';
+
+    if (isYouTube(src) && ytId(src)) {
+      const id = ytId(src);
+      const iframe = document.createElement('iframe');
+      iframe.src = `https://www.youtube.com/embed/${id}?autoplay=1&rel=0&playsinline=1`;
+      iframe.allow = 'autoplay; encrypted-media; picture-in-picture';
+      iframe.allowFullscreen = true;
+      iframe.setAttribute('title', 'YouTube video player');
+      player.appendChild(iframe);
+    } else {
+      const video = document.createElement('video');
+      video.src = src;
+      video.controls = true;
+      video.autoplay = true;
+      video.playsInline = true;
+      video.setAttribute('muted', ''); // для автоплея мобильных при необходимости
+      player.appendChild(video);
+      // если нужно со звуком — раскомментируй:
+      // video.muted = false;
+    }
+
+    // Фокус на кнопке закрытия (доступность)
+    const closeBtn = modal.querySelector('.ch-modal__close');
+    closeBtn && closeBtn.focus({ preventScroll: true });
+  }
+
+  function closeModal(){
+    modal.classList.remove('is-open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.documentElement.classList.remove('no-scroll');
+    // Останавливаем воспроизведение — удаляем узел плеера
+    player.innerHTML = '';
+    // Возврат фокуса на кнопку play
+    playBtn && playBtn.focus({ preventScroll: true });
+  }
+
+  // Открытие
+  if (playBtn){
+    playBtn.addEventListener('click', function(){
+      const src = this.getAttribute('data-video-url');
+      if (!src) return;
+      openModal(src);
+    });
+  }
+
+  // Закрытие по крестику/бекдропу
+  modal.addEventListener('click', function(e){
+    if (e.target.matches('[data-close-modal]')) closeModal();
+  });
+
+  // Закрытие по Esc
+  window.addEventListener('keydown', function(e){
+    if (e.key === 'Escape' && modal.classList.contains('is-open')) closeModal();
+  });
+})();
+</script>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  const playBtn = document.querySelector('.ch-play');
+  const modal   = document.getElementById('ch-video-modal');
+  const player  = document.getElementById('ch-modal-player');
+
+  function pickMp4(btn){
+    // Один-единственный файл
+    return btn.dataset.videoMp4 || '';
+  }
+
+  function openModal(){
+    document.documentElement.classList.add('no-scroll');
+    modal.classList.add('is-open');
+    modal.setAttribute('aria-hidden','false');
+
+    const poster = playBtn.dataset.poster || '';
+    const mp4Url = pickMp4(playBtn);
+
+    player.innerHTML = '<div class="ch-spinner" aria-hidden="true"></div>';
+
+    // создаём <video> заранее, чтобы не было рефлоу
+    const video = document.createElement('video');
+    video.controls   = true;        // системные контролы (с полосой)
+    video.playsInline = true;
+      video.autoplay = true;
+    video.preload    = 'metadata';  // грузим только метаданные — появится длительность
+    video.muted      = false;       // без автоплея — меньше лагов
+    if (poster) video.poster = poster;
+
+    player.innerHTML = '';
+    player.appendChild(video);
+
+    if (mp4Url) {
+      // через <source> Safari надёжнее понимает тип и даёт seek
+      const src = document.createElement('source');
+      src.src = mp4Url;
+      src.type = 'video/mp4';
+      video.appendChild(src);
+
+      // как только пришли метаданные — сразу “пинаем” таймлайн
+      video.addEventListener('loadedmetadata', () => {
+        try { video.currentTime = 0.001; } catch(e){}
+        player.querySelector('.ch-spinner')?.remove();
+      });
+
+      // убираем спиннер, когда реально готовы кадры
+      video.addEventListener('canplay', () => {
+        player.querySelector('.ch-spinner')?.remove();
+      });
+    } else {
+      player.innerHTML = '<p style="color:#fff; padding:20px; text-align:center">Відео недоступне.</p>';
+      return;
+    }
+
+    // Ошибки сети/декодера
+    video.addEventListener('error', () => {
+      player.innerHTML = '<p style="color:#fff; padding:20px; text-align:center">Помилка відтворення. Перевірте з’єднання.</p>';
+    });
+
+    // Фокус на «закрыть»
+    const closeBtn = modal.querySelector('.ch-modal__close');
+    closeBtn && closeBtn.focus({ preventScroll: true });
+  }
+
+  function closeModal(){
+    const video = player.querySelector('video');
+    if (video) {
+      try { video.pause(); } catch(e){}
+      // очистка DOM гарантированно снимает источники и декодер
+    }
+    player.innerHTML = '';
+    modal.classList.remove('is-open');
+    modal.setAttribute('aria-hidden','true');
+    document.documentElement.classList.remove('no-scroll');
+    playBtn && playBtn.focus({ preventScroll: true });
+  }
+
+  if (playBtn) playBtn.addEventListener('click', openModal);
+  modal.addEventListener('click', (e) => { if (e.target.matches('[data-close-modal]')) closeModal(); });
+  window.addEventListener('keydown', (e)=>{ if (e.key === 'Escape' && modal.classList.contains('is-open')) closeModal(); });
+});
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  const ambSwiper = new Swiper('.amb-swiper', {
+    slidesPerView: 3,
+    spaceBetween: 18,
+    speed: 500,
+
+    loop: false,
+    rewind: true,
+
+    autoplay: {
+      delay: 3500,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true
+    },
+
+    navigation: {
+      nextEl: '.amb-next',
+      prevEl: '.amb-prev',
+    },
+    keyboard: { enabled: true },
+
+    /* КЛЮЧЕВОЕ: 1 слайд на маленьких экранах */
+    breakpoints: {
+      0:    { slidesPerView: 1,   spaceBetween: 12 }, /* было 1.2 → стало 1 */
+      640:  { slidesPerView: 2,   spaceBetween: 16 },
+      1024: { slidesPerView: 3,   spaceBetween: 18 }
+    },
+
+    watchOverflow: true,
+    preloadImages: true,
+    updateOnWindowResize: true,
+    on: {
+      imagesReady(sw){ sw.update(); },
+      resize(sw){ sw.update(); }
+    }
+  });
+});
+</script>
+
+<script>
+    (function(){ // Инициализация для всех блоков .about-mission на странице
+    document.querySelectorAll('[data-mission]').forEach(function(root){
+        const slides = Array.from(root.querySelectorAll('.mission-slide'));
+        const prevBtn = root.querySelector('.mission-btn.prev');
+        const nextBtn = root.querySelector('.mission-btn.next');
+        if (!slides.length || !prevBtn || !nextBtn) return;
+        let index = slides.findIndex(s => s.classList.contains('is-active'));
+        if (index < 0) index = 0; update(); prevBtn.addEventListener('click', function(){
+            if (index > 0) { index--; update(); } });
+        nextBtn.addEventListener('click', function(){
+            if (index < slides.length - 1) { index++; update(); } });
+        function update(){ slides.forEach((s, i) => s.classList.toggle('is-active', i === index));
+            prevBtn.disabled = index === 0; nextBtn.disabled = index === slides.length - 1; }
+    });
+})
+();
+</script>
+
+
+<script>
+  document.querySelectorAll('.prj-swiper').forEach(function(swiperEl){
+    const media = swiperEl.closest('.prj-media');
+    const delay = parseInt(swiperEl.dataset.autoplay || '0', 10);
+
+    new Swiper(swiperEl, {
+      loop: true,
+      speed: 550,
+      slidesPerView: 1,
+      watchSlidesProgress: true,
+      autoplay: delay ? {
+        delay: delay,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true
+      } : false,
+      navigation: {
+        nextEl: media.querySelector('.prj-next'),
+        prevEl: media.querySelector('.prj-prev'),
+      },
+      pagination: {
+        el: media.querySelector('.prj-pagination'),
+        clickable: true,
+      },
+    });
+  });
+</script>
+
+<script>
+  document.querySelectorAll('.choose-swiper').forEach(function(swiperEl){
+    const wrap = swiperEl.closest('.choose-media');
+    const delay = parseInt(swiperEl.dataset.autoplay || '0', 10);
+
+    new Swiper(swiperEl, {
+      loop: true,
+      speed: 550,
+      slidesPerView: 1,
+      autoplay: delay ? {
+        delay: delay,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true
+      } : false,
+      navigation: {
+        nextEl: wrap.querySelector('.choose-next'),
+        prevEl: wrap.querySelector('.choose-prev'),
+      },
+      pagination: {
+        el: wrap.querySelector('.choose-pagination'),
+        clickable: true,
+      },
+    });
+  });
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  const svcSwiper = new Swiper('.svc-swiper', {
+    slidesPerView: 3,
+    spaceBetween: 20,
+    speed: 550,
+    loop: false,
+    rewind: true,
+    grabCursor: true,
+    watchOverflow: true,
+
+      autoplay: {
+      delay: 3500,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true
+    },
+
+    navigation: {
+      enabled: true,                 // базово включено
+      nextEl: '.svc-next',
+      prevEl: '.svc-prev',
+    },
+
+
+    breakpoints: {
+      0:    { slidesPerView: 1, spaceBetween: 16, navigation: { enabled: true } },
+      640:  { slidesPerView: 2, spaceBetween: 18, navigation: { enabled: true } },
+      1024: { slidesPerView: 3, spaceBetween: 20, navigation: { enabled: false } } // ← прячем стрелки
+    },
+
+    preloadImages: true,
+    updateOnWindowResize: true,
+    on: {
+      imagesReady(sw){ sw.update(); },
+      resize(sw){ sw.update(); }
+    }
+  });
+});
+</script>
+
+<script>
+
+document.addEventListener('DOMContentLoaded', function(){
+  const svcSwiper = new Swiper('.tm-swiper', {
+    slidesPerView: 3,
+    spaceBetween: 20,
+    speed: 550,
+    loop: false,
+    rewind: true,
+    grabCursor: true,
+    watchOverflow: true,
+
+      autoplay: {
+      delay: 3500,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true
+    },
+
+    navigation: {
+      enabled: true,                 // базово включено
+      nextEl: '.tm-next',
+      prevEl: '.tm-prev',
+    },
+
+
+    breakpoints: {
+      0:    { slidesPerView: 1, spaceBetween: 16, navigation: { enabled: true } },
+      640:  { slidesPerView: 2, spaceBetween: 18, navigation: { enabled: true } },
+      1024: { slidesPerView: 3, spaceBetween: 20, navigation: { enabled: false } } // ← прячем стрелки
+    },
+
+    preloadImages: true,
+    updateOnWindowResize: true,
+    on: {
+      imagesReady(sw){ sw.update(); },
+      resize(sw){ sw.update(); }
+    }
+  });
+});
+</script>
+
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  if (!window.Swiper) return;
+
+  new Swiper('.prod-films-swiper', {
+    slidesPerView: 1,       // один слайд за раз (а внутри — 2 постера)
+    slidesPerGroup: 1,
+    spaceBetween: 0,
+    loop: true,
+    speed: 600,
+    allowTouchMove: true,
+    grabCursor: true,
+    pagination: false,
+    navigation: {
+      nextEl: '.sp-prod__next',
+      prevEl: '.sp-prod__prev'
+    },
+    autoplay: {
+      delay: 2600,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true
+    }
+  });
+});
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+
+<script>
+// --- YouTube URL -> embed
+function toYouTubeEmbed(url) {
+  try {
+    const u = new URL(url);
+    if (u.hostname.includes('youtu.be')) {
+      const id = u.pathname.replace('/', '');
+      const params = u.searchParams.toString();
+      return `https://www.youtube.com/embed/${id}?rel=0&modestbranding=1&autoplay=1${params ? '&' + params : ''}`;
+    }
+    if (u.hostname.includes('youtube.com')) {
+      const id = u.searchParams.get('v');
+      if (id) {
+        const sp = new URLSearchParams(u.search);
+        sp.delete('v');
+        const tail = sp.toString();
+        return `https://www.youtube.com/embed/${id}?rel=0&modestbranding=1&autoplay=1${tail ? '&' + tail : ''}`;
+      }
+      if (u.pathname.startsWith('/shorts/')) {
+        const id = u.pathname.split('/shorts/')[1].split('/')[0];
+        return `https://www.youtube.com/embed/${id}?rel=0&modestbranding=1&autoplay=1`;
+      }
+      if (u.pathname.startsWith('/embed/')) {
+        const id = u.pathname.split('/embed/')[1].split('/')[0];
+        return `https://www.youtube.com/embed/${id}?rel=0&modestbranding=1&autoplay=1`;
+      }
+    }
+  } catch(e) {}
+  return url;
+}
+
+// --- Модалка
+(function(){
+  const modal = document.getElementById('prod-video-modal');
+  const player = document.getElementById('prod-modal-player');
+  const closeEls = modal.querySelectorAll('[data-close-modal]');
+  const openBtns = document.querySelectorAll('.pv-play');
+
+  function lockBody(lock) {
+    document.documentElement.classList.toggle('body--lock', !!lock);
+  }
+
+  function openModalWithYouTube(url) {
+    const embed = toYouTubeEmbed(url);
+    player.innerHTML = `<iframe src="${embed}" title="YouTube video" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>`;
+    modal.setAttribute('aria-hidden', 'false'); lockBody(true);
+    modal.querySelector('.prod-modal__close')?.focus();
+  }
+
+  function openModalWithFile({ mp4, webm, poster }) {
+    const posterAttr = poster ? ` poster="${poster}"` : '';
+    const webmSrc = webm ? `<source src="${webm}" type="video/webm">` : '';
+    const mp4Src  = mp4  ? `<source src="${mp4}" type="video/mp4">` : '';
+    player.innerHTML = `
+      <video controls autoplay playsinline${posterAttr}>
+        ${webmSrc}
+        ${mp4Src}
+        <!-- Фолбек-текст -->
+        Your browser does not support the video tag.
+      </video>`;
+    modal.setAttribute('aria-hidden', 'false'); lockBody(true);
+    modal.querySelector('video')?.focus();
+  }
+
+  // HLS с автодетектом: Safari/iOS умеет нативно, остальные — через hls.js (если подключён)
+  function openModalWithHLS({ hls, poster }) {
+    player.innerHTML = `<video controls autoplay playsinline ${poster ? `poster="${poster}"` : ''}></video>`;
+    const video = player.querySelector('video');
+    const canNativeHls = video.canPlayType('application/vnd.apple.mpegurl') !== '';
+    if (canNativeHls) {
+      video.src = hls;
+      video.addEventListener('loadedmetadata', () => video.play().catch(()=>{}));
+    } else if (window.Hls && window.Hls.isSupported()) {
+      const hlsJs = new Hls();
+      hlsJs.loadSource(hls);
+      hlsJs.attachMedia(video);
+      hlsJs.on(Hls.Events.MANIFEST_PARSED, () => video.play().catch(()=>{}));
+    } else {
+      // Фолбек: предложим прямую ссылку
+      player.innerHTML = `
+        <div style="display:grid;place-items:center;color:#fff;padding:20px;text-align:center">
+          <p>HLS not supported. <a href="${hls}" style="color:#8ab4ff" target="_blank" rel="noopener">Open stream</a></p>
+        </div>`;
+    }
+    modal.setAttribute('aria-hidden', 'false'); lockBody(true);
+  }
+
+  function closeModal(){
+    modal.setAttribute('aria-hidden', 'true'); lockBody(false);
+    // Удаляем содержимое, чтобы остановить проигрывание
+    player.innerHTML = '';
+  }
+
+  openBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const slide = btn.closest('.pv-slide');
+      if (!slide) return;
+
+      const kind   = slide.getAttribute('data-video-kind') || 'youtube';
+      const url    = slide.getAttribute('data-video') || '';
+      const mp4    = slide.getAttribute('data-src-mp4') || '';
+      const webm   = slide.getAttribute('data-src-webm') || '';
+      const poster = slide.getAttribute('data-poster') || '';
+      const hls    = slide.getAttribute('data-src-hls') || '';
+
+      if (kind === 'file' && (mp4 || webm)) {
+        openModalWithFile({ mp4, webm, poster });
+      } else if (kind === 'hls' && hls) {
+        openModalWithHLS({ hls, poster });
+      } else {
+        // по умолчанию — YouTube
+        openModalWithYouTube(url);
+      }
+    }, { passive: true });
+  });
+
+  closeEls.forEach(el => el.addEventListener('click', closeModal));
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+})();
+</script>
+
+
+
+
+{% comment %}
+<section class="highlighted-block">
+  <div class="highlighted-container">
+    <!-- Левая часть: ВИДЕО с затемнением -->
+    <div class="highlighted-image">
+      <video autoplay muted loop playsinline class="highlighted-video">
+        <source src="{% static 'video/optimized_video.mp4' %}" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="highlighted-overlay">
+
+      </div>
+    </div>
+
+    <!-- Правая часть: текст -->
+    <div class="highlighted-text">
+      <h1 class="overlay-caption">{% trans "ПРО НАС" %}</h1>
+      <p>{% trans "<b>«Спільна перемога»</b> — це міжсекторальне об’єднання, що поєднує громадську організацію, продакшн-компанію та креативну маркетингову агенцію, які працюють синергійно задля реалізації соціально важливих проєктів у сферах культури, спорту, медіа, освіти та громадянської дії." %}</p>
+      <p>{% trans "<b>Ми віримо, що сила України — в єдності, і кожна велика перемога починається з малих, але рішучих кроків, зроблених разом.</b>"  %}</p>
+      <button class="scroll-btn" id="scrollTrigger">{% trans "Переглянути" %}</button>
+    </div>
+  </div>
+</section>
+<section class="photo-slider">
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="{% static 'images/main_photo.webp' %}" alt="Слайд 1">
+      </div>
+      <div class="swiper-slide">
+        <img src="{% static 'images/nato_photo-2.webp' %}" alt="Слайд 2">
+      </div>
+      <div class="swiper-slide">
+        <img src="{% static 'images/main_photo.webp' %}" alt="Слайд 3">
+      </div>
+      <div class="swiper-slide">
+        <img src="{% static 'images/nato_photo-2.webp' %}" alt="Слайд 4">
+      </div>
+      <div class="swiper-slide">
+        <img src="{% static 'images/main_photo.webp' %}" alt="Слайд 5">
+      </div>
+      <div class="swiper-slide">
+        <img src="{% static 'images/nato_photo-2.webp' %}" alt="Слайд 6">
+      </div>
+    </div>
+
+    <!-- Стрелки -->
+<div class="swiper-button-prev">
+  <i class="bi bi-chevron-double-left"></i>
+</div>
+<div class="swiper-button-next">
+  <i class="bi bi-chevron-double-right"></i>
+</div>
+
+
+  </div>
+</section>
+
+<!--<section class="video-section">-->
+
+
+<!--  <div id="video-target" class="video-wrapper">-->
+<!--    <video-->
+<!--      src="{% static 'video/optimized_video.mp4' %}"-->
+<!--      autoplay-->
+<!--      muted-->
+<!--      loop-->
+<!--      playsinline-->
+<!--      class="scroll-video"-->
+<!--    ></video>-->
+<!--  </div>-->
+<!--</section>-->
+
+<!--<section class="info-cards-section">-->
+<!--  <div class="info-cards-container">-->
+
+<!--    <div class="info-card">-->
+<!--      <img src="{% static 'images/main_photo.webp' %}" alt="Культура" class="info-card-image">-->
+<!--      <div class="info-card-overlay">-->
+<!--        <div>-->
+<!--          <h3 class="info-card-title">{% trans "Громадська організація <br>«Спільна перемога»" %}</h3>-->
+<!--          <p class="info-card-description">{% trans "Реалізуємо культурно-соціальні ініціативи, що формують єдність і стійкість суспільства." %}</p>-->
+<!--        </div>-->
+<!--        <a href="#" class="info-card-btn">{% trans "Дізнатися більше" %}</a>-->
+<!--      </div>-->
+<!--    </div>-->
+
+<!--    <div class="info-card">-->
+<!--      <img src="{% static 'images/nato_photo-2.webp' %}" alt="Спорт" class="info-card-image">-->
+<!--      <div class="info-card-overlay">-->
+<!--        <div>-->
+<!--          <h3 class="info-card-title">{% trans "ТОВ Креативна агенція <br>«Спільна перемога»" %}</h3>-->
+<!--          <p class="info-card-description">{% trans "Комерційна платформа, що поєднує соціальну місію з економічною ефективністю та розвитком партнерств. " %}</p>-->
+<!--        </div>-->
+<!--        <a href="#" class="info-card-btn">{% trans "Дізнатися більше" %}</a>-->
+<!--      </div>-->
+<!--    </div>-->
+
+<!--    <div class="info-card">-->
+<!--      <img src="{% static 'images/main_photo.webp' %}" alt="Медіа та освіта" class="info-card-image">-->
+<!--      <div class="info-card-overlay">-->
+<!--        <div>-->
+<!--          <h3 class="info-card-title">{% trans "Продакшн <br>«Спільна перемога»" %}</h3>-->
+<!--          <p class="info-card-description">{% trans "Продакшн, що розповідає світові українські історії через потужний аудіовізуальний контент. " %}</p>-->
+<!--        </div>-->
+<!--        <a href="#" class="info-card-btn">{% trans "Дізнатися більше" %}</a>-->
+<!--      </div>-->
+<!--    </div>-->
+
+<!--  </div>-->
+<!--</section>-->
+
+
+<section class="equal-grid-section">
+  <!-- 1 -->
+  <div class="equal-box overlay-box">
+    <div class="overlay-text-block">
+      <p class="overlay-caption">{% trans "СТРУКТУРА ОБ’ЄДНАННЯ" %}</p>
+      <p class="overlay-description">
+        {% trans "«Спільна перемога» має грамотно вибудовану структуру, яка дозволяє ефективно розвиватися у всіх напрямах діяльності та досягати результатів високої якості." %}
+      </p>
+<!--      <p class="overlay-description">-->
+<!--          {% trans "Ми працюємо в таких сферах, як культура, громадянське суспільство, освіта, креативні індустрії, медіа, партнерство з бізнесом і державними структурами, аудіовізуальне виробництво — та багато іншого, що сприяє сталому розвитку й зміцненню суспільства." %}-->
+<!--        </p>-->
+        <p class="overlay-description">
+          {% trans "Ви зможете обрати саме той напрям, який відповідає вашим потребам, а ми реалізуємо ваші ідеї з натхненням і професійною підтримкою." %}
+        </p>
+    </div>
+  </div>
+
+  <!-- 2 -->
+  <div class="equal-box info-box">
+    <img src="{% static 'images/main_photo.webp' %}" alt="Культура" class="info-img">
+    <div class="info-box-overlay">
+      <div class="info-text">
+        <h3>{% trans "Громадська організація «Спільна перемога»" %}</h3>
+        <p class="info-card-description">{% trans "Реалізуємо культурно-соціальні ініціативи, що формують єдність і стійкість суспільства." %}</p>
+      </div>
+      <a href="#" class="info-btn">{% trans "Детальніше" %}</a>
+    </div>
+  </div>
+
+  <!-- 3 -->
+  <div class="equal-box info-box">
+    <img src="{% static 'images/nato_photo-2.webp' %}" alt="Суспільство" class="info-img">
+    <div class="info-box-overlay">
+      <div class="info-text">
+        <h3>{% trans "ТОВ Креативна агенція «Спільна перемога»" %}</h3>
+        <p class="info-card-description">{% trans "Комерційна платформа, що поєднує соціальну місію з економічною ефективністю та розвитком партнерств." %}</p>
+
+      </div>
+      <a href="#" class="info-btn">{% trans "Детальніше" %}</a>
+    </div>
+  </div>
+
+  <!-- 4 -->
+  <div class="equal-box info-box">
+    <img src="{% static 'images/main_photo.webp' %}" alt="Бізнес" class="info-img">
+    <div class="info-box-overlay">
+      <div class="info-text">
+        <h3>{% trans "«Спільна перемога» Продакшн" %}</h3>
+        <p class="info-card-description">{% trans "Продакшн, що розповідає світові українські історії через потужний аудіовізуальний контент." %}</p>
+      </div>
+      <a href="#" class="info-btn">{% trans "Детальніше" %}</a>
+    </div>
+  </div>
+</section>
+
+    <section class="section-wrapper">
+  <!-- ВЕРХНИЙ РЯД (без изменений) -->
+  <div class="top-grid">
+    <div class="top-box image-box">
+      <img src="{% static 'images/marchuk_movie_main.png' %}" alt="Image">
+      <div class="image-overlay">
+        <p class="overlay-title">{% trans "Громадська організація «Спільна перемога»" %}</p>
+      </div>
+    </div>
+
+    <div class="top-box text-box">
+      <div class="text-content">
+        <p>{% trans "Зосереджена на реалізації культурно-соціальних ініціатив, успішно розвиваючи напрямок громадської, культурної дипломатії." %}</p>
+        <p>{% trans "Ми ініціюємо діалоги, форуми, освітні кампанії, наши проекти формують ідентичність, єдність і стійкість суспільства." %}</p>
+      </div>
+      <a href="#" class="info-btn">{% trans "Детальніше" %}</a>
+    </div>
+  </div>
+
+  <!-- СЛАЙДЕР ИЗОБРАЖЕНИЙ -->
+<div class="gallery-slider-section">
+  <div class="swiper imageGallerySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="{% static 'images/space_mriya_picture.webp' %}" alt="Image 1">
+      </div>
+      <div class="swiper-slide">
+        <img src="{% static 'images/dissidnt_picture.webp' %}" alt="Image 2">
+      </div>
+      <div class="swiper-slide">
+        <img src="{% static 'images/marchuk_picture.webp' %}" alt="Image 3">
+      </div>
+      <div class="swiper-slide">
+        <img src="{% static 'images/dissidnt_picture.webp' %}" alt="Image 4">
+      </div>
+    </div>
+
+    <!-- Навигация -->
+    <div class="gallery-button-prev swiper-button-prev"><i class="bi bi-chevron-double-left"></i></div>
+    <div class="gallery-button-next swiper-button-next"><i class="bi bi-chevron-double-right"></i></div>
+    <div class="gallery-pagination swiper-pagination"></div>
+  </div>
+</div>
+
+</section>
+
+    <section class="section-wrapper">
+  <!-- ВЕРХНИЙ РЯД (без изменений) -->
+  <div class="top-grid">
+    <div class="top-box image-box">
+      <img src="{% static 'images/marchuk_movie_main.png' %}" alt="Image">
+      <div class="image-overlay">
+        <p class="overlay-title">{% trans "ТОВ Креативна агенція «Спільна перемога»" %}</p>
+      </div>
+    </div>
+
+    <div class="top-box text-box">
+      <div class="text-content">
+        <p>{% trans "Комерційна структура, що забезпечує організаційний і технічний супровід проєктів, сприяє ефективному партнерству з бізнесом, меценатами та державними інституціями." %}</p>
+        <p>{% trans "Це інструмент сталого розвитку об'єднання, що дозволяє поєднувати соціальну місію з економічною ефективністю." %}</p>
+      </div>
+      <a href="#" class="info-btn">{% trans "Детальніше" %}</a>
+    </div>
+  </div>
+
+  <!-- СЛАЙДЕР ИЗОБРАЖЕНИЙ -->
+<div class="gallery-slider-section">
+  <div class="swiper imageGallerySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="{% static 'images/space_mriya_picture.webp' %}" alt="Image 1">
+      </div>
+      <div class="swiper-slide">
+        <img src="{% static 'images/dissidnt_picture.webp' %}" alt="Image 2">
+      </div>
+      <div class="swiper-slide">
+        <img src="{% static 'images/marchuk_picture.webp' %}" alt="Image 3">
+      </div>
+      <div class="swiper-slide">
+        <img src="{% static 'images/dissidnt_picture.webp' %}" alt="Image 4">
+      </div>
+    </div>
+
+    <!-- Навигация -->
+    <div class="gallery-button-prev swiper-button-prev"><i class="bi bi-chevron-double-left"></i></div>
+    <div class="gallery-button-next swiper-button-next"><i class="bi bi-chevron-double-right"></i></div>
+    <div class="gallery-pagination swiper-pagination"></div>
+  </div>
+</div>
+
+</section>
+
+<section class="section-wrapper">
+  <!-- Верхний ряд -->
+  <div class="top-grid">
+    <div class="top-box image-box">
+      <img src="{% static 'images/marchuk_movie_main.png' %}" alt="Image">
+      <div class="image-overlay">
+        <p class="overlay-title">{% trans "«Спільна перемога» Продакшн" %}</p>
+      </div>
+    </div>
+
+    <div class="top-box text-box">
+      <div class="text-content">
+        <p>{% trans "Продакшн-компанія, яка створює потужний аудіовізуальний контент: художні, документальні фільми, промоційні ролики, відео для телебачення й діджитал-платформ." %}</p>
+        <p>{% trans "Наша мета — розповідати світові українські історії, які надихають, об’єднують і формують новий культурний наратив." %}</p>
+      </div>
+      <a href="#" class="info-btn">{% trans "Детальніше" %}</a>
+    </div>
+  </div>
+  <!-- Нижний блок -->
+  <div class="video-slider-section">
+    <div class="swiper video-swiper">
+      <div class="swiper-wrapper">
+
+        <!-- СЛАЙД 1 -->
+<div class="swiper-slide">
+  <div class="video-description-slide">
+    <div class="video-column">
+      <img class="slide-poster"
+           src="{% static 'images/space_mriya_picture.webp' %}"
+           alt="«Місія Космос. Мрія»"
+           data-video="{% static 'video/space.mp4' %}">
+    </div>
+    <div class="text-column">
+      <div class="text-inner">
+        <div class="text-top">
+          <h3>{% trans "«Місія Космос. Мрія»" %}</h3>
+          <p>{% trans "Перший з документального циклу «Місія-Космос», присвяченого історії космічної галузі України — документальний фільм про життя та політ на американському шатлі «Колумбія» першого космонавта Незалежної України, Героя України Леоніда Каденюка, а також про унікальний експеримент українських вчених, що він провів на орбіті Землі під час участі в місії STS-87." %}</p>
+        </div>
+      </div>
+      <button class="trailer-btn">{% trans "Смотреть трейлер" %}</button>
+    </div>
+  </div>
+</div>
+
+<!-- СЛАЙД 2 -->
+<div class="swiper-slide">
+  <div class="video-description-slide">
+    <div class="video-column">
+      <img class="slide-poster"
+           src="{% static 'images/dissidnt_picture.webp' %}"
+           alt="«Божевільнi. Діагноз: дисидент»"
+           data-video="{% static 'video/dissedent.mp4' %}">
+    </div>
+    <div class="text-column">
+      <div class="text-inner">
+        <div class="text-top">
+          <h3>{% trans "«Божевільнi. Діагноз: дисидент»" %}</h3>
+          <p>{% trans "На початку 2024 року відбудеться прем’єра художнього фільму «Божевільня» (в іноземному прокаті – «Діагноз – дисидент»). Це перше в історії кінематографу ігрове кіно, що розповідає про репресії та «каральну психіатрію», що застосовувались до дисидентів в СРСР. Ролі першого плану у фільмі зіграли: Вітовська, Костянтин Темляк, Остап Ступка, Сергій Калантай." %}</p>
+        </div>
+      </div>
+      <button class="trailer-btn">{% trans "Смотреть трейлер" %}</button>
+    </div>
+  </div>
+</div>
+
+<!-- СЛАЙД 3 -->
+<div class="swiper-slide">
+  <div class="video-description-slide">
+    <div class="video-column">
+      <img class="slide-poster"
+           src="{% static 'images/marchuk_picture.webp' %}"
+           alt="«Одного Всесвіту замало. Іван Марчук»"
+           data-video="{% static 'video/marchuk.mp4' %}">
+    </div>
+    <div class="text-column">
+      <div class="text-inner">
+        <div class="text-top">
+          <h3>{% trans "«Одного Всесвіту замало. Іван Марчук»" %}</h3>
+          <p>{% trans "Документальний фільм про життя та творчість почесного амбасадора ГП «Спільна перемога» Івана Марчука – народного художника України, лауреата Національної премії імені Тараса Шевченка, члена Золотої гільдії Римської академії сучасного мистецтва. У 2007 році британська газета The Daily Telegraph включила Івана Марчука до рейтингу «100 найвизначніших геніїв сучасності»." %}</p>
+        </div>
+      </div>
+      <button class="trailer-btn">{% trans "Смотреть трейлер" %}</button>
+    </div>
+  </div>
+</div>
+
+
+      </div>
+    </div>
+
+    <!-- Миниатюры -->
+    <div class="swiper thumbs-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="{% static 'images/space_mriya_picture.webp' %}" alt="Thumb 1">
+        </div>
+        <div class="swiper-slide">
+          <img src="{% static 'images/dissidnt_picture.webp' %}" alt="Thumb 2">
+        </div>
+        <div class="swiper-slide">
+          <img src="{% static 'images/marchuk_picture.webp' %}" alt="Thumb 3">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+<section class="values-section">
+  <div class="container text-center">
+    <h2 class="section-title">{% trans "Наші цінності" %}</h2>
+    <p class="section-subtitle">
+      {% trans "Принципи, які формують наш підхід до роботи, партнерства та розвитку спільноти." %}
+    </p>
+    <div class="values-grid">
+      <div class="value-item">
+        <i class="fa-solid fa-flag icon"></i>
+        <p>{% trans "Національна <br>гідність" %}</p>
+      </div>
+      <div class="value-item">
+        <i class="fa-solid fa-handshake icon"></i>
+        <p>{% trans "Відповідальне <br>партнерство" %}</p>
+      </div>
+        <div class="value-item">
+        <i class="fa-solid fa-handshake icon"></i>
+        <p>{% trans "Відповідальне <br>партнерство" %}</p>
+      </div>
+        <div class="value-item">
+        <i class="fa-solid fa-handshake icon"></i>
+        <p>{% trans "Відповідальне <br>партнерство" %}</p>
+      </div>
+      <div class="value-item">
+        <i class="fa-solid fa-briefcase icon"></i>
+        <p>{% trans "Професійна <br>реалізація" %}</p>
+      </div>
+      <div class="value-item">
+        <i class="fa-solid fa-eye icon"></i>
+        <p>{% trans "Прозорість <br>та довіра" %}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="team-section">
+  <div class="team-container">
+    <div class="team-card">
+      <img src="{% static 'images/bulba_vol.webp' %}" alt="Team Member 1">
+      <div class="card-overlay">
+        <div class="card-info">
+          <p class="team-name">Олександр Іваненко</p>
+          <p class="team-role">Керівник проєкту</p>
+        </div>
+        <a href="#" class="team-button">Детальніше</a>
+      </div>
+    </div>
+    <div class="team-card">
+      <img src="{% static 'images/sokolinskiy_al.webp' %}" alt="Team Member 2">
+      <div class="card-overlay">
+        <div class="card-info">
+          <p class="team-name">Марія Левченко</p>
+          <p class="team-role">Креативна директорка</p>
+        </div>
+        <a href="#" class="team-button">Детальніше</a>
+      </div>
+    </div>
+    <div class="team-card">
+      <img src="{% static 'images/bulba_vol.webp' %}" alt="Team Member 3">
+      <div class="card-overlay">
+        <div class="card-info">
+          <p class="team-name">Ігор Сидорчук</p>
+          <p class="team-role">Продюсер</p>
+        </div>
+        <a href="#" class="team-button">Детальніше</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="ambassadors-section">
+  <h2 class="section-title">{% trans "Почесні амбасадори" %}</h2>
+  <p class="section-subtitle">{% trans "Ми працюємо з тими, хто творить зміни та надихають на дію." %}<br>{% trans "Наша команда — для тих, хто не просто мріє, а формує майбутнє через дію." %}</p>
+
+  <div class="ambassadors-swiper swiper">
+    <div class="ambassadors-grid swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="ambassador-card">
+          <img src="{% static 'images/bulba_vol.webp' %}" alt="Амбасадор 1">
+          <div class="ambassador-overlay">
+            <div class="ambassador-name">Ім’я Прізвище</div>
+            <div class="ambassador-title">Письменник, громадський діяч</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="ambassador-card">
+          <img src="{% static 'images/bulba_vol.webp' %}" alt="Амбасадор 2">
+          <div class="ambassador-overlay">
+            <div class="ambassador-name">Ім’я Прізвище</div>
+            <div class="ambassador-title">Спортсмен, волонтер</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="ambassador-card">
+          <img src="{% static 'images/ambassador3.webp' %}" alt="Амбасадор 3">
+          <div class="ambassador-overlay">
+            <div class="ambassador-name">Ім’я Прізвище</div>
+            <div class="ambassador-title">Продюсер, медіаексперт</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="ambassador-card">
+          <img src="{% static 'images/ambassador4.webp' %}" alt="Амбасадор 4">
+          <div class="ambassador-overlay">
+            <div class="ambassador-name">Ім’я Прізвище</div>
+            <div class="ambassador-title">Культурний дипломат</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="ambassador-card">
+          <img src="{% static 'images/ambassador5.webp' %}" alt="Амбасадор 5">
+          <div class="ambassador-overlay">
+            <div class="ambassador-name">Ім’я Прізвище</div>
+            <div class="ambassador-title">Журналіст, воєнний репортер</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="ambassador-card">
+          <img src="{% static 'images/ambassador6.webp' %}" alt="Амбасадор 6">
+          <div class="ambassador-overlay">
+            <div class="ambassador-name">Ім’я Прізвище</div>
+            <div class="ambassador-title">Дизайнер, архітектор</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="ambassador-card">
+          <img src="{% static 'images/ambassador7.webp' %}" alt="Амбасадор 7">
+          <div class="ambassador-overlay">
+            <div class="ambassador-name">Ім’я Прізвище</div>
+            <div class="ambassador-title">Інвестор, філантроп</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="ambassador-card">
+          <img src="{% static 'images/ambassador8.webp' %}" alt="Амбасадор 8">
+          <div class="ambassador-overlay">
+            <div class="ambassador-name">Ім’я Прізвище</div>
+            <div class="ambassador-title">Акторка, культурна амбасадорка</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="ambassador-card">
+          <img src="{% static 'images/ambassador9.webp' %}" alt="Амбасадор 9">
+          <div class="ambassador-overlay">
+            <div class="ambassador-name">Ім’я Прізвище</div>
+            <div class="ambassador-title">Правозахисник</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="ambassador-card">
+          <img src="{% static 'images/ambassador10.webp' %}" alt="Амбасадор 10">
+          <div class="ambassador-overlay">
+            <div class="ambassador-name">Ім’я Прізвище</div>
+            <div class="ambassador-title">Лікар, волонтер</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Стрелки -->
+    <button class="ambassadors-button ambassadors-button-prev" aria-label="Previous">&#10094;</button>
+    <button class="ambassadors-button ambassadors-button-next" aria-label="Next">&#10095;</button>
+  </div>
+</section>
+
+
+<video id="fsVideo" controls playsinline style="position:fixed;left:-9999px;top:-9999px;width:1px;height:1px;background:#000;"></video>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const fsVideo = document.getElementById("fsVideo");
+
+  function openFullscreenVideo(src) {
+    if (!fsVideo) return;
+    // Подставляем видео
+    if (fsVideo.src !== src) {
+      fsVideo.src = src;
+      fsVideo.load();
+    }
+
+    // Стартуем воспроизведение (жест пользователя уже был — клик по кнопке)
+    const playThenFullscreen = () => {
+      // Пытаемся сразу фуллскрин
+      if (fsVideo.requestFullscreen) fsVideo.requestFullscreen().catch(()=>{});
+      else if (fsVideo.webkitEnterFullscreen) fsVideo.webkitEnterFullscreen(); // iOS Safari
+    };
+
+    const p = fsVideo.play();
+    if (p && typeof p.then === "function") {
+      p.then(playThenFullscreen).catch(() => playThenFullscreen());
+    } else {
+      playThenFullscreen();
+    }
+
+    // (опционально) остановим автоплей свайпера, если он есть
+    if (window.mainSwiper && mainSwiper.autoplay) mainSwiper.autoplay.stop();
+  }
+
+  // Закрытие: когда вышли из полноэкранного режима — останавливаем и чистим
+  function onFsChange() {
+    const isFs = document.fullscreenElement || document.webkitFullscreenElement;
+    if (!isFs) {
+      try { fsVideo.pause(); } catch(e) {}
+      fsVideo.removeAttribute("src");
+      fsVideo.load();
+      if (window.mainSwiper && mainSwiper.autoplay) mainSwiper.autoplay.start();
+    }
+  }
+  document.addEventListener("fullscreenchange", onFsChange);
+  document.addEventListener("webkitfullscreenchange", onFsChange);
+
+  // Вешаем на все кнопки «Смотреть трейлер»
+  document.querySelectorAll(".trailer-btn").forEach(btn => {
+    btn.addEventListener("click", (e) => {
+      const slide = e.currentTarget.closest(".swiper-slide");
+      const poster = slide && slide.querySelector(".slide-poster");
+      const src = poster && poster.dataset.video;
+      if (src) openFullscreenVideo(src);
+    });
+  });
+});
+</script>
+
+
+
+
+<script>
+  window.addEventListener("scroll", () => {
+    const videoWrapper = document.querySelector(".video-wrapper");
+    const section = document.querySelector(".video-section");
+    const rect = section.getBoundingClientRect();
+
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+      const scrollProgress = 1 - rect.top / window.innerHeight;
+      const newWidth = Math.min(100, 60 + scrollProgress * 40); // от 60 до 100
+      videoWrapper.style.width = newWidth + "vw";
+    }
+  });
+</script>
+
+<script>
+  document.getElementById("scrollTrigger").addEventListener("click", function () {
+    const videoBlock = document.getElementById("video-target");
+    videoBlock.scrollIntoView({
+      behavior: "smooth",
+      block: "start" // можно 'start' или 'center' — как хочешь
+    });
+  });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    setTimeout(() => {
+      const scrollIndicator = document.querySelector(".scroll-indicator");
+      if (scrollIndicator) {
+        scrollIndicator.classList.add("visible");
+      }
+    }, 3000); // задержка 1.8 сек (можно изменить)
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const swiper = new Swiper('.mySwiper', {
+      loop: true,
+      spaceBetween: 2,
+      slidesPerView: 3,
+      speed: 800,
+      autoplay: {
+        delay: 2500, // пауза между слайдами (в мс)
+        disableOnInteraction: false, // продолжает автоплей после ручного свайпа
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      breakpoints: {
+        1200: { slidesPerView: 3 },
+        768: { slidesPerView: 2 },
+        1 : { slidesPerView: 1 },
+      },
+    });
+  });
+</script>
+
+<script>
+  const thumbs = new Swiper(".thumbs-swiper", {
+    spaceBetween: 10,
+    slidesPerView: 3,
+    watchSlidesProgress: true,
+  });
+
+  const mainSwiper = new Swiper(".video-swiper", {
+    spaceBetween: 10,
+    slidesPerView: 1,
+    loop: true, // включим loop
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false, // autoplay не отключается при ручном свайпе
+    },
+    thumbs: {
+      swiper: thumbs,
+    },
+  });
+
+  // Остановка всех видео при смене слайда
+  mainSwiper.on("slideChange", () => {
+    document.querySelectorAll(".slide-video").forEach((video) => {
+      video.pause();
+    });
+  });
+
+  // Остановка и возобновление autoplay при воспроизведении/паузе видео
+  document.querySelectorAll(".slide-video").forEach((video) => {
+    video.addEventListener("play", () => {
+      mainSwiper.autoplay.stop();
+    });
+
+    video.addEventListener("pause", () => {
+      mainSwiper.autoplay.start();
+    });
+
+    video.addEventListener("ended", () => {
+      mainSwiper.autoplay.start();
+    });
+  });
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    new Swiper('.imageGallerySwiper', {
+      loop: true,
+      spaceBetween: 20,
+      slidesPerView: 3,
+      centeredSlides: false,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.gallery-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.gallery-button-next',
+        prevEl: '.gallery-button-prev',
+      },
+      breakpoints: {
+        1200: { slidesPerView: 3 },
+        768: { slidesPerView: 2 },
+        1: { slidesPerView: 1 }
+      }
+    });
+  });
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const ambassadorsSwiper = new Swiper('.ambassadors-swiper', {
+      loop: true,
+      spaceBetween: 20,
+      speed: 650, // плавная скорость
+      grabCursor: true,
+
+      navigation: {
+        nextEl: '.ambassadors-button-next',
+        prevEl: '.ambassadors-button-prev',
+      },
+
+      pagination: {
+        el: '.ambassadors-pagination',
+        clickable: true,
+      },
+
+      autoplay: {
+        delay: 3000,                 // убери блок целиком, если автоплей не нужен
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      },
+
+      breakpoints: {
+        1400: { slidesPerView: 6 },
+        1200: { slidesPerView: 5 },
+        992:  { slidesPerView: 4 },
+        768:  { slidesPerView: 3 },
+        400:  { slidesPerView: 2 },
+        1:    { slidesPerView: 1 },
+      },
+    });
+  });
+</script>
+
+{% endcomment %}
+
+
+{% endblock %}
