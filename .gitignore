@@ -30,3 +30,4 @@ poetry.lock
 *.bak
 pgdata/
 
+static/images/open_video.mp4
