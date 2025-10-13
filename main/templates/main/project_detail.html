@@ -82,24 +82,52 @@
       </article>
     {% endif %}
 
-    {% if object.video_url %}
-      <article class="pdj-card" style="grid-template-columns: 1fr;">
-        <div class="pdj-content" style="align-items:center; text-align:center;">
-          <button class="ch-play" type="button" data-video-url="{{ object.video_url }}" aria-label="{% trans 'Відтворити відео' %}">
-            <span class="ch-play-icon">▶</span>
-          </button>
-          <p class="pdj-lead" style="margin-top:12px;">{% trans "Переглянути відео проєкту" %}</p>
-        </div>
-      </article>
+    {% if object.video_file or object.video_url %}
+  <section class="pdj-video">
+    <div class="pdj-video__inner">
+      {% if object.video_file %}
+        <video
+          class="pdj-video__el"
+          controls
+          preload="metadata"
+          playsinline
+          {% if object.video_poster %}poster="{{ object.video_poster.url }}"{% endif %}
+        >
+          <source src="{{ object.video_file.url }}" type="video/{{ object.video_file.url|slice:'-3:'|lower }}">
+          {% trans "Ваш браузер не підтримує відтворення відео." %}
+        </video>
+      {% else %}
+        {# --- URL-видео: если это прямой файл (mp4/webm/ogg) — рисуем <video>, иначе cover+play --- #}
+        {% with vurl=object.video_url|lower %}
+          {% if vurl|slice:"-4:" == ".mp4" or vurl|slice:"-5:" == ".webm" or vurl|slice:"-4:" == ".ogg" %}
+            <video
+              class="pdj-video__el"
+              controls
+              preload="metadata"
+              playsinline
+              {% if object.video_poster %}poster="{{ object.video_poster.url }}"{% endif %}
+            >
+              <source src="{{ object.video_url }}" type="video/{{ vurl|slice:'-3:' }}">
+              {% trans "Ваш браузер не підтримує відтворення відео." %}
+            </video>
+          {% else %}
+            <div class="pdj-video__cover" data-video-src="{{ object.video_url|escape }}">
+              {% if object.video_poster %}
+                <img class="pdj-video__poster" src="{{ object.video_poster.url }}"
+                     alt="{{ object.title_override|default:project.title }}">
+              {% endif %}
+              <button class="pdj-video__play" type="button" aria-label="{% trans 'Відтворити відео' %}">
+                <span>▶</span>
+              </button>
+            </div>
+            <div class="pdj-video__player" hidden></div>
+          {% endif %}
+        {% endwith %}
+      {% endif %}
+    </div>
+  </section>
+{% endif %}
 
-      <div id="ch-video-modal" class="ch-modal" aria-hidden="true">
-        <div class="ch-modal__backdrop" data-close-modal></div>
-        <div class="ch-modal__dialog" role="dialog" aria-modal="true" aria-label="Video player">
-          <button class="ch-modal__close" type="button" aria-label="{% trans 'Закрити відео' %}" data-close-modal>✕</button>
-          <div class="ch-modal__player" id="ch-modal-player"></div>
-        </div>
-      </div>
-    {% endif %}
   </div>
 
 </section>
@@ -220,4 +248,45 @@
   window.addEventListener('keydown', (e)=>{ if (e.key === 'Escape' && modal.classList.contains('is-open')) closeModal(); });
 })();
 </script>
+
+    <script>
+(function(){
+  const wrap = document.querySelector('.pdj-video__cover');
+  if (!wrap) return;
+
+  function ytId(url){
+    const m = url.match(/(?:v=|\/)([0-9A-Za-z_-]{11})(?:[?&].*)?$/);
+    return m ? m[1] : null;
+  }
+  function isYouTube(url){ return /(?:youtube\.com|youtu\.be)/i.test(url); }
+  function isVimeo(url){ return /vimeo\.com/i.test(url); }
+
+  wrap.addEventListener('click', function(){
+    const url = wrap.getAttribute('data-video-src');
+    const playerHost = isYouTube(url) ? 'youtube' : (isVimeo(url) ? 'vimeo' : null);
+    const playerBox = wrap.nextElementSibling; // .pdj-video__player
+    if (!playerHost || !playerBox) return;
+
+    let embed = '';
+    if (playerHost === 'youtube'){
+      const id = ytId(url);
+      if (!id) return;
+      const src = `https://www.youtube.com/embed/${id}?autoplay=1&rel=0&playsinline=1&modestbranding=1`;
+      embed = `<iframe class="pdj-video__iframe" src="${src}" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen loading="lazy"></iframe>`;
+    } else {
+      // Vimeo
+      // извлекаем ID (простая эвристика)
+      const parts = url.split('/');
+      const vmId = parts.filter(Boolean).pop();
+      const src = `https://player.vimeo.com/video/${vmId}?autoplay=1&muted=0&title=0&byline=0&portrait=0`;
+      embed = `<iframe class="pdj-video__iframe" src="${src}" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen loading="lazy"></iframe>`;
+    }
+
+    playerBox.innerHTML = embed;
+    playerBox.hidden = false;
+    wrap.remove(); // скрываем обложку с кнопкой
+  });
+})();
+</script>
+
 {% endblock %}

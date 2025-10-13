@@ -1,0 +1,64 @@
+services:
+  db:
+    image: postgres:16
+    container_name: sp-postgres
+    environment:
+      POSTGRES_DB: sp-db
+      POSTGRES_USER: basinger
+      POSTGRES_PASSWORD: "Fel96396597!"
+      TZ: "Europe/Rome"
+    volumes:
+      - .:/app
+      - ./media:/app/media
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U basinger -d sp-db"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+    restart: unless-stopped
+
+  web:
+    build: .
+    container_name: sp-web
+    depends_on:
+      db:
+        condition: service_healthy
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+      - ./staticfiles:/app/staticfiles
+      - ./media:/app/media
+    restart: unless-stopped
+
+  nginx:
+    image: nginx:alpine
+    container_name: sp-nginx
+    depends_on:
+      - web
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      # ← на первом запуске примонтируем http-конфиг (см. шаг 2)
+      - ./nginx/nginx.http.conf:/etc/nginx/nginx.conf:ro
+      - ./staticfiles:/var/www/static
+      - ./media:/var/www/media
+      - certbot-webroot:/var/www/certbot
+      - certbot-etc:/etc/letsencrypt
+    restart: unless-stopped
+
+  certbot:
+    image: certbot/certbot:latest
+    container_name: sp-certbot
+    volumes:
+      - certbot-webroot:/var/www/certbot
+      - certbot-etc:/etc/letsencrypt
+
+volumes:
+  pgdata:
+  staticfiles:
+  media:
+  certbot-webroot:
+  certbot-etc:

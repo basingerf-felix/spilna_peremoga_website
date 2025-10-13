@@ -65,19 +65,33 @@ class ProjectDetailAdmin(admin.ModelAdmin):
     list_filter = ("is_published",)
     search_fields = ("slug", "title_override", "lead", "body", "goal", "partners", "results")
     prepopulated_fields = {"slug": ("title_override",)}
-    readonly_fields = ("bulk_upload_grid_link", "clear_grid_link")
+
+    # ✅ добавили превью видео в readonly
+    readonly_fields = ("bulk_upload_grid_link", "clear_grid_link", "video_admin_preview")
+
     inlines = [ProjectDetailImageInline, ProjectDetailGridImageInline]
 
     fieldsets = (
         (_("URL/Публікація"), {"fields": ("slug", "is_published")}),
         (_("Заголовки/Лід"), {"fields": ("title_override", "subtitle", "lead")}),
         (_("Контент"), {"fields": ("body",)}),
-        (_("Медіа"), {"fields": ("cover", "video_url", "bulk_upload_grid_link", "clear_grid_link")}),
+        # ✅ расширили медиаблок: video_file, video_poster, превью
+        (_("Медіа"), {
+            "fields": (
+                "cover",
+                "video_url",
+                "video_file",
+                "video_poster",
+                "video_admin_preview",
+                "bulk_upload_grid_link",
+                "clear_grid_link",
+            )
+        }),
         (_("Блоки (override)"), {"fields": ("goal", "partners", "results")}),
         (_("SEO"), {"fields": ("seo_title", "seo_description", "og_image")}),
     )
 
-    # Кнопка: загрузка полотна
+    # --- Кнопка: загрузка полотна
     def bulk_upload_grid_link(self, obj):
         if not obj or not obj.pk:
             return _("Спершу збережіть об'єкт.")
@@ -88,7 +102,7 @@ class ProjectDetailAdmin(admin.ModelAdmin):
         return format_html('<a class="button" href="{}">{}</a>', url, _("Завантажити полотно (ZIP)"))
     bulk_upload_grid_link.short_description = _("Масове завантаження (полотно)")
 
-    # Кнопка: очистить полотно
+    # --- Кнопка: очистить полотно
     def clear_grid_link(self, obj):
         if not obj or not obj.pk:
             return _("Спершу збережіть об'єкт.")
@@ -103,7 +117,26 @@ class ProjectDetailAdmin(admin.ModelAdmin):
         )
     clear_grid_link.short_description = _("Очистка полотна")
 
-    # URL-ы
+    # --- Превью видео в админке (readonly)
+    def video_admin_preview(self, obj):
+        if not obj:
+            return ""
+        # локальный файл
+        if getattr(obj, "video_file", None):
+            poster = obj.video_poster.url if getattr(obj, "video_poster", None) else ""
+            poster_attr = format_html(' poster="{}"', poster) if poster else ""
+            return format_html(
+                '<video src="{}" style="max-width:480px;max-height:270px;" controls preload="metadata"{}></video>',
+                obj.video_file.url,
+                poster_attr
+            )
+        # ссылка (YouTube/Vimeo/MP4) — показываем сам URL как подсказку
+        if getattr(obj, "video_url", ""):
+            return format_html('<div style="max-width:520px;word-break:break-all;color:#555;">{}</div>', obj.video_url)
+        return ""
+    video_admin_preview.short_description = _("Прев’ю відео")
+
+    # --- URL-ы
     def get_urls(self):
         urls = super().get_urls()
         custom = [
@@ -120,7 +153,7 @@ class ProjectDetailAdmin(admin.ModelAdmin):
         ]
         return custom + urls
 
-    # Обработчик: очистить полотно
+    # --- Обработчик: очистить полотно
     def clear_grid(self, request, object_id: int):
         project = get_object_or_404(ProjectDetail, pk=object_id)
         deleted_count, details = ProjectDetailGridImage.objects.filter(project=project).delete()
@@ -130,7 +163,7 @@ class ProjectDetailAdmin(admin.ModelAdmin):
             object_id,
         )
 
-    # Обработчик: массовая загрузка полотна
+    # --- Обработчик: массовая загрузка полотна
     def bulk_upload_grid(self, request, object_id: int):
         project = get_object_or_404(ProjectDetail, pk=object_id)
 
@@ -151,14 +184,8 @@ class ProjectDetailAdmin(admin.ModelAdmin):
 
             created = 0
             stats = {
-                "total": 0,
-                "dirs": 0,
-                "macosx": 0,
-                "hiddenfork": 0,
-                "bad_ext": 0,
-                "empty": 0,
-                "pillow_failed": 0,
-                "saved": 0,
+                "total": 0, "dirs": 0, "macosx": 0, "hiddenfork": 0,
+                "bad_ext": 0, "empty": 0, "pillow_failed": 0, "saved": 0,
             }
 
             max_order = (
@@ -260,6 +287,8 @@ class ProjectDetailAdmin(admin.ModelAdmin):
             "form": form,
         }
         return render(request, "admin/projectdetail/bulk_upload_images.html", context)
+
+
 class ProjectImageInline(admin.TabularInline):
     model = ProjectImage
     extra = 0

@@ -297,7 +297,7 @@ img {
 
 /* Языки */
 .off-lang{ margin-top: 6px; }
-.off-lang-label{ display:block; font-weight:700; margin-bottom: 8px; color: var(--ch-muted); }
+.off-lang-label{ display:block; font-weight:700; margin-bottom: 8px; color: #ffffff; }
 .off-lang-row{ display:flex; gap: 8px; flex-wrap: wrap; }
 .off-lang-btn{
   width: 42px; height: 42px; border-radius: 999px; border: 0;
@@ -677,7 +677,7 @@ html.offcanvas-lock, body.offcanvas-lock{ overflow: hidden; }
 }
 .ft-bottombar p{ margin:0; font-weight:600; }
 .ft-legal{ list-style:none; padding:0; margin:0; display:flex; gap:16px; }
-.ft-legal a{ color:#fff; text-decoration:none; font-weight:600; opacity:.95; }
+.ft-legal a{ color:#fff; text-decoration:none; font-weight:600; opacity:.95; font-size: 14px;}
 .ft-legal a:hover{ opacity:1; text-decoration:underline; }
 
 /* адаптив */

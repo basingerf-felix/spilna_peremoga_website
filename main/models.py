@@ -1,5 +1,7 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
+from django.core.validators import FileExtensionValidator
+
 
 class ContactMessage(models.Model):
     first_name = models.CharField(max_length=80)
@@ -48,6 +50,20 @@ class ProjectDetail(models.Model):
     # Медіа
     cover = models.ImageField(_("Обкладинка (герой)"), upload_to="projects/detail/", blank=True, null=True)
     video_url = models.URLField(_("Відео (YouTube/Vimeo/MP4)"), blank=True)
+
+    # ✅ Новое: собственный файл и постер (обложка)
+    video_file = models.FileField(
+        _("Відеофайл"),
+        upload_to="projects/detail/video/",
+        blank=True,
+        validators=[FileExtensionValidator(allowed_extensions=["mp4", "webm", "ogg"])]
+    )
+    video_poster = models.ImageField(
+        _("Обкладинка відео (poster)"),
+        upload_to="projects/detail/video/posters/",
+        blank=True,
+        null=True
+    )
 
     # (опціонально) дубль блоків з можливістю перезапису
     goal = models.TextField(_("Мета (override)"), blank=True)

@@ -99,7 +99,7 @@
 
       <aside class="ch-stats" aria-label="{% trans 'Результати компанії' %}">
   <div class="ch-stat">
-    <div class="ch-num">40+</div>
+    <div class="ch-num">20+</div>
     <div class="ch-label">{% trans "Реалізовані проєкти" %}</div>
   </div>
   <div class="ch-stat">
@@ -107,7 +107,7 @@
     <div class="ch-label">{% trans "Років досвіду" %}</div>
   </div>
   <div class="ch-stat">
-    <div class="ch-num">50+</div>
+    <div class="ch-num">30+</div>
     <div class="ch-label">{% trans "Надійні партнери" %}</div>
   </div>
           <div class="ch-stat">
@@ -395,7 +395,7 @@
             <span><strong>{% trans "Результати" %}:</strong> {% trans "іменні плити з латуні з QR-кодами; регулярні церемонії відкриття" %}</span>
           </li>
         </ul>
-        <a href="#" class="prj-link">{% trans "Дізнатися більше" %} &nbsp;<i class="fa-solid fa-arrow-right"></i></a>
+        <a href="{% url 'project_detail' slug='plosha-zirok' %}" class="prj-link">{% trans "Дізнатися більше" %} &nbsp;<i class="fa-solid fa-arrow-right"></i></a>
       </div>
     </article>
 
@@ -451,7 +451,7 @@
             <span><strong>{% trans "Результати" %}:</strong> {% trans "«Роза вітрів» (2019), «Сквер НАТО» і скульптура «Україночка під парасолькою НАТО» (2024), візити ветеранів, молодіжний форум, конференція, освітній курс" %}</span>
           </li>
         </ul>
-        <a href="#" class="prj-link">{% trans "Дізнатися більше" %} &nbsp;<i class="fa-solid fa-arrow-right"></i></a>
+        <a href="{% url 'project_detail' slug='ukrayina-nato-spilna-peremoga' %}" class="prj-link">{% trans "Дізнатися більше" %} &nbsp;<i class="fa-solid fa-arrow-right"></i></a>
       </div>
     </article>
 
@@ -508,7 +508,7 @@
             <span><strong>{% trans "Результати" %}:</strong> {% trans "повнометражний художній фільм; перше в кіно системне висвітлення каральної психіатрії" %}</span>
           </li>
         </ul>
-        <a href="#" class="prj-link">{% trans "Дізнатися більше" %} &nbsp;<i class="fa-solid fa-arrow-right"></i></a>
+        <a href="{% url 'project_detail' slug='bozhevilni-diagnoz-disident' %}" class="prj-link">{% trans "Дізнатися більше" %} &nbsp;<i class="fa-solid fa-arrow-right"></i></a>
       </div>
     </article>
 
@@ -1124,13 +1124,13 @@
       <div class="ct-aside-inner">
         <div class="ct-block">
           <h3>{% trans "Адреса" %}</h3>
-          <p>2464 Royal Ln. Mesa,</p>
-          <p>New Jersey 45463</p>
+          <p>Київ, Україна</p>
+
         </div>
 
         <div class="ct-block">
           <h3>{% trans "Контакти" %}</h3>
-          <p>{% trans "Телефон" %}: +(000) 000-0000</p>
+          <p>{% trans "Телефон" %}: +38 (096) 012-1277</p>
           <p>{% trans "Електронна пошта" %}: example@gmail.com</p>
         </div>
 
@@ -1140,18 +1140,18 @@
   <ul class="ct-contacts">
     <li>
 
-      <a href="tel:+390000000000"><i class="bi bi-telephone"></i></a>
+      <a href="tel:+380960121277"><i class="bi bi-telephone"></i></a>
     </li>
 
     <li>
 
-      <a href="https://wa.me/390000000000" target="_blank" rel="noopener">
+      <a href="https://wa.me/380960121277" target="_blank" rel="noopener">
        <i class="bi bi-whatsapp"></i>
       </a>
     </li>
     <li>
 
-      <a href="https://t.me/your_username" target="_blank" rel="noopener">
+      <a href="https://t.me/@Bulba_V" target="_blank" rel="noopener">
         <i class="bi bi-telegram"></i>
       </a>
     </li>

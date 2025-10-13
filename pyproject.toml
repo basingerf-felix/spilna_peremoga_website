@@ -2,20 +2,18 @@
 name = "sp-poetry"
 version = "0.1.0"
 description = ""
-authors = [
-    { name = "Felix Basinger", email = "basingerfelix17@gmail.com" }
-]
+authors = ["Felix Basinger <basingerfelix17@gmail.com>"]
 readme = "README.md"
-requires-python = ">=3.11"
 
-dependencies = [
-    "django (>=5.2,<6.0)",
-    "psycopg[binary] (>=3.1)",
-    "dj-database-url (>=3.0.1,<4.0.0)",
-    "python-dotenv (>=1.1.1,<2.0.0)",
-    "pillow (>=11.3.0,<12.0.0)",
-    "gunicorn (>=22.0.0,<23.0.0)"
-]
+[tool.poetry.dependencies]
+python = ">=3.11"
+django = ">=5.2,<6.0"
+psycopg = { extras = ["binary"], version = ">=3.1" }
+dj-database-url = ">=3.0.1,<4.0.0"
+python-dotenv = ">=1.1.1,<2.0.0"
+pillow = ">=11.3.0,<12.0.0"
+gunicorn = ">=22.0.0,<23.0.0"
+requests = ">=2.31,<3.0"
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]

@@ -1,3 +1,5 @@
+from urllib.parse import quote
+
 from django.conf import settings
 from django.contrib import messages
 from django.db.models import Prefetch
@@ -6,48 +8,48 @@ from django.utils.translation import gettext_lazy as _
 from django.core.mail import send_mail
 from django.views import View
 from django.views.generic import TemplateView, DetailView
+import requests
 
+from .emailing import send_contact_emails
 from .forms import ContactForm
 from .models import Project, OrgUnit, ProjectDetail
 
 
 def index(request):
-    # По умолчанию пустая форма
     form = ContactForm()
-
-    # Обрабатываем только если это наш POST
     if request.method == "POST" and request.POST.get("form_name") == "contact":
         form = ContactForm(request.POST)
         if form.is_valid():
             obj = form.save(commit=False)
             obj.ip = request.META.get("REMOTE_ADDR")
-            obj.user_agent = request.META.get("HTTP_USER_AGENT","")[:500]
+            obj.user_agent = request.META.get("HTTP_USER_AGENT", "")[:500]
             obj.save()
 
-            # Отправка письма (можно отключить/настроить)
-            recipients = getattr(settings, "CONTACT_RECIPIENTS", [settings.DEFAULT_FROM_EMAIL])
-            subject = f"[Contact] {obj.subject}"
-            body = (
-                f"From: {obj.first_name} {obj.last_name}\n"
-                f"Email: {obj.email}\nPhone: {obj.phone}\n\n"
-                f"{obj.message}\n\n--\nIP: {obj.ip}"
-            )
-            try:
-                send_mail(subject, body, settings.DEFAULT_FROM_EMAIL, recipients, fail_silently=True)
-            except Exception:
-                pass
+            # формируем контекст для писем
+            ctx = {
+                "first_name": obj.first_name,
+                "last_name": obj.last_name,
+                "email": obj.email,
+                "phone": obj.phone,
+                "subject": obj.subject,
+                "message": obj.message,
+                "ip": obj.ip,
+                "user_agent": obj.user_agent,
+            }
 
-            messages.success(request, _("Дякуємо! Повідомлення надіслано."))
-            # редирект, чтобы избежать повторной отправки и прокрутить к секции
+            try:
+                ok, info = send_contact_emails(ctx)
+                if ok:
+                    messages.success(request, _("Дякуємо! Повідомлення надіслано."))
+                else:
+                    messages.warning(request, _("Повідомлення збережено, але лист не надіслано (%(err)s).") % {"err": info})
+            except Exception:
+                messages.warning(request, _("Повідомлення збережено, але лист не надіслано. Спробуйте пізніше."))
+
             return redirect("/#contact")
         else:
             messages.error(request, _("Перевірте поля та спробуйте знову."))
-
-    return render(request, "main/index.html", {
-        "contact_form": form,
-    })
-
-
+    return render(request, "main/index.html", {"contact_form": form})
 
 
 class ProjectsListView(TemplateView):

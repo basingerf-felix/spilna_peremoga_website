@@ -163,7 +163,7 @@
 
     <!-- Переключатель языка (мобайл-версия в панели) -->
     <div class="off-lang">
-      <span class="off-lang-label">{% trans "Мова" %}</span>
+      <span class="off-lang-label">{% trans "Мова:" %}</span>
       <div class="off-lang-row">
         {% for lang in languages %}
         <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
@@ -254,10 +254,10 @@
     <div class="ft-col ft-contacts">
       <h3 class="ft-h3">{% trans "Контакти" %}</h3>
       <ul class="ft-contacts-list">
-        <li><i class="bi bi-telephone-fill"></i> <a href="tel:+0000000000">+(000) 000-0000</a></li>
+        <li><i class="bi bi-telephone-fill"></i> <a href="tel:+0000000000">+38 (096) 012-1277</a></li>
         <li><i class="bi bi-envelope-fill"></i> <a href="mailto:example@gmail.com">example@gmail.com</a></li>
         <li><i class="bi bi-geo-alt-fill"></i>
-          <span>2464 Royal Ln. Mesa,<br> New Jersey 45463</span>
+          <span>Київ, Україна</span>
         </li>
       </ul>
     </div>

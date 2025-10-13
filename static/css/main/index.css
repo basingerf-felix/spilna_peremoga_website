@@ -733,10 +733,16 @@
   .about-lead{ max-width: 100%; }
   .about-grid{ grid-template-columns: 1fr; }
   .about-photo, .about-mission{ min-height: 320px; }
+
 }
 
-
-
+@media (max-width: 991px) {
+    .about-mission p {
+        margin: 0 0 20px;
+        font-size: 16px;
+        opacity: .95;
+    }
+}
 
 
 

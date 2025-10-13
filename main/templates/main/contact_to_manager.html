@@ -1,0 +1,10 @@
+<h2>Нова заявка з форми</h2>
+<table border="1" cellpadding="6" cellspacing="0" width="100%" style="border-collapse:collapse">
+  <tr><td><b>Імʼя</b></td><td>{{ first_name }} {{ last_name }}</td></tr>
+  <tr><td><b>Email</b></td><td>{{ email }}</td></tr>
+  {% if phone %}<tr><td><b>Телефон</b></td><td>{{ phone }}</td></tr>{% endif %}
+  <tr><td><b>Тема</b></td><td>{{ subject }}</td></tr>
+  <tr><td><b>Повідомлення</b></td><td><pre style="white-space:pre-wrap">{{ message }}</pre></td></tr>
+  <tr><td><b>IP</b></td><td>{{ ip }}</td></tr>
+  <tr><td><b>User-Agent</b></td><td>{{ user_agent }}</td></tr>
+</table>
