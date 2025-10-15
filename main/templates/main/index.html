@@ -24,8 +24,9 @@
     <div class="hero-overlay">
         <div class="hero-content-block">
             <img src="{% static 'images/logo_without_words.png' %}" alt="Спільна Перемога" class="hero-logo">
-            <p class="hero-organization"> Спільна Перемога</p>
-            <p class="hero-slogan">«Коли слово стає дiєю»</p>
+            <p class="hero-organization">{% trans "Спільна Перемога" %}</p>
+            <p class="hero-slogan">{% trans "«Коли слово стає дiєю»" %}</p>
+
         </div>
     </div>
 </section>
@@ -1124,7 +1125,7 @@
       <div class="ct-aside-inner">
         <div class="ct-block">
           <h3>{% trans "Адреса" %}</h3>
-          <p>Київ, Україна</p>
+          <p>{% trans "Київ, Україна" %}</p>
 
         </div>
 
