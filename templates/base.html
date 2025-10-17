@@ -4,25 +4,110 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-    <meta charset="UTF-8">
-    <title>{% block title %}Спільна Перемога{% endblock %}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  {# base.html — убедись, что вверху файла есть: {% load static i18n %} #}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Только Bootstrap Grid -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap-grid.min.css">
-    <!-- Кастомные стили --><!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  {# ——— Индексация ——— #}
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    {% block head %}{% endblock %}
+  {# ——— Title / Description (переопределяй на страницах) ——— #}
+  <title>{% block title %}Спільна Перемога — простір дії та нових сенсів{% endblock %}</title>
+  <meta name="description" content="{{ meta_description|default:'Культурні ініціативи, аудіовізуальний продакшн, освітні та спортивні проєкти. Київ, Україна. Офіційний сайт платформи «Спільна Перемога». Контакти: +38 (096) 012-1277.' }}">
+
+  {# ——— Meta keywords (не критично для Google, но оставим) ——— #}
+  <meta name="keywords" content="Спільна Перемога, культурні ініціативи, продакшн, кіновиробництво, документальне кіно, креативна агенція, громадські проєкти, освіта, спорт, Україна, Київ, соціальні кампанії, партнерство, медіапроекти, кіно, відеовиробництво, творчі проєкти, нація воїнів, Іван Марчук">
+
+  {# ——— Canonical ——— #}
+  <link rel="canonical" href="{{ canonical_url|default:request.build_absolute_uri }}">
+
+  {# ——— Hreflang для мультиязычия ——— #}
+  {% if hreflangs %}
+    {% for lang, url in hreflangs.items %}
+      <link rel="alternate" hreflang="{{ lang }}" href="{{ url }}">
+    {% endfor %}
+    {% if hreflangs.uk %}<link rel="alternate" hreflang="x-default" href="{{ hreflangs.uk }}">{% endif %}
+  {% endif %}
+
+  {# ——— Open Graph ——— #}
+  <meta property="og:locale" content="{{ request.LANGUAGE_CODE|default:'uk' }}">
+  <meta property="og:type" content="{{ og_type|default:'website' }}">
+  <meta property="og:site_name" content="Спільна Перемога">
+  <meta property="og:title" content="{{ og_title|default:page_title|default:'Спільна Перемога — простір дії та нових сенсів' }}">
+  <meta property="og:description" content="{{ og_description|default:meta_description }}">
+  <meta property="og:url" content="{{ request.build_absolute_uri }}">
+  <meta property="og:image" content="{{ og_image|default:request.build_absolute_uri|add:'static/images/og-default.jpg' }}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  {# ——— Twitter Cards ——— #}
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ og_title|default:page_title|default:'Спільна Перемога — простір дії та нових сенсів' }}">
+  <meta name="twitter:description" content="{{ og_description|default:meta_description }}">
+  <meta name="twitter:image" content="{{ og_image|default:request.build_absolute_uri|add:'static/images/og-default.jpg' }}">
+
+  {# ——— Favicons / PWA ——— #}
+  <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicons/apple-touch-icon.png' %}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicons/favicon-32x32.png' %}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicons/favicon-16x16.png' %}">
+  <link rel="manifest" href="{% static 'favicons/site.webmanifest' %}">
+  <link rel="mask-icon" href="{% static 'favicons/safari-pinned-tab.svg' %}" color="#0e2235">
+  <link rel="shortcut icon" href="{% static 'favicons/favicon.ico' %}">
+  <meta name="msapplication-TileColor" content="#0e2235">
+  <meta name="theme-color" content="#0e2235">
+
+  {# ——— CSS (твои же подключения + preconnect) ——— #}
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  {# Preload критического шрифта (пример: Poppins 600 латиница/кириллица) #}
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+  {# ——— JSON-LD: Organization ——— #}
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"Спільна Перемога",
+    "url":"{{ site_url|default:request.scheme|add:"://"|add:request.get_host }}",
+    "logo":"{{ request.build_absolute_uri }}static/images/logo_without_words.png",
+    "email":"clients@spilnaperemoga.com",
+    "telephone":"+380960121277",
+    "address":{
+      "@type":"PostalAddress",
+      "addressLocality":"Київ",
+      "addressCountry":"UA"
+    },
+    "sameAs":[
+      "https://www.facebook.com/spilnaperemoha/?locale=uk",
+      "https://www.instagram.com/spilnaperemoga?igsh=Z3NocmJicGlmNmYx"
+    ]
+  }
+  </script>
+
+  {# ——— JSON-LD: WebSite + SearchAction ——— #}
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebSite",
+    "name":"Спільна Перемога",
+    "url":"{{ site_url|default:request.scheme|add:"://"|add:request.get_host }}",
+    "potentialAction":{
+      "@type":"SearchAction",
+      "target":"{{ site_url|default:request.scheme|add:"://"|add:request.get_host }}/search?q={query}",
+      "query-input":"required name=query"
+    }
+  }
+  </script>
+
+  {# ——— Блок для пер-страничных добавок (например, VideoObject/Article) ——— #}
+  {% block extra_head %}{% endblock %}
 </head>
+
 <body>
 
 <header class="site-header ">
