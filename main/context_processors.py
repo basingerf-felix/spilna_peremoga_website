@@ -5,6 +5,6 @@ def language_flags(request):
         'languages': [
             {'code': 'uk', 'flag': 'uk.png'},
             {'code': 'en', 'flag': 'en.png'},
-            {'code': 'it', 'flag': 'it.png'},
+            # {'code': 'it', 'flag': 'it.png'},
         ]
     }

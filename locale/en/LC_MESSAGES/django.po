@@ -1,0 +1,2068 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-15 15:10+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: main/admin.py:51
+msgid "ZIP з зображеннями (для полотна)"
+msgstr ""
+
+#: main/admin.py:75
+msgid "URL/Публікація"
+msgstr ""
+
+#: main/admin.py:76
+msgid "Заголовки/Лід"
+msgstr ""
+
+#: main/admin.py:77
+msgid "Контент"
+msgstr ""
+
+#: main/admin.py:79
+msgid "Медіа"
+msgstr ""
+
+#: main/admin.py:90
+msgid "Блоки (override)"
+msgstr ""
+
+#: main/admin.py:91
+msgid "SEO"
+msgstr ""
+
+#: main/admin.py:97 main/admin.py:108
+msgid "Спершу збережіть об'єкт."
+msgstr ""
+
+#: main/admin.py:102
+msgid "Завантажити полотно (ZIP)"
+msgstr ""
+
+#: main/admin.py:103
+msgid "Масове завантаження (полотно)"
+msgstr ""
+
+#: main/admin.py:116
+msgid "Очистити полотно"
+msgstr ""
+
+#: main/admin.py:118
+msgid "Очистка полотна"
+msgstr ""
+
+#: main/admin.py:137
+msgid "Прев’ю відео"
+msgstr ""
+
+#: main/admin.py:179
+msgid "Файл не є коректним ZIP-архівом."
+msgstr ""
+
+#: main/admin.py:261
+msgid "У архіві не знайдено зображень (jpg/jpeg/png/webp)."
+msgstr ""
+
+#: main/admin.py:267
+#, python-brace-format
+msgid ""
+"Підсумок: всього файлів: {total}, папок: {dirs}, macOS: {macosx}, ._форки: "
+"{hiddenfork}, інший розширення: {bad_ext}, порожніх/недоступних: {empty}, "
+"Pillow помилок: {pillow_failed}, збережено: {saved}"
+msgstr ""
+
+#: main/admin.py:286
+msgid "Завантаження полотна (ZIP)"
+msgstr "Canvas upload (ZIP)"
+
+#: main/forms.py:20
+msgid "Іван"
+msgstr "Ivan"
+
+#: main/forms.py:21
+msgid "Петренко"
+msgstr "Petrenko"
+
+#: main/forms.py:22
+msgid "example@gmail.com"
+msgstr "example@gmail.com"
+
+#: main/forms.py:23
+msgid "Введіть номер телефону"
+msgstr "Enter your phone number"
+
+#: main/forms.py:24
+msgid "Введіть тему…"
+msgstr "Enter a subject…"
+
+#: main/forms.py:25
+msgid "Введіть повідомлення…"
+msgstr "Enter your message…"
+
+#: main/forms.py:28
+msgid "Ім'я"
+msgstr "First name"
+
+#: main/forms.py:29
+msgid "Прізвище"
+msgstr "Last name"
+
+#: main/forms.py:30 main/templates/main/index.html:1135
+msgid "Електронна пошта"
+msgstr "Email"
+
+#: main/forms.py:31
+msgid "Номер телефону"
+msgstr "Phone number"
+
+#: main/forms.py:32
+msgid "Тема"
+msgstr "Subject"
+
+#: main/forms.py:33
+msgid "Ваше повідомлення"
+msgstr "Your message"
+
+#: main/forms.py:50
+msgid "Виявлено спам."
+msgstr "Spam detected."
+
+#: main/forms.py:57
+msgid "Ім'я має містити щонайменше 2 символи."
+msgstr "The first name must contain at least 2 characters."
+
+#: main/forms.py:59
+msgid "Ім'я задовге (макс. 50 символів)."
+msgstr "The first name is too long (max. 50 characters)."
+
+#: main/forms.py:61
+msgid "Ім'я може містити лише літери, пробіли, апостроф або дефіс."
+msgstr ""
+"The first name may contain only letters, spaces, apostrophes, or hyphens."
+
+#: main/forms.py:70
+msgid "Прізвище задовге (макс. 60 символів)."
+msgstr "The last name is too long (max. 60 characters)."
+
+#: main/forms.py:72
+msgid "Прізвище може містити лише літери, пробіли, апостроф або дефіс."
+msgstr ""
+"The last name may contain only letters, spaces, apostrophes, or hyphens."
+
+#: main/forms.py:81
+msgid "Вкажіть електронну пошту."
+msgstr "Please provide an email address."
+
+#: main/forms.py:84
+msgid "Електронна пошта не може містити пробіли."
+msgstr "Email address cannot contain spaces."
+
+#: main/forms.py:96
+msgid "Невірний номер телефону. Вкажіть від 10 до 15 цифр."
+msgstr "Invalid phone number. Please enter 10 to 15 digits."
+
+#: main/forms.py:104
+msgid "Тема надто коротка (мін. 3 символи)."
+msgstr "The subject is too short (min. 3 characters)."
+
+#: main/forms.py:106
+msgid "Тема задовга (макс. 120 символів)."
+msgstr "The subject is too long (max. 120 characters)."
+
+#: main/forms.py:109
+msgid "Будь ласка, не додавайте посилання в тему повідомлення."
+msgstr "Please do not include links in the subject."
+
+#: main/forms.py:116
+msgid "Повідомлення надто коротке (мін. 10 символів)."
+msgstr "The message is too short (min. 10 characters)."
+
+#: main/forms.py:118
+msgid "Повідомлення задовге (макс. 4000 символів)."
+msgstr "The message is too long (max. 4000 characters)."
+
+#: main/forms.py:131
+msgid "Вкажіть принаймні електронну пошту або телефон."
+msgstr "Please provide at least an email address or a phone number."
+
+#: main/models.py:26
+msgid "Підрозділ"
+msgstr "Department"
+
+#: main/models.py:27 main/models.py:172
+msgid "Слаг"
+msgstr "Slug"
+
+#: main/models.py:31
+msgid "Підрозділ організації"
+msgstr "Organization department"
+
+#: main/models.py:32
+msgid "Підрозділи організації"
+msgstr "Organization departments"
+
+#: main/models.py:40
+msgid "Слаг детальної сторінки"
+msgstr "Detailed page slug"
+
+#: main/models.py:43
+msgid "Заголовок (детально)"
+msgstr "Title (detailed)"
+
+#: main/models.py:44
+msgid "Підзаголовок"
+msgstr "Subtitle"
+
+#: main/models.py:45
+msgid "Короткий лід/опис"
+msgstr "Short lead/description"
+
+#: main/models.py:48
+msgid "Детальний опис (HTML дозволено)"
+msgstr "Detailed description (HTML allowed)"
+
+#: main/models.py:51
+msgid "Обкладинка (герой)"
+msgstr "Cover (hero image)"
+
+#: main/models.py:52
+msgid "Відео (YouTube/Vimeo/MP4)"
+msgstr "Video (YouTube/Vimeo/MP4)"
+
+#: main/models.py:56
+msgid "Відеофайл"
+msgstr "Video file"
+
+#: main/models.py:62
+msgid "Обкладинка відео (poster)"
+msgstr "Video cover (poster)"
+
+#: main/models.py:69
+msgid "Мета (override)"
+msgstr "Meta (override)"
+
+#: main/models.py:70
+msgid "Партнери (override)"
+msgstr "Partners (override)"
+
+#: main/models.py:71
+msgid "Результати (override)"
+msgstr "Results (override)"
+
+#: main/models.py:74
+msgid "SEO title"
+msgstr "SEO title"
+
+#: main/models.py:75
+msgid "SEO description"
+msgstr "SEO description"
+
+#: main/models.py:76
+msgid "OG image"
+msgstr "OG image"
+
+#: main/models.py:78 main/models.py:153
+msgid "Опубліковано"
+msgstr "Published"
+
+#: main/models.py:83
+msgid "Детальна сторінка проєкту"
+msgstr "Project detail page"
+
+#: main/models.py:84
+msgid "Детальні сторінки проєктів"
+msgstr "Project detail pages"
+
+#: main/models.py:95 main/models.py:177
+#: main/templates/main/project_detail.html:13
+msgid "Проєкт"
+msgstr "Project"
+
+#: main/models.py:97 main/models.py:186
+msgid "Зображення"
+msgstr "Image"
+
+#: main/models.py:98
+msgid "ALT"
+msgstr "ALT"
+
+#: main/models.py:99 main/models.py:154 main/models.py:188 main/models.py:203
+msgid "Порядок"
+msgstr "Order"
+
+#: main/models.py:102 main/models.py:103
+msgid "Зображення полотна"
+msgstr "Canvas image"
+
+#: main/models.py:111
+msgid "Проєкт (детально)"
+msgstr "Project (detailed)"
+
+#: main/models.py:118
+msgid "Зображення (детально)"
+msgstr "Image (detailed)"
+
+#: main/models.py:119
+msgid "Галерея (детально)"
+msgstr "Gallery (detailed)"
+
+#: main/models.py:126
+msgid "Назва проєкту"
+msgstr "Project name"
+
+#: main/models.py:127
+msgid "Опис"
+msgstr "Description"
+
+#: main/models.py:127
+msgid "Основний опис/лід для картки"
+msgstr "Main description/lead for card"
+
+#: main/models.py:128 main/templates/main/go_creative_agency.html:226
+#: main/templates/main/go_sp_production.html:179
+#: main/templates/main/go_spilna_peremoga.html:230
+#: main/templates/main/index.html:388 main/templates/main/index.html:444
+#: main/templates/main/index.html:501
+#: main/templates/main/project_detail.html:58
+#: main/templates/main/projects.html:66
+msgid "Мета"
+msgstr "Mission"
+
+#: main/models.py:128
+msgid "Текст для блоку «Мета»"
+msgstr "Text for the 'Mission' block"
+
+#: main/models.py:129 main/templates/main/about.html:226
+#: main/templates/main/go_creative_agency.html:233
+#: main/templates/main/go_sp_production.html:186
+#: main/templates/main/go_spilna_peremoga.html:237
+#: main/templates/main/index.html:392 main/templates/main/index.html:448
+#: main/templates/main/index.html:505
+#: main/templates/main/project_detail.html:62
+#: main/templates/main/projects.html:73
+msgid "Партнери"
+msgstr "Partners"
+
+#: main/models.py:129
+msgid "Текст для блоку «Партнери»"
+msgstr "Text for the 'Partners' block"
+
+#: main/models.py:130 main/templates/main/go_creative_agency.html:240
+#: main/templates/main/go_sp_production.html:193
+#: main/templates/main/go_spilna_peremoga.html:244
+#: main/templates/main/index.html:396 main/templates/main/index.html:452
+#: main/templates/main/index.html:509
+#: main/templates/main/project_detail.html:66
+#: main/templates/main/projects.html:80
+msgid "Результати"
+msgstr "Results"
+
+#: main/models.py:130
+msgid "Текст для блоку «Результати»"
+msgstr "Text for the 'Results' block"
+
+#: main/models.py:134
+msgid "Реверсувати макет (текст зліва, фото справа)"
+msgstr "Reverse layout (text left, image right)"
+
+#: main/models.py:141
+msgid "Реверс для сторінки: Громадська платформа"
+msgstr "Reverse layout for page: Civil Platform"
+
+#: main/models.py:145
+msgid "Реверс для сторінки: Освіта"
+msgstr "Reverse layout for page: Education"
+
+#: main/models.py:149
+msgid "Реверс для сторінки: Спорт"
+msgstr "Reverse layout for page: Sport"
+
+#: main/models.py:158
+msgid "Підрозділи"
+msgstr "Departments"
+
+#: main/models.py:167
+msgid "Детальна сторінка"
+msgstr "Detail page"
+
+#: main/models.py:169
+msgid "Опціонально: прив’яжіть детальну сторінку для «Дізнатися більше»."
+msgstr "Optional: attach a detailed page for 'Learn more'."
+
+#: main/models.py:178 main/templates/main/go_creative_agency.html:189
+#: main/templates/main/go_sp_production.html:142
+#: main/templates/main/go_spilna_peremoga.html:191
+msgid "Проєкти"
+msgstr "Projects"
+
+#: main/models.py:187
+msgid "Alt (опис зображення)"
+msgstr "Alt (image description)"
+
+#: main/models.py:192 main/models.py:193
+msgid "Зображення проєкту"
+msgstr "Project image"
+
+#: main/models.py:202
+msgid "Текст бейджа"
+msgstr "Badge text"
+
+#: main/models.py:207
+msgid "Бейдж проєкту"
+msgstr "Project badge"
+
+#: main/models.py:208
+msgid "Бейджі проєкту"
+msgstr "Project badges"
+
+#: main/templates/main/about.html:4
+msgid "Про нас — Спільна Перемога"
+msgstr "About Us — Common Victory"
+
+#: main/templates/main/about.html:16
+msgid "Команда працює над проєктом"
+msgstr "The team is working on the project"
+
+#: main/templates/main/about.html:17
+msgid "Команда «Спільна Перемога»"
+msgstr "Common Victory Team"
+
+#: main/templates/main/about.html:21 templates/base.html:145
+msgid "Про нас"
+msgstr "About us"
+
+#: main/templates/main/about.html:23
+msgid "Ми створюємо"
+msgstr "We create"
+
+#: main/templates/main/about.html:24
+msgid "сенси, які діють"
+msgstr "meanings that work"
+
+#: main/templates/main/about.html:27
+msgid ""
+"«Спільна Перемога» — це простір, де ініціативи, креатив та продакшн "
+"об’єднуються заради вимірюваного суспільного впливу."
+msgstr ""
+"'Common Victory' is a space where initiatives, creativity, and production "
+"unite for measurable social impact."
+
+#: main/templates/main/about.html:31
+msgid "проєктів"
+msgstr "projects"
+
+#: main/templates/main/about.html:32
+msgid "років досвіду"
+msgstr "years of experience"
+
+#: main/templates/main/about.html:33 main/templates/main/about.html:196
+msgid "партнерів"
+msgstr "partners"
+
+#: main/templates/main/about.html:34
+msgid "подій"
+msgstr "events"
+
+#: main/templates/main/about.html:43
+#: main/templates/main/go_creative_agency.html:125
+#: main/templates/main/go_spilna_peremoga.html:126
+#: main/templates/main/index.html:130
+msgid "Хто ми"
+msgstr "Who we are"
+
+#: main/templates/main/about.html:45
+msgid "Місія, візія"
+msgstr "Mission, vision"
+
+#: main/templates/main/about.html:46
+msgid "та підхід"
+msgstr "and approach"
+
+#: main/templates/main/about.html:52
+msgid "Місія"
+msgstr "Mission"
+
+#: main/templates/main/about.html:53
+msgid "Візія"
+msgstr "Vision"
+
+#: main/templates/main/about.html:54
+msgid "Підхід"
+msgstr "Approach"
+
+#: main/templates/main/about.html:60
+msgid ""
+"Мобілізувати спільноту навколо значущих культурних, освітніх, спортивних та "
+"громадських ініціатив. Ми перетворюємо ідеї на дії, а дії — на сталі зміни."
+msgstr ""
+"To mobilize the community around meaningful cultural, educational, sports, "
+"and civic initiatives. We turn ideas into actions and actions into lasting "
+"change."
+
+#: main/templates/main/about.html:65
+msgid ""
+"Україна — країна сильних історій та рішень. Ми прагнемо стати платформою, де "
+"народжуються наративи, що визначають завтра."
+msgstr ""
+"Ukraine is a country of strong stories and decisions. We strive to become a "
+"platform where narratives that shape tomorrow are born."
+
+#: main/templates/main/about.html:70
+msgid "Дані → стратегія → креатив → продакшн → вимірювання результатів."
+msgstr "Data → Strategy → Creativity → Production → Measurement of results."
+
+#: main/templates/main/about.html:71
+msgid ""
+"Партнерство і відповідальність: прозорість у комунікації та бюджетуванні."
+msgstr ""
+"Partnership and responsibility: transparency in communication and budgeting."
+
+#: main/templates/main/about.html:72
+msgid "Швидкість і якість: мультидисциплінарні команди під завдання."
+msgstr "Speed and quality: multidisciplinary teams for each task."
+
+#: main/templates/main/about.html:82
+msgid "Історія"
+msgstr "History"
+
+#: main/templates/main/about.html:83
+msgid "Ключові"
+msgstr "Key"
+
+#: main/templates/main/about.html:83
+msgid "віхи"
+msgstr "milestones"
+
+#: main/templates/main/about.html:89
+msgid "Старт платформи"
+msgstr "Platform launch"
+
+#: main/templates/main/about.html:90
+msgid ""
+"Перші міські культурні події, волонтерські ініціативи, публічна дипломатія."
+msgstr ""
+"First city cultural events, volunteer initiatives, and public diplomacy."
+
+#: main/templates/main/about.html:95
+msgid "«Роза вітрів»"
+msgstr "‘Rose of the Winds’"
+
+#: main/templates/main/about.html:96
+msgid "Знаковий міський арт-об’єкт про євроатлантичний вибір України."
+msgstr "A landmark city art object about Ukraine's Euro-Atlantic choice."
+
+#: main/templates/main/about.html:101
+msgid "«Сквер НАТО»"
+msgstr "‘NATO Square’"
+
+#: main/templates/main/about.html:102
+msgid ""
+"Скульптура «Україночка під парасолькою НАТО» і масштабна комунікаційна "
+"кампанія."
+msgstr ""
+"The sculpture ‘Ukrainian Girl under the NATO Umbrella’ and a large-scale "
+"communication campaign."
+
+#: main/templates/main/about.html:107
+msgid "«БожеВільні»"
+msgstr "‘GodlyMad’"
+
+#: main/templates/main/about.html:108
+msgid "Повнометражний фільм про дисидентів: продакшн та медійний вплив."
+msgstr "Feature film about dissidents: production and media impact."
+
+#: main/templates/main/about.html:116 main/templates/main/about.html:122
+#: main/templates/main/index.html:753 templates/base.html:50
+#: templates/base.html:151
+msgid "Команда"
+msgstr "Team"
+
+#: main/templates/main/about.html:118
+msgid "Люди, які"
+msgstr "People who"
+
+#: main/templates/main/about.html:119
+msgid "запускають зміни"
+msgstr "drive change"
+
+#: main/templates/main/about.html:127
+msgid "Володимир Бульба"
+msgstr "Volodymyr Bulba"
+
+#: main/templates/main/about.html:131
+msgid ""
+"Засновник платформи. Майстер спорту міжнародного класу. Радник Міністра "
+"молоді та спорту (2015–2019)."
+msgstr ""
+"Founder of the platform. International Master of Sports. Advisor to the "
+"Minister of Youth and Sports (2015–2019)."
+
+#: main/templates/main/about.html:139
+msgid "Олександр Соколинський"
+msgstr "Oleksandr Sokolyinskyi"
+
+#: main/templates/main/about.html:143
+msgid ""
+"Співзасновник. Менеджер спортивно-молодіжних подій, громадський діяч, "
+"спортивний директор НКРУ."
+msgstr ""
+"Co-founder. Manager of sports and youth events, public figure, Sports "
+"Director of NCRU."
+
+#: main/templates/main/about.html:151
+msgid "Валерія Іваненко"
+msgstr "Valeriia Ivanenko"
+
+#: main/templates/main/about.html:155
+msgid ""
+"Директор «Спільна Перемога Продакшн». Продюсер, член спілок "
+"кінематографістів та журналістів."
+msgstr ""
+"Director of 'Common Victory Production'. Producer, member of film and "
+"journalist associations."
+
+#: main/templates/main/about.html:161
+#: main/templates/main/go_creative_agency.html:56
+#: main/templates/main/go_creative_agency.html:169
+#: main/templates/main/go_spilna_peremoga.html:57
+#: main/templates/main/go_spilna_peremoga.html:171
+#: main/templates/main/index.html:178 main/templates/main/index.html:279
+#: main/templates/main/index.html:796 main/templates/main/index.html:817
+msgid "Попередній"
+msgstr "Previous"
+
+#: main/templates/main/about.html:162
+#: main/templates/main/go_creative_agency.html:59
+#: main/templates/main/go_creative_agency.html:172
+#: main/templates/main/go_spilna_peremoga.html:60
+#: main/templates/main/go_spilna_peremoga.html:174
+#: main/templates/main/index.html:181 main/templates/main/index.html:282
+#: main/templates/main/index.html:799 main/templates/main/index.html:820
+msgid "Наступний"
+msgstr "Next"
+
+#: main/templates/main/about.html:170
+msgid "Бекстейдж"
+msgstr "Backstage"
+
+#: main/templates/main/about.html:171
+msgid "Процес"
+msgstr "Process"
+
+#: main/templates/main/about.html:171
+msgid "та люди"
+msgstr "and people"
+
+#: main/templates/main/about.html:185
+msgid "Закрити"
+msgstr "Close"
+
+#: main/templates/main/about.html:186
+#: templates/admin/projectdetail/bulk_upload_images.html:13
+msgid "Назад"
+msgstr "Back"
+
+#: main/templates/main/about.html:188
+msgid "Вперед"
+msgstr "Forward"
+
+#: main/templates/main/about.html:195 main/templates/main/about.html:198
+msgid "Відгуки"
+msgstr "Testimonials"
+
+#: main/templates/main/about.html:196
+msgid "Досвід"
+msgstr "Experience"
+
+#: main/templates/main/about.html:202
+msgid ""
+"Команда швидко перетворює ідеї на зрозумілу стратегію і якісний контент."
+msgstr ""
+"The team quickly turns ideas into a clear strategy and quality content."
+
+#: main/templates/main/about.html:203
+msgid "Партнер проєкту «Сквер НАТО»"
+msgstr "Partner of the 'NATO Square' project"
+
+#: main/templates/main/about.html:208
+msgid "Вони мислять впливом: від сценарію до вимірювання результатів."
+msgstr ""
+"They think in terms of impact — from concept to measurement of results."
+
+#: main/templates/main/about.html:209
+msgid "Представник міжнародної організації"
+msgstr "Representative of an international organization"
+
+#: main/templates/main/about.html:214
+msgid "Прозора співпраця і сильний продакшн — рідкісне поєднання."
+msgstr "Transparent collaboration and strong production — a rare combination."
+
+#: main/templates/main/about.html:215
+msgid "Куратор культурних проєктів"
+msgstr "Curator of cultural projects"
+
+#: main/templates/main/about.html:227 main/templates/main/index.html:987
+msgid "Разом"
+msgstr "Together"
+
+#: main/templates/main/about.html:227 main/templates/main/index.html:988
+msgid "посилюємо вплив"
+msgstr "we amplify impact"
+
+#: main/templates/main/about.html:229
+msgid "Логотипи партнерів"
+msgstr "Partners’ logos"
+
+#: main/templates/main/about.html:255
+msgid "Маєте ідею?"
+msgstr "Have an idea?"
+
+#: main/templates/main/about.html:255
+msgid "Зробімо її гучною"
+msgstr "Let's make it loud"
+
+#: main/templates/main/about.html:256
+msgid ""
+"Напишіть нам кілька рядків — повернемося зі стратегією та першим планом дій."
+msgstr ""
+"Write us a few lines — we'll come back with a strategy and a first action "
+"plan."
+
+#: main/templates/main/about.html:257 templates/base.html:182
+#: templates/base.html:220
+msgid "Зв’язатися"
+msgstr "Contact us"
+
+#: main/templates/main/go_creative_agency.html:5
+#: main/templates/main/go_sp_production.html:5
+msgid "Креативна маркетингова агенція — Спільна Перемога"
+msgstr "Creative Marketing Agency — Common Victory"
+
+#: main/templates/main/go_creative_agency.html:21
+msgid "Креатив. Партнерства. Результат."
+msgstr "Creativity. Partnerships. Results."
+
+#: main/templates/main/go_creative_agency.html:25
+msgid "Креативна маркетингова агенція"
+msgstr "Creative Marketing Agency"
+
+#: main/templates/main/go_creative_agency.html:26
+#: main/templates/main/go_sp_production.html:25
+#: main/templates/main/go_spilna_peremoga.html:26
+#: main/templates/main/index.html:27 main/templates/main/index.html:45
+#: main/templates/main/index.html:630
+msgid "Спільна Перемога"
+msgstr "Common Victory"
+
+#: main/templates/main/go_creative_agency.html:33
+msgid ""
+"Одна з небагатьох агенцій в Україні, що професійно працює з елітними "
+"спортсменами та публічними особистостями. Співзасновник і організатор "
+"проєкту «Площа Зірок» у центрі столиці. Комерційна структура, яка забезпечує "
+"організаційний і технічний супровід ініціатив, поєднуючи соціальну місію з "
+"економічною ефективністю."
+msgstr ""
+"One of the few agencies in Ukraine that works professionally with elite "
+"athletes and public figures. Co-founder and organizer of the 'Star Square' "
+"project in the heart of the capital. A commercial structure providing "
+"organizational and technical support for initiatives, combining a social "
+"mission with economic efficiency."
+
+#: main/templates/main/go_creative_agency.html:41
+msgid "Наші компетенції"
+msgstr "Our expertise"
+
+#: main/templates/main/go_creative_agency.html:42
+#: main/templates/main/index.html:64
+msgid "Креативні кампанії"
+msgstr "Creative campaigns"
+
+#: main/templates/main/go_creative_agency.html:43
+msgid "Менеджмент спортсменів і публічних осіб"
+msgstr "Management of athletes and public figures"
+
+#: main/templates/main/go_creative_agency.html:44
+msgid "Партнерства та спонсорство"
+msgstr "Partnerships and sponsorship"
+
+#: main/templates/main/go_creative_agency.html:45
+msgid "PR і комунікації"
+msgstr "PR and communications"
+
+#: main/templates/main/go_creative_agency.html:68
+msgid "Проєкт з елітними спортсменами"
+msgstr "Project with elite athletes"
+
+#: main/templates/main/go_creative_agency.html:73
+msgid "Публічні особистості та бренд-колабації"
+msgstr "Public figures and brand collaborations"
+
+#: main/templates/main/go_creative_agency.html:78
+msgid "Подієвий продакшн"
+msgstr "Event production"
+
+#: main/templates/main/go_creative_agency.html:83
+msgid "«Площа Зірок» — організація та менеджмент"
+msgstr "'Star Square' — organization and management"
+
+#: main/templates/main/go_creative_agency.html:88
+msgid "PR-активності та комунікації"
+msgstr "PR activities and communications"
+
+#: main/templates/main/go_creative_agency.html:93
+#: main/templates/main/go_creative_agency.html:98
+#: main/templates/main/go_creative_agency.html:103
+#: main/templates/main/go_creative_agency.html:109
+msgid "Партнерства з бізнесом і державою"
+msgstr "Partnerships with business and government"
+
+#: main/templates/main/go_creative_agency.html:127
+msgid "Креатив і результат"
+msgstr "Creativity and results"
+
+#: main/templates/main/go_creative_agency.html:128
+msgid "для брендів і лідерів думок"
+msgstr "for brands and opinion leaders"
+
+#: main/templates/main/go_creative_agency.html:134
+msgid ""
+"Працюємо на стику спорту, культури та бізнесу: формуємо партнерства, "
+"створюємо кампанії, керуємо іміджевими та комерційними проєктами. "
+"Забезпечуємо повний цикл — від ідеї й продакшну до медіапідтримки та "
+"звітності."
+msgstr ""
+"We work at the intersection of sports, culture, and business: forming "
+"partnerships, creating campaigns, and managing image and commercial "
+"projects. We provide a full cycle — from concept and production to media "
+"support and reporting."
+
+#: main/templates/main/go_creative_agency.html:136
+#: main/templates/main/go_creative_agency.html:247
+#: main/templates/main/go_sp_production.html:200
+#: main/templates/main/go_spilna_peremoga.html:137
+#: main/templates/main/go_spilna_peremoga.html:251
+#: main/templates/main/index.html:141 main/templates/main/index.html:399
+#: main/templates/main/index.html:455 main/templates/main/index.html:512
+#: main/templates/main/index.html:726 main/templates/main/projects.html:88
+msgid "Дізнатися більше"
+msgstr "Learn more"
+
+#: main/templates/main/go_creative_agency.html:143
+msgid "Команда, партнерства, продакшн"
+msgstr "Team, partnerships, production"
+
+#: main/templates/main/go_creative_agency.html:150
+msgid ""
+"Ми професійно співпрацюємо з елітними спортсменами, публічними особистостями "
+"та брендами, вибудовуючи довгострокові взаємовигідні відносини й масштабуючи "
+"вплив."
+msgstr ""
+"We work professionally with elite athletes, public figures, and brands, "
+"building long-term mutually beneficial relationships and scaling impact."
+
+#: main/templates/main/go_creative_agency.html:155
+msgid ""
+"Агенція є співзасновником і організатором «Площі Зірок» у центрі столиці — "
+"знакового проєкту, що відзначає досягнення та популяризує українські таланти."
+msgstr ""
+"The agency co-founded and organizes 'Star Square' in the city center—an "
+"iconic project that honors achievements and promotes Ukrainian talent."
+
+#: main/templates/main/go_creative_agency.html:160
+msgid ""
+"Ми як комерційна структура забезпечуємо організаційний і технічний супровід "
+"ініціатив, сприяючи партнерству з бізнесом, меценатами та державними "
+"інституціями. Це інструмент сталого розвитку, що поєднує соціальну місію з "
+"економічною ефективністю."
+msgstr ""
+"As a commercial structure, we provide organizational and technical support "
+"for initiatives, fostering partnerships with business, patrons, and public "
+"institutions. It is a tool for sustainable development that combines a "
+"social mission with economic efficiency."
+
+#: main/templates/main/go_creative_agency.html:166
+msgid "Наш Підхід"
+msgstr "Our Approach"
+
+#: main/templates/main/go_creative_agency.html:187
+msgid "Останні проєкти агенції"
+msgstr "Latest agency projects"
+
+#: main/templates/main/go_creative_agency.html:189
+msgid "креативної маркетингової агенції"
+msgstr "of the creative marketing agency"
+
+#: main/templates/main/go_creative_agency.html:251
+#: main/templates/main/go_sp_production.html:204
+#: main/templates/main/go_spilna_peremoga.html:255
+#: main/templates/main/projects.html:92
+msgid "Детально готується"
+msgstr "Details coming soon"
+
+#: main/templates/main/go_creative_agency.html:257
+#: main/templates/main/go_sp_production.html:210
+#: main/templates/main/go_spilna_peremoga.html:261
+msgid "Наразі немає опублікованих проєктів у цьому підрозділі."
+msgstr "There are currently no published projects in this division."
+
+#: main/templates/main/go_sp_production.html:23
+#: main/templates/main/index.html:628
+msgid "Кіно, що говорить мовою світу"
+msgstr "Cinema that speaks the world's language"
+
+#: main/templates/main/go_sp_production.html:26
+#: main/templates/main/index.html:631
+msgid "Продакшн"
+msgstr "Production"
+
+#: main/templates/main/go_sp_production.html:40
+#: main/templates/main/index.html:353 main/templates/main/index.html:409
+#: main/templates/main/index.html:466 main/templates/main/index.html:645
+msgid "Фасад сучасної бізнес-будівлі"
+msgstr "Facade of a modern business building"
+
+#: main/templates/main/go_sp_production.html:41
+#: main/templates/main/go_sp_production.html:53
+#: main/templates/main/go_sp_production.html:65
+#: main/templates/main/go_sp_production.html:75
+#: main/templates/main/index.html:646 main/templates/main/index.html:658
+#: main/templates/main/index.html:670 main/templates/main/index.html:680
+#: main/templates/main/project_detail.html:119
+msgid "Відтворити відео"
+msgstr "Play video"
+
+#: main/templates/main/go_sp_production.html:52
+#: main/templates/main/index.html:356 main/templates/main/index.html:412
+#: main/templates/main/index.html:469 main/templates/main/index.html:657
+msgid "Інтер’єр бізнес-хабу"
+msgstr "Interior of a business hub"
+
+#: main/templates/main/go_sp_production.html:64
+#: main/templates/main/index.html:669
+msgid "Постер відео"
+msgstr "Video poster"
+
+#: main/templates/main/go_sp_production.html:74
+#: main/templates/main/index.html:679
+msgid "Кадр із серіалу"
+msgstr "Frame from the series"
+
+#: main/templates/main/go_sp_production.html:89
+#: main/templates/main/index.html:694
+msgid ""
+"«Спільна Перемога Продакшн» - прогресивна українська кіновиробнича компанія, "
+"що поєднує традиції класичного кіно з найновішими технологіями ШІ. Ми "
+"створюємо художні та документальні фільми, які відкривають Україні нові "
+"горизонти у світовому медіапросторі."
+msgstr ""
+"'Common Victory Production' is a forward-thinking Ukrainian film company "
+"that combines classic cinema traditions with the latest AI technologies. We "
+"create feature and documentary films that open new horizons for Ukraine in "
+"the global media space."
+
+#: main/templates/main/go_sp_production.html:92
+#: main/templates/main/index.html:697
+msgid ""
+"Наша мiсiя - розповідати історії України мовою, зрозумілою світу. Ми "
+"створюємо кіно, що зберігає культурну пам’ять, надихає нові покоління та "
+"формує сучасний образ нашої країни на міжнародній арені."
+msgstr ""
+"Our mission is to tell Ukraine’s stories in a language the world "
+"understands. We create films that preserve cultural memory, inspire new "
+"generations, and shape our country’s contemporary image on the international "
+"stage."
+
+#: main/templates/main/go_sp_production.html:95
+#: main/templates/main/index.html:700
+msgid "У нашому портфоліо - проєкти, що вже стали знаковими:"
+msgstr "Our portfolio includes projects that have already become iconic:"
+
+#: main/templates/main/go_sp_production.html:100
+#: main/templates/main/index.html:705
+msgid "Художній фільм «Божевільні»"
+msgstr "Feature film 'Bozhevilni' ('The Mad')"
+
+#: main/templates/main/go_sp_production.html:100
+#: main/templates/main/index.html:705
+msgid ""
+"драматична історія з глибоким філософським підтекстом і потужним візуальним "
+"стилем;"
+msgstr ""
+"a dramatic story with a deep philosophical subtext and a powerful visual "
+"style;"
+
+#: main/templates/main/go_sp_production.html:104
+#: main/templates/main/index.html:709
+msgid "Документальний фільм «Цілого світу замало. Іван Марчук»"
+msgstr "Documentary 'The Whole World Is Not Enough. Ivan Marchuk'"
+
+#: main/templates/main/go_sp_production.html:104
+#: main/templates/main/index.html:709
+msgid "кінопортрет легендарного українського художника, визнаного у світі;"
+msgstr "a film portrait of a legendary Ukrainian artist recognized worldwide;"
+
+#: main/templates/main/go_sp_production.html:108
+#: main/templates/main/index.html:713
+msgid "Документальний фільм «Місія космос. Мрія про космонавта Каденюка»"
+msgstr "Documentary 'Mission: Space. The Dream of Astronaut Kadenyuk'"
+
+#: main/templates/main/go_sp_production.html:108
+#: main/templates/main/index.html:713
+msgid "стрічка про життя та мрію першого українського астронавта;"
+msgstr "a film about the life and dream of Ukraine’s first astronaut;"
+
+#: main/templates/main/go_sp_production.html:112
+#: main/templates/main/index.html:717
+msgid "Пілотна серія «АТОбайки»"
+msgstr "Pilot episode 'ATObaiky'"
+
+#: main/templates/main/go_sp_production.html:112
+#: main/templates/main/index.html:717
+msgid ""
+"гостросюжетна історія про пригоди українських військових у зоні АТО, "
+"створена за мотивами книги засновника компанії Володимира Бульби."
+msgstr ""
+"a fast-paced story about the adventures of Ukrainian soldiers in the ATO "
+"zone, based on the book by the company’s founder, Volodymyr Bulba."
+
+#: main/templates/main/go_sp_production.html:114
+#: main/templates/main/index.html:719
+msgid "Наразі наша команда працює над масштабною кінематографічною сагою:"
+msgstr "Our team is currently working on a large-scale cinematic saga:"
+
+#: main/templates/main/go_sp_production.html:117
+#: main/templates/main/index.html:722
+msgid "«Нація воїнів. Ринг історії»"
+msgstr "'Nation of Warriors. The Ring of History'"
+
+#: main/templates/main/go_sp_production.html:117
+#: main/templates/main/index.html:722
+msgid ""
+"документальний проєкт про становлення українського професійного боксу та "
+"його внесок у світовий спорт."
+msgstr ""
+"a documentary project about the rise of Ukrainian professional boxing and "
+"its contribution to world sport."
+
+#: main/templates/main/go_sp_production.html:130
+#: main/templates/main/index.html:94 main/templates/main/index.html:735
+msgid "Закрити відео"
+msgstr "Close video"
+
+#: main/templates/main/go_sp_production.html:140
+msgid "Останні проєкти продакшн-студії"
+msgstr "Latest projects of the production studio"
+
+#: main/templates/main/go_sp_production.html:142
+msgid "продакшн-студії"
+msgstr "of the production studio"
+
+#: main/templates/main/go_spilna_peremoga.html:5
+msgid "Громадська платформа — Спільна Перемога"
+msgstr "Civic Platform — Common Victory"
+
+#: main/templates/main/go_spilna_peremoga.html:21
+msgid "З 2014 року: шлях до національного рівня"
+msgstr "Since 2014: the path to the national level"
+
+#: main/templates/main/go_spilna_peremoga.html:25 templates/base.html:57
+#: templates/base.html:155 templates/base.html:245
+msgid "Громадська платформа"
+msgstr "Civic Platform"
+
+#: main/templates/main/go_spilna_peremoga.html:33
+msgid ""
+"Ми об’єднуємо людей, ідеї та партнерства, щоб утілювати суспільно важливі "
+"ініціативи в Україні та за її межами. Послідовна робота платформи "
+"перетворила локальні проєкти на рух національного масштабу."
+msgstr ""
+"We bring together people, ideas, and partnerships to implement socially "
+"important initiatives in Ukraine and beyond. The platform’s consistent work "
+"has transformed local projects into a nationwide movement."
+
+#: main/templates/main/go_spilna_peremoga.html:41
+msgid "Напрямки діяльності платформи"
+msgstr "Platform focus areas"
+
+#: main/templates/main/go_spilna_peremoga.html:42
+msgid "Культурна дипломатія"
+msgstr "Cultural diplomacy"
+
+#: main/templates/main/go_spilna_peremoga.html:43
+msgid "Громадські ініціативи"
+msgstr "Civic initiatives"
+
+#: main/templates/main/go_spilna_peremoga.html:45
+msgid "Спорт і здорові спільноти"
+msgstr "Sport and healthy communities"
+
+#: main/templates/main/go_spilna_peremoga.html:46
+msgid "Міжнародна співпраця"
+msgstr "International cooperation"
+
+#: main/templates/main/go_spilna_peremoga.html:69
+msgid "Проєкт 1"
+msgstr "Project 1"
+
+#: main/templates/main/go_spilna_peremoga.html:74
+msgid "Проєкт 2"
+msgstr "Project 2"
+
+#: main/templates/main/go_spilna_peremoga.html:79
+msgid "Проєкт 3"
+msgstr "Project 3"
+
+#: main/templates/main/go_spilna_peremoga.html:84
+msgid "Проєкт 4"
+msgstr "Project 4"
+
+#: main/templates/main/go_spilna_peremoga.html:89
+msgid "Проєкт 5"
+msgstr "Project 5"
+
+#: main/templates/main/go_spilna_peremoga.html:94
+#: main/templates/main/go_spilna_peremoga.html:99
+#: main/templates/main/go_spilna_peremoga.html:105
+#: main/templates/main/go_spilna_peremoga.html:110
+msgid "Проєкт 6"
+msgstr "Project 6"
+
+#: main/templates/main/go_spilna_peremoga.html:128
+msgid "Платформа громадянської дії"
+msgstr "Platform for civic action"
+
+#: main/templates/main/go_spilna_peremoga.html:129
+msgid "разом із 2014 року"
+msgstr "together since 2014"
+
+#: main/templates/main/go_spilna_peremoga.html:135
+msgid ""
+"Працюємо для громад, освітніх спільнот, культурних і спортивних осередків. "
+"Допомагаємо ініціативам ставати системними програмами з відчутним впливом "
+"для людей."
+msgstr ""
+"We work for communities, educational circles, and cultural and sports hubs. "
+"We help initiatives become systematic programs with a tangible impact for "
+"people."
+
+#: main/templates/main/go_spilna_peremoga.html:144
+msgid "Партнерство та співпраця"
+msgstr "Partnership and cooperation"
+
+#: main/templates/main/go_spilna_peremoga.html:152
+msgid ""
+"Ми виросли з волонтерських і локальних ініціатив у платформу, що поєднує "
+"громадські організації, партнерів та активні громади. Наша мета — створювати "
+"сталу інфраструктуру для суспільно корисних проєктів."
+msgstr ""
+"We grew from volunteer and local initiatives into a platform that unites "
+"civic organizations, partners, and active communities. Our goal is to build "
+"a sustainable infrastructure for socially beneficial projects."
+
+#: main/templates/main/go_spilna_peremoga.html:157
+msgid ""
+"Працюємо через партнерства, відкриті конкурси і mentoring: підтримуємо "
+"команди, надаємо експертизу, комунікації та проєктний менеджмент. "
+"Зосереджуємося на культурній дипломатії, освіті молоді, спорті та "
+"міжнародній взаємодії."
+msgstr ""
+"We work through partnerships, open calls, and mentoring: we support teams, "
+"provide expertise, communications, and project management. We focus on "
+"cultural diplomacy, youth education, sport, and international engagement."
+
+#: main/templates/main/go_spilna_peremoga.html:162
+msgid ""
+"Результат — програми, що зміцнюють єдність і репутацію України: від "
+"локальних подій до міжнародних проєктів і кампаній, які формують позитивні "
+"зміни в суспільстві."
+msgstr ""
+"The result is programs that strengthen Ukraine’s unity and reputation—from "
+"local events to international projects and campaigns that drive positive "
+"change in society."
+
+#: main/templates/main/go_spilna_peremoga.html:168
+#: main/templates/main/index.html:175
+msgid "Наша Місія"
+msgstr "Our Mission"
+
+#: main/templates/main/go_spilna_peremoga.html:189
+msgid "Останні проєкти платформи"
+msgstr "Latest platform projects"
+
+#: main/templates/main/go_spilna_peremoga.html:191
+msgid "громадської платформи"
+msgstr "of the civic platform"
+
+#: main/templates/main/index.html:28
+msgid "«Коли слово стає дiєю»"
+msgstr "When a word becomes action"
+
+#: main/templates/main/index.html:41
+msgid "Єдність, що творить майбутнє"
+msgstr "Unity that shapes the future"
+
+#: main/templates/main/index.html:46
+msgid "Простір дії та нових сенсів"
+msgstr "A space for action and new meanings"
+
+#: main/templates/main/index.html:53
+msgid ""
+"Тут зустрічаються ініціативи, ідеї та досвід, щоб народжувати сміливі "
+"проєкти й історії, що надихають і формують стійкість. Партнерство стає "
+"енергією розвитку, а спільні кроки ведуть до перемог, які змінюють культуру, "
+"суспільство й майбутнє України."
+msgstr ""
+"Here, initiatives, ideas, and experience meet to give rise to bold projects "
+"and stories that inspire and build resilience. Partnership becomes the "
+"energy of development, and joint steps lead to victories that transform the "
+"culture, society, and the future of Ukraine."
+
+#: main/templates/main/index.html:62
+msgid "Послуги"
+msgstr "Services"
+
+#: main/templates/main/index.html:63
+msgid "Культурні ініціативи"
+msgstr "Cultural initiatives"
+
+#: main/templates/main/index.html:65
+msgid "Аудіовізуальний продакшн"
+msgstr "Audiovisual production"
+
+#: main/templates/main/index.html:66
+msgid "Освітні проєкти"
+msgstr "Educational projects"
+
+#: main/templates/main/index.html:67
+msgid "Спортивні ініціативи"
+msgstr "Sports initiatives"
+
+#: main/templates/main/index.html:68
+msgid "Громадянські проєкти"
+msgstr "Civic projects"
+
+#: main/templates/main/index.html:79
+msgid "Engineers discussing a project at a construction site"
+msgstr "Engineers discussing a project at a construction site"
+
+#: main/templates/main/index.html:83
+msgid "Play video"
+msgstr "Play video"
+
+#: main/templates/main/index.html:101
+msgid "Результати компанії"
+msgstr "Company results"
+
+#: main/templates/main/index.html:104
+msgid "Реалізовані проєкти"
+msgstr "Completed projects"
+
+#: main/templates/main/index.html:108
+msgid "Років досвіду"
+msgstr "Years of experience"
+
+#: main/templates/main/index.html:112
+msgid "Надійні партнери"
+msgstr "Trusted partners"
+
+#: main/templates/main/index.html:116
+msgid "Організованих заходів"
+msgstr "Events organized"
+
+#: main/templates/main/index.html:132
+msgid "Творимо досконалість"
+msgstr "We craft excellence"
+
+#: main/templates/main/index.html:133
+msgid "у кожному проєкті"
+msgstr "in every project"
+
+#: main/templates/main/index.html:139
+msgid ""
+"Ми віримо, що сила України — в єдності, і кожна велика перемога починається "
+"з малих, але рішучих кроків, зроблених разом."
+msgstr ""
+"We believe that Ukraine’s strength lies in unity, and every great victory "
+"begins with small but determined steps taken together."
+
+#: main/templates/main/index.html:148
+msgid "Handshake partnership"
+msgstr "Handshake partnership"
+
+#: main/templates/main/index.html:152
+msgid "Років"
+msgstr "Years"
+
+#: main/templates/main/index.html:153
+msgid "досвіду"
+msgstr "of experience"
+
+#: main/templates/main/index.html:164
+msgid ""
+"«Спільна перемога» — це міжсекторальне об’єднання, що поєднує громадську "
+"організацію, продакшн-компанію та креативну маркетингову агенцію, які "
+"працюють синергійно задля реалізації соціально важливих проєктів у сферах "
+"культури, спорту, медіа, освіти та громадянської дії."
+msgstr ""
+"'Common Victory' is a cross-sectoral union that brings together a civic "
+"organization, a production company, and a creative marketing agency working "
+"synergistically to implement socially important projects in culture, sports, "
+"media, education, and civic action."
+
+#: main/templates/main/index.html:169
+msgid ""
+"Наша команда об’єднує тих, хто творить нову культуру, розвиває креативні "
+"проєкти, створює фільми та візуальний контент і впроваджує ідеї з відчутним "
+"впливом. Ми підтримуємо сильні голоси, відкриваємо потенціал і формуємо "
+"простір для рішень, що надихають, змінюють і визначають майбутнє України."
+msgstr ""
+"Our team brings together those who create a new culture, develop creative "
+"projects, produce films and visual content, and implement ideas with "
+"tangible impact. We amplify strong voices, unlock potential, and shape a "
+"space for solutions that inspire, transform, and define Ukraine’s future."
+
+#: main/templates/main/index.html:197
+msgid "Наші послуги"
+msgstr "Our services"
+
+#: main/templates/main/index.html:199
+msgid "Послуги, що відповідають"
+msgstr "Services that match"
+
+#: main/templates/main/index.html:200
+msgid "вашим потребам"
+msgstr "your needs"
+
+#: main/templates/main/index.html:205
+msgid "Сервіси"
+msgstr "Services"
+
+#: main/templates/main/index.html:213
+msgid "Команда на житловому об’єкті"
+msgstr "Team at a residential site"
+
+#: main/templates/main/index.html:219
+msgid "Громадська організація <br>«Спільна перемога»"
+msgstr "Civic organization <br>“Common Victory”"
+
+#: main/templates/main/index.html:221
+msgid ""
+"Реалізуємо культурно-соціальні ініціативи, що формують єдність і стійкість "
+"суспільства."
+msgstr ""
+"We implement cultural and social initiatives that build society’s unity and "
+"resilience."
+
+#: main/templates/main/index.html:224 main/templates/main/index.html:247
+#: main/templates/main/index.html:270
+msgid "Детальніше"
+msgstr "Learn more"
+
+#: main/templates/main/index.html:236
+msgid "Команда на комерційному об’єкті"
+msgstr "Team at a commercial site"
+
+#: main/templates/main/index.html:242
+msgid "ТОВ Креативна агенція <br>«Спільна перемога»"
+msgstr "LLC Creative Agency <br>“Common Victory”"
+
+#: main/templates/main/index.html:244
+msgid ""
+"Комерційна платформа, що поєднує соціальну місію з економічною ефективністю "
+"та розвитком партнерств."
+msgstr ""
+"A commercial platform that combines a social mission with economic "
+"efficiency and partnership development."
+
+#: main/templates/main/index.html:259
+msgid "Процес ремонту та оновлення"
+msgstr "Renovation and upgrade process"
+
+#: main/templates/main/index.html:265
+msgid "Продакшн-студія <br>«Спільна перемога»"
+msgstr "Production studio <br>“Common Victory”"
+
+#: main/templates/main/index.html:267
+msgid ""
+"Продакшн, що розповідає світові українські історії через потужний "
+"аудіовізуальний контент."
+msgstr ""
+"A production house that tells the world Ukrainian stories through powerful "
+"audiovisual content."
+
+#: main/templates/main/index.html:295
+msgid "Як ми працюємо"
+msgstr "How we work"
+
+#: main/templates/main/index.html:297
+msgid "Як ми"
+msgstr "How we"
+
+#: main/templates/main/index.html:298
+msgid "досягаємо результату"
+msgstr "achieve results"
+
+#: main/templates/main/index.html:306
+msgid "Крок 1"
+msgstr "Step 1"
+
+#: main/templates/main/index.html:307
+msgid "Діагностика та стратегія"
+msgstr "Diagnostics and strategy"
+
+#: main/templates/main/index.html:309
+msgid ""
+"Проводимо брифінг і занурення в контекст, аналізуємо ринок, конкурентів і "
+"цільову аудиторію, після чого формуємо чітку дорожню карту: від ключових "
+"меседжів і образу бренду до каналів комунікації."
+msgstr ""
+"We conduct a briefing and deep dive into context, analyze the market, "
+"competitors, and target audience, and then craft a clear roadmap—from key "
+"messages and brand image to communication channels."
+
+#: main/templates/main/index.html:315
+msgid "Крок 2"
+msgstr "Step 2"
+
+#: main/templates/main/index.html:316
+msgid "Креатив та концепція"
+msgstr "Creative and concept"
+
+#: main/templates/main/index.html:318
+msgid ""
+"Генеруємо і перевіряємо ідеї, розробляємо айдентику, візуальні рішення й "
+"сценарії кампаній, презентуємо й узгоджуємо з клієнтом, допрацьовуємо до "
+"найсильнішої концепції."
+msgstr ""
+"We generate and validate ideas, develop identity, visual solutions, and "
+"campaign scripts, present and align with the client, and refine to the "
+"strongest concept."
+
+#: main/templates/main/index.html:324
+msgid "Крок 3"
+msgstr "Step 3"
+
+#: main/templates/main/index.html:325
+msgid "Реалізація та результат"
+msgstr "Execution and results"
+
+#: main/templates/main/index.html:327
+msgid ""
+"Запускаємо кампанії та виробляємо матеріали, супроводжуємо і коригуємо в "
+"процесі, вимірюємо ефективність і надаємо прозорий звіт з рекомендаціями для "
+"наступних кроків."
+msgstr ""
+"We launch campaigns and produce materials, support and adjust along the way, "
+"measure effectiveness, and provide a transparent report with recommendations "
+"for next steps."
+
+#: main/templates/main/index.html:340 main/templates/main/projects.html:16
+msgid "Останні проєкти"
+msgstr "Latest projects"
+
+#: main/templates/main/index.html:342 main/templates/main/projects.html:18
+msgid "Наші"
+msgstr "Our"
+
+#: main/templates/main/index.html:342 main/templates/main/projects.html:18
+msgid "реалізовані проєкти"
+msgstr "completed projects"
+
+#: main/templates/main/index.html:359 main/templates/main/index.html:362
+#: main/templates/main/index.html:365 main/templates/main/index.html:415
+#: main/templates/main/index.html:418 main/templates/main/index.html:421
+#: main/templates/main/index.html:472 main/templates/main/index.html:475
+#: main/templates/main/index.html:478
+msgid "Панорама комплексу"
+msgstr "Complex panorama"
+
+#: main/templates/main/index.html:376 main/templates/main/index.html:431
+#: main/templates/main/index.html:489
+msgid "Київ"
+msgstr "Kyiv"
+
+#: main/templates/main/index.html:381
+msgid "«Площа зірок»"
+msgstr "“Alley of Stars”"
+
+#: main/templates/main/index.html:383
+msgid ""
+"«Площа зірок» у центрі Києва, створена у 2015 році біля ТРЦ «GULLIVER», "
+"стала сучасною пам’яткою та символом вшанування видатних українців. Тут "
+"встановлені іменні плити з латунного сплаву з QR-кодами, що відкривають "
+"детальну інформацію про діячів культури, театру, кіно, музики та спорту. "
+"Урочисті церемонії відкриття нових зірок збирають киян і туристів, "
+"перетворюючись на значні події та сприяючи популяризації української "
+"культури й гордості за досягнення країни."
+msgstr ""
+"“Alley of Stars” in central Kyiv, created in 2015 near the GULLIVER mall, "
+"has become a modern landmark and a symbol of honoring outstanding "
+"Ukrainians. Brass name plaques with QR codes provide detailed information "
+"about figures in culture, theater, cinema, music, and sports. Ceremonial "
+"unveilings of new stars draw locals and tourists, becoming major events that "
+"promote Ukrainian culture and pride in the country’s achievements."
+
+#: main/templates/main/index.html:388
+msgid "вшанування видатних українців і популяризація культури"
+msgstr "honoring outstanding Ukrainians and promoting culture"
+
+#: main/templates/main/index.html:392
+msgid "міська влада"
+msgstr "city authorities"
+
+#: main/templates/main/index.html:396
+msgid "іменні плити з латуні з QR-кодами; регулярні церемонії відкриття"
+msgstr "brass name plaques with QR codes; regular unveiling ceremonies"
+
+#: main/templates/main/index.html:432
+msgid "Брюссель"
+msgstr "Brussels"
+
+#: main/templates/main/index.html:437
+msgid "«Україна – НАТО. Спільна перемога»"
+msgstr "“Ukraine–NATO. Common Victory”"
+
+#: main/templates/main/index.html:439
+msgid ""
+"ГО «Спільна перемога» реалізує ініціативи, що зміцнюють партнерство України "
+"з НАТО: візит поранених воїнів АТО до Брюсселя, молодіжний форум, міжнародну "
+"конференцію та освітній курс. Найбільш символічними стали проєкти у центрі "
+"Києва — «Роза вітрів» (2019) та «Сквер НАТО» зі скульптурою «Україночка під "
+"парасолькою НАТО» (2024), які стали знаковим символом євроатлантичного "
+"вибору України."
+msgstr ""
+"The NGO “Common Victory” implements initiatives that strengthen Ukraine’s "
+"partnership with NATO: a visit of wounded ATO veterans to Brussels, a youth "
+"forum, an international conference, and an educational course. The most "
+"symbolic projects in central Kyiv—“Rose of the Winds” (2019) and the “NATO "
+"Square” with the sculpture “Ukrainian Girl under the NATO Umbrella” (2024)—"
+"have become iconic symbols of Ukraine’s Euro-Atlantic choice."
+
+#: main/templates/main/index.html:444
+msgid "публічна дипломатія та посилення євроатлантичного вектору"
+msgstr "public diplomacy and strengthening the Euro-Atlantic course"
+
+#: main/templates/main/index.html:448
+msgid "Центр інформації та документації НАТО, дипломати, міжнародні інституції"
+msgstr ""
+"NATO Information and Documentation Centre, diplomats, international "
+"institutions"
+
+#: main/templates/main/index.html:452
+msgid ""
+"«Роза вітрів» (2019), «Сквер НАТО» і скульптура «Україночка під парасолькою "
+"НАТО» (2024), візити ветеранів, молодіжний форум, конференція, освітній курс"
+msgstr ""
+"“Rose of the Winds” (2019); “NATO Square” and the sculpture “Ukrainian Girl "
+"under the NATO Umbrella” (2024); veterans’ visits; youth forum; conference; "
+"educational course"
+
+#: main/templates/main/index.html:494
+msgid "«Божевільнi. Діагноз: дисидент»"
+msgstr "“BozheVilni. Diagnosis: Dissident”"
+
+#: main/templates/main/index.html:496
+msgid ""
+"«БожеВільні» — дебютний фільм Дениса Тарасова про радянських дисидентів, які "
+"попри переслідування залишалися вірними своїм переконанням. Стрічка вперше у "
+"світовому кіно показує каральну медицину СРСР, коли психіатричні лікарні "
+"ставали знаряддям репресій. Створений компанією «Спільна Перемога Продакшн» "
+"у партнерстві з FILM.UA та «Національною Кінематекою України» за підтримки "
+"Держкіно, фільм нагадує про ціну свободи та мужність тих, хто протистояв "
+"тоталітарному режиму."
+msgstr ""
+"“BozheVilni” is Denis Tarasov’s debut film about Soviet dissidents who, "
+"despite persecution, remained true to their convictions. For the first time "
+"in world cinema, the film reveals the USSR’s punitive psychiatry, when "
+"psychiatric hospitals became instruments of repression. Produced by “Spilna "
+"Peremoga Production” in partnership with FILM.UA and the National "
+"Cinematheque of Ukraine with the support of the Ukrainian State Film Agency, "
+"the film reminds us of the price of freedom and the courage of those who "
+"resisted the totalitarian regime."
+
+#: main/templates/main/index.html:501
+msgid "нагадати про ціну свободи та злочини каральної медицини СРСР"
+msgstr ""
+"to remind of the price of freedom and the crimes of the USSR’s punitive "
+"psychiatry"
+
+#: main/templates/main/index.html:505
+msgid "НКУ"
+msgstr "National Cinematheque of Ukraine"
+
+#: main/templates/main/index.html:505
+msgid "Держкіно"
+msgstr "Ukrainian State Film Agency"
+
+#: main/templates/main/index.html:509
+msgid ""
+"повнометражний художній фільм; перше в кіно системне висвітлення каральної "
+"психіатрії"
+msgstr ""
+"feature fiction film; the first systematic depiction of punitive psychiatry "
+"in cinema"
+
+#: main/templates/main/index.html:517 main/templates/main/projects.html:100
+msgid "Переглянути всі проєкти"
+msgstr "View all projects"
+
+#: main/templates/main/index.html:527
+msgid "Чому обирають нас"
+msgstr "Why choose us"
+
+#: main/templates/main/index.html:529
+msgid "Будуємо довіру,"
+msgstr "We build trust,"
+
+#: main/templates/main/index.html:530
+msgid "поставляємо досконалість"
+msgstr "we deliver excellence"
+
+#: main/templates/main/index.html:541 main/templates/main/index.html:550
+#: main/templates/main/index.html:559
+msgid "Команда інженерів за робочим столом"
+msgstr "Team of engineers at a desk"
+
+#: main/templates/main/index.html:544 main/templates/main/index.html:553
+#: main/templates/main/index.html:562
+msgid "Проєктна нарада"
+msgstr "Project meeting"
+
+#: main/templates/main/index.html:547 main/templates/main/index.html:556
+#: main/templates/main/index.html:565
+msgid "Монтаж на об’єкті"
+msgstr "On-site installation"
+
+#: main/templates/main/index.html:585
+msgid "Національна гідність"
+msgstr "National dignity"
+
+#: main/templates/main/index.html:586
+msgid ""
+"Ми бережемо та підкреслюємо українську ідентичність у кожному проєкті, "
+"формуючи гордість за країну."
+msgstr ""
+"We preserve and highlight Ukrainian identity in every project, fostering "
+"pride in the country."
+
+#: main/templates/main/index.html:594
+msgid "Відповідальне партнерство"
+msgstr "Responsible partnership"
+
+#: main/templates/main/index.html:595
+msgid ""
+"Ми будуємо співпрацю на чесності, прозорості та взаємній довірі для "
+"довготривалого розвитку."
+msgstr ""
+"We build cooperation on honesty, transparency, and mutual trust for long-"
+"term development."
+
+#: main/templates/main/index.html:603
+msgid "Професійна реалізація"
+msgstr "Professional execution"
+
+#: main/templates/main/index.html:604
+msgid ""
+"Кожен проєкт проходить через експертне планування, якісну реалізацію та "
+"контроль на всіх етапах."
+msgstr ""
+"Every project goes through expert planning, high-quality execution, and "
+"oversight at every stage."
+
+#: main/templates/main/index.html:612
+msgid "Прозорість та довіра"
+msgstr "Transparency and trust"
+
+#: main/templates/main/index.html:613
+msgid ""
+"Ми відкрито ділимося процесами й результатами, забезпечуючи чесність і "
+"надійність у співпраці."
+msgstr ""
+"We openly share processes and results, ensuring honesty and reliability in "
+"cooperation."
+
+#: main/templates/main/index.html:743
+msgid "Наша команда"
+msgstr "Our team"
+
+#: main/templates/main/index.html:746
+msgid "Знайомтесь з людьми,"
+msgstr "Meet the people,"
+
+#: main/templates/main/index.html:747
+msgid "які стоять за проєктами"
+msgstr "behind the projects"
+
+#: main/templates/main/index.html:759
+msgid "Jenny Alexander"
+msgstr "Jenny Alexander"
+
+#: main/templates/main/index.html:763
+msgid ""
+"<b>Засновник Нацiональної громадської платформи «Спiльна Перемога».</b> "
+"<br>Майстер спорту мiжнародного класу. Радник Мiнiстра молодi та спорту "
+"України (2015-2019). Нагороджений державною вiдзнакою з вiдстоювання "
+"iнформацiйного суверенiтету України. Автор книжок «АТОбайки» та «Фронтовi "
+"байки»."
+msgstr ""
+"<b>Founder of the National Civic Platform “Common Victory”.</b> "
+"<br>International Master of Sports. Adviser to the Minister of Youth and "
+"Sports of Ukraine (2015–2019). Awarded a state distinction for defending "
+"Ukraine’s information sovereignty. Author of the books “ATO Tales” and "
+"“Frontline Tales”."
+
+#: main/templates/main/index.html:772
+msgid "Esther Howard"
+msgstr "Esther Howard"
+
+#: main/templates/main/index.html:776
+msgid ""
+"<b>Засновник Нацiональної громадської платформи «Спiльна Перемога».</b> "
+"<br>Провiдний в Українi, професiйний менеджер спортивно-молодiжних заходiв. "
+"Громадський дiяч. Спортивний директор Нацiональної книги рекордiв України. "
+"Нагороджений державною вiдзнакою за вiдстоювання суверенiтету України."
+msgstr ""
+"<b>Founder of the National Civic Platform “Common Victory”.</b> <br>Leading "
+"professional manager of sports and youth events in Ukraine. Public figure. "
+"Sports Director of the National Book of Records of Ukraine. Awarded a state "
+"distinction for defending Ukraine’s sovereignty."
+
+#: main/templates/main/index.html:785
+msgid "Ronald Richards"
+msgstr "Ronald Richards"
+
+#: main/templates/main/index.html:789
+msgid ""
+"<b>Директор Продюсерської Агенцiї «Спiльна перемога продакшн».</b> "
+"<br>Продюсер. Член Союзу кiнематографiстiв України. Член Союзу журналiстiв "
+"України. Лауреат премiї Нацiональної Спiлки журналiстiв України «Золоте "
+"перо». Лауреат премiї «ПРОМЕТЕЙ-ПРЕСТИЖ» загальнонацiональної програми "
+"«Людина року»."
+msgstr ""
+"<b>Director of the Production Agency “Common Victory Production”.</b> "
+"<br>Producer. Member of the Union of Cinematographers of Ukraine. Member of "
+"the Union of Journalists of Ukraine. Laureate of the National Union of "
+"Journalists of Ukraine’s “Golden Pen” award. Laureate of the “PROMETHEUS-"
+"PRESTIGE” award of the national program “Person of the Year”."
+
+#: main/templates/main/index.html:808
+msgid "Амбасадори організації"
+msgstr "Organization ambassadors"
+
+#: main/templates/main/index.html:810
+msgid "Обличчя, які"
+msgstr "Faces that"
+
+#: main/templates/main/index.html:811
+msgid "надихають наш рух"
+msgstr "inspire our movement"
+
+#: main/templates/main/index.html:832
+msgid "Іван Марчук"
+msgstr "Ivan Marchuk"
+
+#: main/templates/main/index.html:836
+msgid ""
+"Український живописець, народний художник України, лауреат Національної "
+"премії України ім. Шевченка. Почесний академік Національної академії "
+"мистецтв України."
+msgstr ""
+"Ukrainian painter, People’s Artist of Ukraine, laureate of the Shevchenko "
+"National Prize of Ukraine. Honorary Academician of the National Academy of "
+"Arts of Ukraine."
+
+#: main/templates/main/index.html:849
+msgid "Ольга Лящук"
+msgstr "Olha Liashchuk"
+
+#: main/templates/main/index.html:853
+msgid "Найсильнiша жiнка планети, рекордсменка Книги рекордiв Гiннеса."
+msgstr "The strongest woman on the planet, Guinness World Records holder."
+
+#: main/templates/main/index.html:866
+msgid "Володимир Оснiк"
+msgstr "Volodymyr Osnik"
+
+#: main/templates/main/index.html:870
+msgid "Перший українець Мiстер Всесвiт з фiтнесу."
+msgstr "The first Ukrainian Mr. Universe in fitness."
+
+#: main/templates/main/index.html:883
+msgid "Олена Пiдгрушна"
+msgstr "Olena Pidhrushna"
+
+#: main/templates/main/index.html:887
+msgid ""
+" Українська біатлоністка, заслужений майстер спорту України, чемпіонка "
+"Олімпійських ігор, чемпіонка світу, 5-разова чемпіонка Європи, переможниця і "
+"призерка етапів Кубка світу з біатлону."
+msgstr ""
+"Ukrainian biathlete, Honored Master of Sports of Ukraine, Olympic champion, "
+"world champion, five-time European champion, winner and medalist of Biathlon "
+"World Cup stages."
+
+#: main/templates/main/index.html:900
+msgid "Михайло Зав’ялов"
+msgstr "Mykhailo Zavyalov"
+
+#: main/templates/main/index.html:904
+msgid ""
+"Український радянський боксер та тренер, український тренер та спортивний "
+"функціонер, заслужений тренер СРСР. Президент професiйної лiги боксу України."
+msgstr ""
+"Ukrainian Soviet boxer and coach, Ukrainian coach and sports official, "
+"Honored Coach of the USSR. President of the Professional Boxing League of "
+"Ukraine."
+
+#: main/templates/main/index.html:917
+msgid "Олександр Абраменко"
+msgstr "Oleksandr Abramenko"
+
+#: main/templates/main/index.html:921
+msgid ""
+"Український фристайліст, заслужений майстер спорту України, фахівець із "
+"лижної акробатики, олімпійський чемпіон 2018 року. Володар малого "
+"Кришталевого глобуса з лижної акробатики сезону 2015–16."
+msgstr ""
+"Ukrainian freestyle skier, Honored Master of Sports of Ukraine, aerials "
+"specialist, 2018 Olympic champion. Winner of the small Crystal Globe in "
+"aerials for the 2015–16 season."
+
+#: main/templates/main/index.html:933
+msgid "Яна Клочкова"
+msgstr "Yana Klochkova"
+
+#: main/templates/main/index.html:937
+msgid ""
+" Українська плавчиня, чотирикратна олімпійська чемпіонка на дистанціях 200 "
+"та 400 метрів, срібна призерка — 800 метрів. Принесла Україні найбільшу "
+"кількість золотих олімпійських медалей."
+msgstr ""
+"Ukrainian swimmer, four-time Olympic champion at 200 and 400 meters, silver "
+"medalist at 800 meters. Brought Ukraine the largest number of Olympic gold "
+"medals."
+
+#: main/templates/main/index.html:949
+msgid "Галина Яблонська"
+msgstr "Halyna Yablonska"
+
+#: main/templates/main/index.html:953
+msgid ""
+"Українська актриса героїчного плану, громадська діячка, режисерка, "
+"сценаристка. Народна артистка УРСР. Член Національної спілки театральних "
+"діячів України, актриса Національного академічного драматичного театру ім. "
+"Івана Франка."
+msgstr ""
+"Ukrainian actress of the heroic tradition, public figure, director, and "
+"screenwriter. People’s Artist of the Ukrainian SSR. Member of the National "
+"Union of Theatre Workers of Ukraine, actress of the Ivan Franko National "
+"Academic Drama Theater."
+
+#: main/templates/main/index.html:965
+msgid "Валентин Щербачев"
+msgstr "Valentyn Shcherbachev"
+
+#: main/templates/main/index.html:969
+msgid ""
+"Український спортивний журналіст. Засновник «Національного реєстру рекордів "
+"України», голова «Клубу незвичайних рекордсменів», засновник «Всесвітньої "
+"української спортивної агенції». Заслужений журналіст України."
+msgstr ""
+"Ukrainian sports journalist. Founder of the National Register of Records of "
+"Ukraine, head of the Club of Unusual Record Holders, founder of the World "
+"Ukrainian Sports Agency. Honored Journalist of Ukraine."
+
+#: main/templates/main/index.html:985
+msgid "Наші партнери та друзi"
+msgstr "Our partners and friends"
+
+#: main/templates/main/index.html:1049
+msgid "Стати партнером"
+msgstr "Become a partner"
+
+#: main/templates/main/index.html:1059
+msgid "Зв’яжіться з нами"
+msgstr "Contact us"
+
+#: main/templates/main/index.html:1061
+msgid "Маєте ідею проєкту?"
+msgstr "Have a project idea?"
+
+#: main/templates/main/index.html:1062
+msgid "Поговорімо!"
+msgstr "Let’s talk!"
+
+#: main/templates/main/index.html:1120
+msgid "Надіслати "
+msgstr "Send"
+
+#: main/templates/main/index.html:1127
+msgid "Адреса"
+msgstr "Address"
+
+#: main/templates/main/index.html:1128 templates/base.html:260
+msgid "Київ, Україна"
+msgstr "Kyiv, Ukraine"
+
+#: main/templates/main/index.html:1133 templates/base.html:83
+#: templates/base.html:161 templates/base.html:249 templates/base.html:255
+msgid "Контакти"
+msgstr "Contacts"
+
+#: main/templates/main/index.html:1134
+msgid "Телефон"
+msgstr "Phone"
+
+#: main/templates/main/index.html:1139
+msgid "Канали зв’язку"
+msgstr "Communication channels"
+
+#: main/templates/main/index.html:1167
+msgid "Ми в соцмережах"
+msgstr "We are on social media"
+
+#: main/templates/main/project_detail.html:72
+msgid "До всіх проєктів"
+msgstr "Back to all projects"
+
+#: main/templates/main/project_detail.html:97
+#: main/templates/main/project_detail.html:111
+msgid "Ваш браузер не підтримує відтворення відео."
+msgstr "Your browser does not support video playback."
+
+#: main/templates/main/project_detail.html:138
+msgid "Галерея фото проєкту"
+msgstr "Project photo gallery"
+
+#: main/templates/main/projects.html:4
+msgid "Наші реалізовані проєкти"
+msgstr "Our completed projects"
+
+#: main/views.py:43
+msgid "Дякуємо! Повідомлення надіслано."
+msgstr "Thank you! Your message has been sent."
+
+#: main/views.py:45
+#, python-format
+msgid "Повідомлення збережено, але лист не надіслано (%(err)s)."
+msgstr "The message was saved, but the email was not sent (%(err)s)."
+
+#: main/views.py:47
+msgid "Повідомлення збережено, але лист не надіслано. Спробуйте пізніше."
+msgstr ""
+"The message was saved, but the email was not sent. Please try again later."
+
+#: main/views.py:51
+msgid "Перевірте поля та спробуйте знову."
+msgstr "Please check the fields and try again."
+
+#: templates/admin/projectdetail/bulk_upload_images.html:7
+msgid ""
+"Завантажте ZIP-архів з зображеннями (jpg, jpeg, png, webp). Всі файли будуть "
+"додані до полотна цього проєкту."
+msgstr ""
+"Upload a ZIP archive with images (jpg, jpeg, png, webp). All files will be "
+"added to this project’s canvas."
+
+#: templates/admin/projectdetail/bulk_upload_images.html:11
+msgid "Завантажити"
+msgstr "Upload"
+
+#: templates/base.html:41 templates/base.html:143 templates/base.html:244
+msgid "Головна"
+msgstr "Home"
+
+#: templates/base.html:53
+msgid "Розділи команди"
+msgstr "Team sections"
+
+#: templates/base.html:65 templates/base.html:156 templates/base.html:246
+msgid "Креативна агенцiя"
+msgstr "Creative agency"
+
+#: templates/base.html:73 templates/base.html:157
+msgid "Продакш-студiя"
+msgstr "Production studio"
+
+#: templates/base.html:79 templates/base.html:146 templates/base.html:248
+msgid "Проекти"
+msgstr "Projects"
+
+#: templates/base.html:121 templates/base.html:319
+msgid "Відкрити меню"
+msgstr "Open menu"
+
+#: templates/base.html:137
+msgid "Головне меню"
+msgstr "Main menu"
+
+#: templates/base.html:138 templates/base.html:307
+msgid "Закрити меню"
+msgstr "Close menu"
+
+#: templates/base.html:166
+msgid "Мова:"
+msgstr "Language:"
+
+#: templates/base.html:202
+msgid "Разом до дії"
+msgstr "Together into action"
+
+#: templates/base.html:205
+msgid "Приєднуйтесь до «Спільної Перемоги»"
+msgstr "Join “Common Victory”"
+
+#: templates/base.html:206
+msgid "Разом перетворимо ідеї на дії"
+msgstr "Together we’ll turn ideas into action"
+
+#: templates/base.html:216
+msgid "Будьмо"
+msgstr "Let’s be"
+
+#: templates/base.html:217
+msgid "на зв'язку"
+msgstr "in touch"
+
+#: templates/base.html:218
+msgid "тут"
+msgstr "here"
+
+#: templates/base.html:241 templates/base.html:242
+msgid "Навігація"
+msgstr "Navigation"
+
+#: templates/base.html:247
+msgid "Продакшн-студiя"
+msgstr "Production studio"
+
+#: templates/base.html:268
+msgid "Спільна Перемога. Усі права захищені."
+msgstr "Common Victory. All rights reserved."
+
+#: templates/base.html:270
+msgid "Умови користування"
+msgstr "Terms of use"
+
+#: templates/base.html:272
+msgid "Політика конфіденційності"
+msgstr "Privacy policy"
+
+#: templates/base.html:282
+msgid "Прокрутити вгору"
+msgstr "Scroll to top"
