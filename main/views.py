@@ -97,30 +97,6 @@ class ProjectDetailView(DetailView):
         return ctx
 
 
-class AboutView(TemplateView):
-    template_name = "main/about.html"
-
-    def get_context_data(self, **kwargs):
-        ctx = super().get_context_data(**kwargs)
-        # Приклад динаміки без БД (за потреби — заміниш на ORM-моделі нижче)
-        ctx["team"] = [
-            {
-                "name": "Володимир Бульба",
-                "role": "Засновник платформи. Майстер спорту міжнародного класу. Радник Міністра молоді та спорту (2015–2019).",
-                "photo": "images/bulba_vol.webp",
-            },
-            {
-                "name": "Олександр Соколинський",
-                "role": "Співзасновник. Менеджер спортивно-молодіжних подій, громадський діяч, спортивний директор НКРУ.",
-                "photo": "images/sokolinskiy_al.webp",
-            },
-            {
-                "name": "Валерія Іваненко",
-                "role": "Директор «Спільна Перемога Продакшн». Продюсер, член спілок кінематографістів та журналістів.",
-                "photo": "images/ivanenko_val.webp",
-            },
-        ]
-        return ctx
 
 
 class UnitProjectsMixin:
