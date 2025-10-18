@@ -42,7 +42,7 @@ services:
       - "443:443"
     volumes:
       # ← на первом запуске примонтируем http-конфиг (см. шаг 2)
-      - ./nginx/nginx.http.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx/conf.d:/etc/nginx/conf.d:ro
       - ./staticfiles:/var/www/static
       - ./media:/var/www/media
       - certbot-webroot:/var/www/certbot

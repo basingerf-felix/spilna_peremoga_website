@@ -1,0 +1,17 @@
+# ---- Webmail: HTTP (нужен для ACME) ----
+server {
+    listen 80;
+    listen [::]:80;
+    server_name mail.spilnaperemoga.com;
+
+    location /.well-known/acme-challenge/ {
+        root /var/www/certbot;
+        try_files $uri =404;
+    }
+
+    location / {
+        return 301 https://$host$request_uri;
+    }
+}
+
+# ---- Webmail: HTTPS (reverse proxy в Webuzo) ----
