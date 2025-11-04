@@ -170,7 +170,8 @@
                       </a>
                     </div>
                   </div>
-                    <a href="{% url 'projects' %}" class="nav-link">{% trans "Проекти" %}</a>
+<a href="{% url 'list' %}" class="nav-link">{% trans "Новини" %}</a>                    
+<a href="{% url 'projects' %}" class="nav-link">{% trans "Проекти" %}</a>
                     {# === КАСТОМНИЙ ДРОПДАУН ДЛЯ КОМАНДИ === #}
 
                     <a href="{% url 'index' %}#contact" class="nav-link" data-contact-link>
@@ -236,7 +237,7 @@
     <nav class="offcanvas-nav">
         <a href="{% url 'index' %}" class="off-link">{% trans "Головна" %}</a>
 
-
+<a href="{% url 'list' %}" class="off-link">{% trans "Новини" %}</a>
       <a href="{% url 'projects' %}" class="off-link">{% trans "Проекти" %}</a>
 
       <!-- Выпадающий раздел "Команда" в виде аккордеона -->

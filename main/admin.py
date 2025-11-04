@@ -320,3 +320,27 @@ class ProjectAdmin(admin.ModelAdmin):
         return ", ".join(u.name for u in obj.units.all())
 
     units_list.short_description = "Підрозділи"
+
+class NewsImageInline(admin.TabularInline):
+    model = NewsImage
+    extra = 1
+    fields = ("image", "alt", "order")
+    ordering = ("order",)
+
+@admin.register(NewsArticle)
+class NewsArticleAdmin(admin.ModelAdmin):
+    list_display = ("title", "published_at", "is_published")
+    list_filter = ("is_published", "published_at", "author")
+    search_fields = ("title", "lead", "body", "author_name")
+    prepopulated_fields = {"slug": ("title",)}
+    readonly_fields = ("created_at", "updated_at")
+    inlines = [NewsImageInline]
+    fieldsets = (
+        (None, {"fields": ("title", "slug", "subtitle", "lead", "body")}),
+        (_("Медіа"), {"fields": ("cover",)}),
+        (_("Відео"), {"fields": ("video_url", "video_file", "video_poster")}),
+        (_("Автор"), {"fields": ("author_name", "author")}),
+        (_("Публікація"), {"fields": ("is_published", "published_at")}),
+        (_("SEO/OG"), {"fields": ("seo_title", "seo_description", "og_image")}),
+        (_("Служебні"), {"fields": ("created_at", "updated_at")}),
+    )

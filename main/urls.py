@@ -8,4 +8,6 @@ urlpatterns = [
     path("go-spilna-peremoga/", views.SubdivisionView.as_view(), name="go-spilna-peremoga"),
     path("go_creative_agency/", views.EducationUnitView.as_view(), name="go-creative-agency"),
     path("go_sp_productio/", views.SportsUnitView.as_view(), name="go-sp-production"),
+	 path("news/", views.NewsListView.as_view(), name="list"),
+    path("news/<slug:slug>/", views.NewsDetailView.as_view(), name="detail"),
 ]

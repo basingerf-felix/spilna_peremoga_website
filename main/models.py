@@ -211,4 +211,80 @@ class ProjectBadge(models.Model):
         return f"{self.text} ({self.project.title})"
 
 
+class PublishedManager(models.Manager):
+    def get_queryset(self):
+        return (super()
+                .get_queryset()
+                .filter(is_published=True, published_at__lte=timezone.now()))
+
+class NewsArticle(models.Model):
+    slug = models.SlugField(_("Слаг"), max_length=255, unique=True)
+
+    title = models.CharField(_("Заголовок"), max_length=255)
+    subtitle = models.CharField(_("Підзаголовок"), max_length=255, blank=True)
+    lead = models.TextField(_("Короткий вступ/лід"), blank=True)
+    body = models.TextField(_("Текст статті (HTML дозволено)"), blank=True)
+
+    cover = models.ImageField(_("Головне фото"), upload_to="news/covers/", blank=True, null=True)
+    video_url = models.URLField(_("Відео (YouTube/Vimeo/MP4 URL)"), blank=True)
+    video_file = models.FileField(
+        _("Відеофайл"),
+        upload_to="news/video/",
+        blank=True,
+        validators=[FileExtensionValidator(allowed_extensions=["mp4", "webm", "ogg"])]
+    )
+    video_poster = models.ImageField(_("Постер відео (poster)"), upload_to="news/video/posters/", blank=True, null=True)
+
+    author_name = models.CharField(_("Автор (ім'я для відображення)"), max_length=160, blank=True)
+    author = models.ForeignKey(settings.AUTH_USER_MODEL, verbose_name=_("Автор (зв'язок з користувачем)"),
+                               on_delete=models.SET_NULL, null=True, blank=True, related_name="news_articles")
+
+    is_published = models.BooleanField(_("Опубліковано"), default=False)
+    published_at = models.DateTimeField(_("Дата публікації"), default=timezone.now)
+
+    seo_title = models.CharField(_("SEO title"), max_length=255, blank=True)
+    seo_description = models.TextField(_("SEO description"), blank=True)
+    og_image = models.ImageField(_("OG image"), upload_to="news/og/", blank=True, null=True)
+
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        ordering = ("-published_at", "-created_at")
+        verbose_name = _("Новина")
+        verbose_name_plural = _("Новини")
+        indexes = [
+            models.Index(fields=["-published_at"]),
+            models.Index(fields=["is_published", "published_at"]),
+        ]
+
+    def __str__(self):
+        return self.title
+
+    def get_absolute_url(self):
+        # БЕЗ namespace:
+        return reverse("news_detail", kwargs={"slug": self.slug})
+
+    @property
+    def display_author(self) -> str:
+        if self.author_name:
+            return self.author_name
+        if self.author and (self.author.get_full_name() or self.author.username):
+            return self.author.get_full_name() or self.author.username
+        return ""
+
+
+class NewsImage(models.Model):
+    article = models.ForeignKey(NewsArticle, on_delete=models.CASCADE, related_name="images", verbose_name=_("Стаття"))
+    image = models.ImageField(_("Зображення"), upload_to="news/gallery/")
+    alt = models.CharField(_("ALT"), max_length=255, blank=True)
+    order = models.PositiveIntegerField(_("Порядок"), default=0, db_index=True)
+
+    class Meta:
+        verbose_name = _("Зображення статті")
+        verbose_name_plural = _("Галерея статті")
+        ordering = ("order", "id")
+
+    def __str__(self):
+        return self.alt or f"{self.article.title} [{self.order}]"
 
