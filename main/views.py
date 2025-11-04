@@ -150,3 +150,37 @@ class SportsUnitView(UnitProjectsMixin, TemplateView):
     template_name  = "main/go_sp_production.html"
     unit_slug      = "prodakshn-studiya-brspilna-peremoga"
     reverse_field  = "is_reverse_sport"
+
+class NewsListView(ListView):
+    model = NewsArticle
+    template_name = "news/news_list.html"
+    context_object_name = "articles"
+    paginate_by = 9
+
+    def get_queryset(self):
+        return (NewsArticle.objects
+                .filter(is_published=True, published_at__lte=timezone.now())
+                .order_by("-published_at", "-created_at"))
+
+    def get_context_data(self, **kwargs):
+        ctx = super().get_context_data(**kwargs)
+        ctx["also_see"] = NewsArticle.objects.filter(
+            is_published=True, published_at__lte=timezone.now()
+        ).order_by("-published_at")[:6]
+        return ctx
+
+class NewsDetailView(DetailView):
+    model = NewsArticle
+    template_name = "news/news_detail.html"
+    context_object_name = "article"
+
+    def get_queryset(self):
+        return NewsArticle.objects.filter(is_published=True, published_at__lte=timezone.now())
+
+    def get_context_data(self, **kwargs):
+        ctx = super().get_context_data(**kwargs)
+        ctx["also_see"] = (NewsArticle.objects
+                           .filter(is_published=True, published_at__lte=timezone.now())
+                           .exclude(pk=self.object.pk)
+                           .order_by("-published_at")[:6])
+        return ctx
