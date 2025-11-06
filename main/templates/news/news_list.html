@@ -1,64 +1,10 @@
-{% extends "base.html" %}
-{% load i18n %}
-{% load static %}
-
-{% block title %}{% trans "Новини" %}{% endblock %}
-
-{% block extra_head %}
-  <link rel="stylesheet" href="{% static 'css/main/news.css' %}">
-{% endblock %}
-
-{% block content %}
-<section class="nws-list">
-  <div class="nws-container">
-    <header class="nws-head">
-      <div class="nws-eyebrow">{% trans "Останні оновлення" %}</div>
-      <h1 class="nws-title">
-  {% trans "Новини" %} <span class="accent">{% trans "«Спільної Перемоги»" %}</span>
-</h1>
-    </header>
-
-    <div class="nws-grid">
-      {% for item in articles %}
-        <article class="nws-card">
-          <a href="{% url 'detail' slug=item.slug %}" class="nws-card__media">
-            {% if item.cover %}
-              <img src="{{ item.cover.url }}" alt="{{ item.title }}">
-            {% else %}
-              <div class="nws-card__placeholder" aria-hidden="true"></div>
-            {% endif %}
-          </a>
-          <div class="nws-card__body">
-            <h2 class="nws-card__title">
-              <a href="{% url 'detail' slug=item.slug %}">{{ item.title }}</a>
-            </h2>
-            <time class="nws-card__date" datetime="{{ item.published_at|date:'Y-m-d' }}">
-              {{ item.published_at|date:"d.m.Y" }}
-            </time>
-          </div>
-        </article>
-      {% empty %}
-        <p class="nws-empty">{% trans "Наразі новин немає." %}</p>
-      {% endfor %}
-    </div>
-
-    {% if is_paginated %}
-      <nav class="nws-pagination" aria-label="{% trans 'Навігація сторінками' %}">
-        {% if page_obj.has_previous %}
-          <a class="nws-page nws-page--prev" href="?page={{ page_obj.previous_page_number }}">{% trans "Назад" %}</a>
-        {% else %}
-          <span class="nws-page nws-page--disabled">{% trans "Назад" %}</span>
-        {% endif %}
-
-        <span class="nws-page__state">{{ page_obj.number }} / {{ paginator.num_pages }}</span>
-
-        {% if page_obj.has_next %}
-          <a class="nws-page nws-page--next" href="?page={{ page_obj.next_page_number }}">{% trans "Далі" %}</a>
-        {% else %}
-          <span class="nws-page nws-page--disabled">{% trans "Далі" %}</span>
-        {% endif %}
-      </nav>
-    {% endif %}
-  </div>
-</section>
-{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>$Title$</title>
+</head>
+<body>
+$END$
+</body>
+</html>
